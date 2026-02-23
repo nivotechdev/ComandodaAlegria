@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Sparkles, Users, MapPin, Gift } from "lucide-react";
+import Image from "next/image";
+import { Users, MapPin, Gift } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -37,7 +38,13 @@ export default function Header() {
           </div>
           
           <Link href="/" className="flex flex-shrink-0 items-center gap-2">
-            <Sparkles className="h-10 w-10 text-primary drop-shadow-lg" />
+            <Image
+              src="https://whfdrrdozhyavyflgaxo.supabase.co/storage/v1/object/sign/Comando%20da%20Alegria/comando%20da%20alegria%204k.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOWY1OGE2Ni03MDFhLTRhNDQtOWJhZC0zOGRkNmVkYTNhODAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJDb21hbmRvIGRhIEFsZWdyaWEvY29tYW5kbyBkYSBhbGVncmlhIDRrLnBuZyIsImlhdCI6MTc3MTg3MTcyNSwiZXhwIjoxMjI3MzM1OTcyNX0.oKK1I_TIo5VZN1I8kagg3Q5hyi83aAbwnZRG4ZV_2Ig"
+              alt="Comando da Alegria Logo"
+              width={40}
+              height={40}
+              className="drop-shadow-lg"
+            />
             <span className="hidden font-headline text-2xl font-bold text-foreground sm:block">
               Comando da Alegria
             </span>

@@ -1,4 +1,4 @@
-import { MapPin, Rocket, Sparkles } from "lucide-react";
+import { MapPin, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -24,7 +24,7 @@ export default function CoverageArea() {
                     <MapPin className="h-16 w-16 text-vibrant-pink" />
                 </div>
                 <div className="absolute -bottom-12 -right-16 animate-float" style={{animationDelay: '1s'}}>
-                     <Rocket className="h-16 w-16 text-accent/50 rotate-[135deg]" />
+                     <Sparkles className="h-16 w-16 text-accent/50 rotate-[15deg]" />
                 </div>
             </div>
             <div className="bg-white/30 backdrop-blur-md border-2 border-dashed border-accent/50 rounded-3xl p-8 lg:p-12 animate-bounce-in shadow-lg">

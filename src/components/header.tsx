@@ -28,10 +28,10 @@ export default function Header() {
       <div className="container px-4 md:px-6">
         <nav className={cn("flex w-full items-center justify-between gap-4 rounded-full bg-card/80 px-4 py-2 backdrop-blur-lg transition-all duration-300 md:justify-around", scrolled ? 'shadow-lg ring-1 ring-black/5' : 'shadow-none')}>
           <div className="hidden items-center gap-6 md:flex">
-            <Link href="#characters" className="flex items-center gap-2 font-headline text-lg font-semibold text-foreground/70 transition-colors hover:text-primary">
+            <Link href="/personagens" className="flex items-center gap-2 font-headline text-lg font-semibold text-foreground/70 transition-colors hover:text-primary">
               <Users className="h-5 w-5" /> Personagens
             </Link>
-            <Link href="#services" className="flex items-center gap-2 font-headline text-lg font-semibold text-foreground/70 transition-colors hover:text-primary">
+            <Link href="/#services" className="flex items-center gap-2 font-headline text-lg font-semibold text-foreground/70 transition-colors hover:text-primary">
               <Gift className="h-5 w-5" /> Serviços
             </Link>
           </div>
@@ -44,7 +44,7 @@ export default function Header() {
           </Link>
 
           <div className="hidden items-center gap-6 md:flex">
-            <Link href="#coverage" className="flex items-center gap-2 font-headline text-lg font-semibold text-foreground/70 transition-colors hover:text-primary">
+            <Link href="/#coverage" className="flex items-center gap-2 font-headline text-lg font-semibold text-foreground/70 transition-colors hover:text-primary">
               <MapPin className="h-5 w-5" /> Área
             </Link>
             <Button asChild className="rounded-full bg-accent font-bold text-accent-foreground shadow-md transition-transform hover:scale-105 hover:bg-accent/90">

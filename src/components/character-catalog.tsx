@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -9,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 const Wave = () => (
     <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] -translate-y-px">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-[calc(100%+1.3px)] h-[80px] fill-background">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-[calc(100%+1.3px)] h-[80px] fill-primary/10">
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
         </svg>
     </div>
@@ -18,8 +17,7 @@ const Wave = () => (
 export default function CharacterCatalog() {
   const characters = PlaceHolderImages.filter(img => img.id.startsWith("character-"));
   const borderColors = ["border-vibrant-pink", "border-primary", "border-accent", "border-secondary"];
-  const [showAll, setShowAll] = useState(false);
-  const displayedCharacters = showAll ? characters : characters.slice(0, 4);
+  const displayedCharacters = characters.slice(0, 4);
   
   return (
     <section id="characters" className="w-full py-20 md:py-32 lg:py-40 bg-primary/10 relative">
@@ -65,14 +63,14 @@ export default function CharacterCatalog() {
                 </div>
             ))}
         </div>
-        {!showAll && characters.length > 4 && (
+        {characters.length > 4 && (
           <div className="mt-16 text-center">
             <Button
+              asChild
               size="lg"
               className="bg-vibrant-pink text-white rounded-full px-10 py-8 text-xl font-bold shadow-lg hover:shadow-xl transition-all hover:scale-110 active:scale-105 animate-pulse-balloon"
-              onClick={() => setShowAll(true)}
             >
-              ✨ Ver Mais Personagens
+              <Link href="/personagens">✨ Ver Mais Personagens</Link>
             </Button>
           </div>
         )}

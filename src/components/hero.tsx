@@ -2,13 +2,6 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Sparkles, Star, ToyBrick, MoveDown } from "lucide-react";
 
-const BalloonIcon = (props: React.SVGProps<SVGSVGElement>) => (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-        <path d="M13.5 22C13.5 22 15.5 20 15.5 17C15.5 14 14 11 12 11C10 11 8.5 14 8.5 17C8.5 20 10.5 22 10.5 22" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M12 2C8.68629 2 6 5.58172 6 10C6 14.4183 8.68629 18 12 18C15.3137 18 18 14.4183 18 10C18 5.58172 15.3137 2 12 2Z" stroke="currentColor" strokeWidth="1.5"/>
-    </svg>
-)
-
 export default function Hero() {
 
   return (
@@ -19,7 +12,6 @@ export default function Hero() {
       {/* Floating Elements / Confetti and Stars */}
       <Sparkles className="absolute top-[10%] left-[5%] h-8 w-8 text-accent opacity-70 animate-float" />
       <Star className="absolute top-[15%] right-[10%] h-6 w-6 text-vibrant-pink opacity-80 animate-twinkle" style={{animationDelay: '0.5s'}} />
-      <BalloonIcon className="absolute bottom-[20%] left-[15%] h-10 w-10 text-secondary opacity-50 animate-float" style={{animationDelay: '2s'}} />
       <ToyBrick className="absolute bottom-[10%] right-[5%] h-8 w-8 text-primary opacity-60 animate-float-alt" style={{animationDelay: '3s'}} />
       <Sparkles className="absolute top-[50%] left-[20%] h-5 w-5 text-accent opacity-70 animate-twinkle" style={{animationDelay: '1.5s'}} />
       <Star className="absolute top-[80%] right-[15%] h-7 w-7 text-vibrant-pink opacity-60 animate-float" style={{animationDelay: '2.5s'}} />

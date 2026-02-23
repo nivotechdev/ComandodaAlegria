@@ -1,4 +1,4 @@
-import { Award, Clock, PartyPopper } from "lucide-react";
+import { Crown, Clock, PartyPopper } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
 const Wave = () => (
@@ -16,7 +16,7 @@ const features = [
     description: "Chegamos sempre no horário para garantir que a magia comece na hora certa, sem estresse para você."
   },
   {
-    icon: <Award className="h-10 w-10 text-secondary" />,
+    icon: <Crown className="h-10 w-10 text-secondary" />,
     title: "Fantasias de Luxo",
     description: "Nossos trajes são de alta costura, fiéis aos personagens e impressionam pela riqueza de detalhes."
   },
@@ -45,7 +45,7 @@ export default function ServiceHighlights() {
         <div className="grid gap-8 md:grid-cols-3">
           {features.map((feature, index) => (
             <Card key={feature.title} className="flex flex-col items-center text-center p-8 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-primary/20 hover:shadow-xl hover:-translate-y-2 border-2 border-transparent hover:border-primary animate-bounce-in" style={{ animationDelay: `${index * 150}ms` }}>
-              <CardHeader className="p-0">
+              <CardHeader className="p-0 items-center">
                 <div className="bg-primary/10 rounded-full p-4 mb-4 inline-block">
                     {feature.icon}
                 </div>

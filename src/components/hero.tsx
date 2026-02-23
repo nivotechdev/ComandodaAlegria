@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Sparkles, Star, ToyBrick, MoveDown } from "lucide-react";
+import { Sparkles, Star, MoveDown } from "lucide-react";
 
 export default function Hero() {
 
@@ -12,7 +12,6 @@ export default function Hero() {
       {/* Floating Elements / Confetti and Stars */}
       <Sparkles className="absolute top-[10%] left-[5%] h-8 w-8 text-accent opacity-70 animate-float" />
       <Star className="absolute top-[15%] right-[10%] h-6 w-6 text-vibrant-pink opacity-80 animate-twinkle" style={{animationDelay: '0.5s'}} />
-      <ToyBrick className="absolute bottom-[10%] right-[5%] h-8 w-8 text-primary opacity-60 animate-float-alt" style={{animationDelay: '3s'}} />
       <Sparkles className="absolute top-[50%] left-[20%] h-5 w-5 text-accent opacity-70 animate-twinkle" style={{animationDelay: '1.5s'}} />
       <Star className="absolute top-[80%] right-[15%] h-7 w-7 text-vibrant-pink opacity-60 animate-float" style={{animationDelay: '2.5s'}} />
       <Star className="absolute top-[40%] left-[40%] h-4 w-4 text-primary opacity-70 animate-twinkle" />

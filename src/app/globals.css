@@ -83,6 +83,7 @@ body {
 @layer base {
   html {
     @apply overflow-x-hidden;
+    overscroll-behavior-y: none;
   }
   * {
     @apply border-border;
@@ -98,5 +99,8 @@ body {
     }
     .touch-manipulation {
         touch-action: manipulation;
+    }
+    .will-change-transform {
+        will-change: transform;
     }
 }

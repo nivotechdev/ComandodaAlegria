@@ -5,7 +5,7 @@ import { Sparkles, Star, MoveDown } from "lucide-react";
 export default function Hero() {
 
   return (
-    <section className="relative w-full h-svh overflow-hidden flex items-center justify-center">
+    <section className="relative w-full h-svh overflow-hidden flex items-center justify-center will-change-transform">
       {/* Background Gradient & Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-vibrant-pink/20 to-secondary/20"></div>
       

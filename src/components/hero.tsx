@@ -5,9 +5,9 @@ import { Sparkles, Star, MoveDown } from "lucide-react";
 export default function Hero() {
 
   return (
-    <section className="relative w-full h-svh overflow-hidden flex items-center justify-center will-change-transform">
+    <section className="relative w-full h-svh overflow-hidden flex items-center justify-center will-change-transform [overscroll-behavior:none] [touch-action:pan-y]">
       {/* Background Gradient & Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-vibrant-pink/20 to-secondary/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-vibrant-pink/20 to-secondary/20 [transform:translateZ(0)]"></div>
       
       {/* Floating Elements / Confetti and Stars */}
       <Sparkles className="absolute top-[10%] left-[5%] h-8 w-8 text-accent opacity-70 animate-float" />

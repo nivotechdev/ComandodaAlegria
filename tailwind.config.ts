@@ -15,12 +15,17 @@ export default {
       fontFamily: {
         body: ['Lexend', 'sans-serif'],
         headline: ['Fredoka', 'sans-serif'],
+        script: ['Pacifico', 'cursive'],
         code: ['monospace'],
       },
       colors: {
         'vibrant-pink': 'hsl(var(--pink))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
+        'logo-blue': '#2B82AD',
+        'logo-orange': '#F5A623',
+        'logo-pink': '#D81B60',
+        'logo-green': '#8BC34A',
         card: {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',

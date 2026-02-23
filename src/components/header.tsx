@@ -7,6 +7,7 @@ import { Users, MapPin, Gift } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import LogoText from "./logo-text";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -45,9 +46,9 @@ export default function Header() {
               height={40}
               className="drop-shadow-lg"
             />
-            <span className="hidden font-headline text-2xl font-bold text-foreground sm:block">
-              Comando da Alegria
-            </span>
+            <div className="hidden sm:block">
+              <LogoText className="text-2xl" />
+            </div>
           </Link>
 
           <div className="hidden items-center gap-6 md:flex">

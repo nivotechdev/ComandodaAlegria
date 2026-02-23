@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/ca
 const Wave = () => (
     <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] -translate-y-px">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-[calc(100%+1.3px)] h-[80px] fill-secondary/10">
-            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.39-16.72-168.19-17.73-250.45-.39-58.02,11.9-113.81,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.83C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="fill-accent/10"></path>
+            <path d="M0,50 C150,100 350,0 600,50 C850,100 1050,0 1200,50 L1200,120 L0,120 Z"></path>
         </svg>
     </div>
 )

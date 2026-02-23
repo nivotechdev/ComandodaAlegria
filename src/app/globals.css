@@ -96,4 +96,7 @@ body {
     .text-outline-white {
         text-shadow: -2px -2px 0 #FFF, 2px -2px 0 #FFF, -2px 2px 0 #FFF, 2px 2px 0 #FFF, -2px 0 0 #FFF, 2px 0 0 #FFF, 0 -2px 0 #FFF, 0 2px 0 #FFF;
     }
+    .touch-manipulation {
+        touch-action: manipulation;
+    }
 }

@@ -42,12 +42,12 @@ export default function Header() {
             <Image
               src="https://whfdrrdozhyavyflgaxo.supabase.co/storage/v1/object/sign/Comando%20da%20Alegria/comando%20da%20alegria%204k.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOWY1OGE2Ni03MDFhLTRhNDQtOWJhZC0zOGRkNmVkYTNhODAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJDb21hbmRvIGRhIEFsZWdyaWEvY29tYW5kbyBkYSBhbGVncmlhIDRrLnBuZyIsImlhdCI6MTc3MTg3MTcyNSwiZXhwIjoxMjI3MzM1OTcyNX0.oKK1I_TIo5VZN1I8kagg3Q5hyi83aAbwnZRG4ZV_2Ig"
               alt="Comando da Alegria Logo"
-              width={40}
-              height={40}
+              width={48}
+              height={48}
               className="drop-shadow-lg"
             />
             <div className="hidden sm:block">
-              <LogoText className="text-2xl" />
+              <LogoText className="text-3xl" />
             </div>
           </Link>
 

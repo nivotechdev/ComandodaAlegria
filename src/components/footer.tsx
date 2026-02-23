@@ -12,9 +12,18 @@ const BalloonIcon = (props: React.SVGProps<SVGSVGElement>) => (
     </svg>
 )
 
+const CloudDivider = () => (
+    <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] -translate-y-px">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-[100px] fill-secondary">
+            <path d="M1200 120L0 120 0 89.16C168.89 40.24 374.31 8.29 565.42 58.74 710.13 97.12 856.41 91.31 1003.82 58.74 1092.74 40.24 1173.85 64.12 1200 89.16z" />
+        </svg>
+    </div>
+)
+
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-secondary text-primary-foreground w-full pt-24 relative overflow-hidden">
+    <footer id="contact" className="bg-secondary text-primary-foreground w-full pt-32 relative overflow-hidden">
+      <CloudDivider />
       <div className="container mx-auto px-4 md:px-6 grid md:grid-cols-3 gap-12 items-start justify-center text-center md:text-left relative z-10 pb-16">
         
         <div className="flex flex-col items-center md:items-start gap-4">

@@ -8,9 +8,9 @@ import WhatsAppFab from "@/components/whatsapp-fab";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col bg-background text-foreground">
+    <div className="flex min-h-screen flex-col text-foreground bg-background">
       <Header />
-      <main className="flex-grow">
+      <main className="flex-grow relative z-0">
         <Hero />
         <CharacterCatalog />
         <ServiceHighlights />

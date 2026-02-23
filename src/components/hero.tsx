@@ -12,7 +12,7 @@ const BalloonIcon = (props: React.SVGProps<SVGSVGElement>) => (
 export default function Hero() {
 
   return (
-    <section className="relative w-full h-screen min-h-[700px] overflow-hidden flex items-center justify-center">
+    <section className="relative w-full h-screen min-h-[700px] overflow-hidden flex items-center justify-center pt-20">
       {/* Background Gradient & Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-vibrant-pink/20 to-secondary/20"></div>
       

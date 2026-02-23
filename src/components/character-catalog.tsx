@@ -4,17 +4,28 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
+const Wave = () => (
+    <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] -translate-y-px">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-[calc(100%+1.3px)] h-[80px] fill-background">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+        </svg>
+    </div>
+)
+
 export default function CharacterCatalog() {
   const characters = PlaceHolderImages.filter(img => img.id.startsWith("character-"));
   const borderColors = ["border-vibrant-pink", "border-primary", "border-accent", "border-secondary"];
   
   return (
-    <section id="characters" className="w-full py-12 md:py-24 lg:py-32 bg-background -mt-px">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="characters" className="w-full py-20 md:py-32 lg:py-40 bg-background relative">
+      <Wave />
+      <div className="container mx-auto px-4 md:px-6 relative">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-foreground -rotate-2" style={{textShadow: '2px 2px 0px hsl(var(--primary)/0.5), -2px -2px 0px hsl(var(--accent)/0.5)'}}>
-              Nosso Catálogo de Estrelas
+            <h2 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl" style={{ textShadow: '3px 3px 0px white' }}>
+                <span className="text-primary inline-block -rotate-3">Nosso</span>{' '}
+                <span className="text-accent inline-block rotate-2">Catálogo</span>{' '}
+                <span className="text-secondary inline-block -rotate-1">de Estrelas</span>
             </h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               De super-heróis a princesas, temos o personagem perfeito para encantar seus convidados.
@@ -24,14 +35,14 @@ export default function CharacterCatalog() {
         <div className="pt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-20">
             {characters.map((character, index) => (
                 <div key={character.id} className="group animate-bounce-in [animation-fill-mode:backwards]" style={{ animationDelay: `${index * 100}ms` }}>
-                    <Card className={`overflow-visible relative rounded-3xl border-4 bg-background shadow-lg transition-all duration-300 group-hover:shadow-2xl group-hover:-translate-y-2 group-hover:rotate-[-3deg] ${borderColors[index % borderColors.length]}`}>
+                    <Card className={`overflow-visible relative rounded-3xl border-4 bg-background shadow-lg transition-all duration-300 group-hover:shadow-2xl group-hover:-translate-y-4 group-hover:-rotate-[4deg] ${borderColors[index % borderColors.length]}`}>
                         <div className="relative aspect-[3/4] rounded-t-[calc(1.5rem-4px)]">
                             <Image
                                 src={character.imageUrl}
                                 alt={character.description}
                                 width={400}
                                 height={600}
-                                className="w-full h-full object-cover object-top rounded-t-[calc(1.5rem-4px)] transition-transform duration-500 ease-out group-hover:scale-125 group-hover:-translate-y-6 group-hover:z-10 relative"
+                                className="w-full h-full object-cover object-top rounded-t-[calc(1.5rem-4px)] transition-transform duration-500 ease-out group-hover:scale-125 group-hover:-translate-y-8 relative z-10"
                                 data-ai-hint={character.imageHint}
                             />
                         </div>
@@ -40,8 +51,8 @@ export default function CharacterCatalog() {
                             {character.id.split('-').slice(1).map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ')}
                             </h3>
                         </CardContent>
-                        <div className="absolute inset-0 flex items-end justify-center p-6 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 rounded-[calc(1.5rem-4px)] z-20 pointer-events-none">
-                             <Button asChild className="pointer-events-auto w-full rounded-full bg-accent font-bold text-accent-foreground transform translate-y-4 shadow-lg transition-all duration-300 group-hover:translate-y-0">
+                        <div className="absolute inset-0 flex items-end justify-center p-6 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 rounded-[calc(1.5rem-4px)] z-20 pointer-events-none">
+                             <Button asChild className="pointer-events-auto w-full rounded-full bg-vibrant-pink text-white font-bold shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-2 animate-pulse-balloon">
                                 <Link href="#contact">Quero este na festa!</Link>
                             </Button>
                         </div>

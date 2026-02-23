@@ -77,9 +77,6 @@ export default function Footer() {
             </div>
         </div>
         
-        <div className="absolute right-8 bottom-8 animate-float" style={{ animationDuration: '6s'}}>
-            <BalloonIcon className="w-12 h-12 text-vibrant-pink/80 -rotate-12" />
-        </div>
       </div>
        <div className="bg-accent text-accent-foreground text-center py-3 font-semibold text-sm">
            © {new Date().getFullYear()} Comando da Alegria • Levando magia onde você estiver!

@@ -97,12 +97,18 @@ export default {
           '0%, 100%': { transform: 'scale(1)' },
           '50%': { transform: 'scale(1.08)' },
         },
+        'bounce-in': {
+          '0%': { transform: 'scale(0.9)', opacity: '0' },
+          '50%': { transform: 'scale(1.05)', opacity: '1' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'float': 'float 4s ease-in-out infinite',
         'pulse-balloon': 'pulse-balloon 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'bounce-in': 'bounce-in 0.6s ease-out',
       },
     },
   },

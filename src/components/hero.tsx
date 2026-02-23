@@ -16,6 +16,9 @@ export default function Hero() {
       <Star className="absolute top-[80%] right-[15%] h-7 w-7 text-vibrant-pink opacity-60 animate-float" style={{animationDelay: '2.5s'}} />
       <Star className="absolute top-[40%] left-[40%] h-4 w-4 text-primary opacity-70 animate-twinkle" />
       <Sparkles className="absolute top-[70%] left-[10%] h-8 w-8 text-secondary opacity-60 animate-float-alt" style={{animationDelay: '1s'}} />
+      <Star className="absolute top-[85%] left-[25%] h-5 w-5 text-primary opacity-70 animate-twinkle" style={{animationDelay: '3s'}} />
+      <Sparkles className="absolute top-[25%] left-[70%] h-6 w-6 text-secondary opacity-60 animate-float" style={{animationDelay: '2s'}} />
+      <Star className="absolute top-[60%] right-[30%] h-4 w-4 text-accent opacity-80 animate-twinkle" style={{animationDelay: '3.5s'}} />
 
 
       <div className="container relative z-10 mx-auto flex flex-col items-center justify-center text-center gap-8 px-4">

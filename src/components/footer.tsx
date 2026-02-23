@@ -31,6 +31,8 @@ export default function Footer() {
         <Sparkles className="absolute top-2/3 right-1/4 h-5 w-5 text-vibrant-pink/50 opacity-80 animate-twinkle" style={{animationDelay: '1s'}} />
         <Sparkles className="absolute bottom-10 right-10 h-8 w-8 text-white opacity-90 animate-twinkle" style={{animationDelay: '0.5s'}} />
         <Sparkles className="absolute bottom-1/4 left-1/4 h-4 w-4 text-accent/50 opacity-60 animate-twinkle" style={{animationDelay: '1.5s'}} />
+        <Sparkles className="absolute top-1/2 left-[10%] h-6 w-6 text-primary/50 opacity-70 animate-twinkle" style={{animationDelay: '2s'}} />
+        <Sparkles className="absolute bottom-1/3 right-[15%] h-5 w-5 text-secondary/50 opacity-60 animate-twinkle" style={{animationDelay: '2.5s'}} />
 
         <div className="flex flex-col items-center md:items-start gap-4">
              <Link href="/" className="flex flex-shrink-0 items-center gap-3">

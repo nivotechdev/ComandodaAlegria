@@ -26,7 +26,7 @@ export default function Header() {
       )}
     >
       <div className="container px-4 md:px-6">
-        <nav className={cn("flex w-full items-center justify-between gap-4 rounded-full bg-card/80 px-4 backdrop-blur-lg transition-all duration-300 md:justify-around", scrolled ? 'shadow-lg ring-1 ring-black/5' : 'shadow-none')}>
+        <nav className={cn("flex w-full items-center justify-between gap-4 rounded-full bg-background/90 px-4 backdrop-blur-lg transition-all duration-300 md:justify-around", scrolled ? 'shadow-lg ring-1 ring-black/5' : 'shadow-none')}>
           <div className="hidden items-center gap-6 md:flex">
             <Link href="/personagens" className="flex items-center gap-2 font-headline text-lg font-semibold text-foreground/70 transition-colors hover:text-primary">
               <Users className="h-5 w-5" /> Personagens

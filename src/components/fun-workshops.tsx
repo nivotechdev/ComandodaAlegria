@@ -1,4 +1,4 @@
-import { Paintbrush, Puzzle, Wand } from "lucide-react";
+import { Paintbrush, Laugh, Gift } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -14,7 +14,7 @@ const Wave = () => (
 
 const workshops = [
   {
-    icon: <Puzzle className="h-7 w-7 text-secondary" />,
+    icon: <Laugh className="h-7 w-7 text-secondary" />,
     title: "Recreação Animada",
     description: "Brincadeiras clássicas, gincanas e muita energia para não deixar ninguém parado! Nossa equipe de recreadores transforma qualquer espaço em um parque de diversões.",
   },
@@ -24,7 +24,7 @@ const workshops = [
     description: "Transformamos as crianças em seus heróis e animais favoritos com tintas antialérgicas e muito brilho! Uma recordação colorida que encanta a todos.",
   },
   {
-    icon: <Wand className="h-7 w-7 text-vibrant-pink" />,
+    icon: <Gift className="h-7 w-7 text-vibrant-pink" />,
     title: "Escultura em Balões",
     description: "Arte com balões que ganham formas de espadas, bichinhos e flores. O presente perfeito para cada convidado levar para casa!",
   },
@@ -46,51 +46,33 @@ export default function FunWorkshops() {
             </p>
         </div>
         <div className="grid justify-items-center gap-8 md:grid-cols-3">
-            {/* Card 1 */}
-            <Card 
-              className="flex w-full max-w-sm flex-col items-center text-center p-4 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-105 animate-bounce-in border-4 bg-card border-secondary hover:shadow-secondary/30"
-              style={{ animationDelay: `0ms` }}
-            >
-              <CardHeader className="p-0">
-                <div className="rounded-full p-3 mb-3 inline-block bg-secondary/10">
-                    {workshops[0].icon}
-                </div>
-                <CardTitle className="text-lg font-bold font-headline">{workshops[0].title}</CardTitle>
-              </CardHeader>
-              <CardDescription className="mt-2 text-sm">
-                {workshops[0].description}
-              </CardDescription>
-            </Card>
-            {/* Card 2 */}
-            <Card 
-              className="flex w-full max-w-sm flex-col items-center text-center p-4 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-105 animate-bounce-in border-4 bg-card border-accent hover:shadow-accent/30"
-              style={{ animationDelay: `150ms` }}
-            >
-              <CardHeader className="p-0">
-                <div className="rounded-full p-3 mb-3 inline-block bg-accent/10">
-                    {workshops[1].icon}
-                </div>
-                <CardTitle className="text-lg font-bold font-headline">{workshops[1].title}</CardTitle>
-              </CardHeader>
-              <CardDescription className="mt-2 text-sm">
-                {workshops[1].description}
-              </CardDescription>
-            </Card>
-            {/* Card 3 */}
-            <Card 
-              className="flex w-full max-w-sm flex-col items-center text-center p-4 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-105 animate-bounce-in border-4 bg-card border-vibrant-pink hover:shadow-vibrant-pink/30"
-              style={{ animationDelay: `300ms` }}
-            >
-              <CardHeader className="p-0">
-                <div className="rounded-full p-3 mb-3 inline-block bg-vibrant-pink/10">
-                    {workshops[2].icon}
-                </div>
-                <CardTitle className="text-lg font-bold font-headline">{workshops[2].title}</CardTitle>
-              </CardHeader>
-              <CardDescription className="mt-2 text-sm">
-                {workshops[2].description}
-              </CardDescription>
-            </Card>
+            {workshops.map((workshop, index) => {
+                const borderColors = ["border-secondary", "border-accent", "border-vibrant-pink"];
+                const bgColors = ["bg-secondary/10", "bg-accent/10", "bg-vibrant-pink/10"];
+                const shadowColors = ["hover:shadow-secondary/30", "hover:shadow-accent/30", "hover:shadow-vibrant-pink/30"];
+                
+                return (
+                    <Card 
+                        key={workshop.title}
+                        className={cn(
+                            "flex w-full max-w-sm flex-col items-center text-center p-4 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-105 animate-bounce-in border-4 bg-card",
+                            borderColors[index],
+                            shadowColors[index]
+                        )}
+                        style={{ animationDelay: `${index * 150}ms` }}
+                    >
+                      <CardHeader className="p-0 items-center">
+                        <div className={cn("rounded-full p-3 mb-3", bgColors[index])}>
+                            {workshop.icon}
+                        </div>
+                        <CardTitle className="text-lg font-bold font-headline">{workshop.title}</CardTitle>
+                      </CardHeader>
+                      <CardDescription className="mt-2 text-sm">
+                        {workshop.description}
+                      </CardDescription>
+                    </Card>
+                );
+            })}
         </div>
         <div className="mt-16 text-center">
             <p className="text-xl font-medium text-foreground/80 mb-4">Quer o pacote completo?</p>

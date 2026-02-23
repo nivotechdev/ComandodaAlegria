@@ -14,7 +14,7 @@ const BalloonIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 const CloudDivider = () => (
     <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] -translate-y-px">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-[100px] fill-secondary">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-[100px] fill-white">
             <path d="M1200 120L0 120 0 89.16C168.89 40.24 374.31 8.29 565.42 58.74 710.13 97.12 856.41 91.31 1003.82 58.74 1092.74 40.24 1173.85 64.12 1200 89.16z" />
         </svg>
     </div>
@@ -22,52 +22,57 @@ const CloudDivider = () => (
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-secondary text-primary-foreground w-full pt-32 relative overflow-hidden">
+    <footer id="contact" className="bg-gradient-to-br from-primary/30 to-secondary/30 text-foreground w-full pt-32 relative overflow-hidden">
       <CloudDivider />
       <div className="container mx-auto px-4 md:px-6 grid md:grid-cols-3 gap-12 items-start justify-center text-center md:text-left relative z-10 pb-16">
         
+        {/* Stars decoration */}
+        <Sparkles className="absolute top-10 left-10 h-6 w-6 text-accent/50 opacity-70 animate-twinkle" />
+        <Sparkles className="absolute top-2/3 right-1/4 h-5 w-5 text-vibrant-pink/50 opacity-80 animate-twinkle" style={{animationDelay: '1s'}} />
+        <Sparkles className="absolute bottom-10 right-10 h-8 w-8 text-white opacity-90 animate-twinkle" style={{animationDelay: '0.5s'}} />
+        <Sparkles className="absolute bottom-1/4 left-1/4 h-4 w-4 text-accent/50 opacity-60 animate-twinkle" style={{animationDelay: '1.5s'}} />
+
         <div className="flex flex-col items-center md:items-start gap-4">
              <Link href="/" className="flex flex-shrink-0 items-center gap-3">
                 <Sparkles className="h-12 w-12 text-accent drop-shadow-lg" />
-                <span className="font-headline text-3xl font-bold text-primary-foreground">
-                Comando da Alegria
+                <span className="font-headline text-3xl font-bold text-foreground">
+                    Comando da Alegria
                 </span>
             </Link>
-            <p className="text-primary-foreground/80 max-w-xs">
-                Transformando sua festa em um evento inesquecível com a magia que encanta.
+            <p className="font-medium text-foreground/80 max-w-xs">
+                Criando memórias que duram para sempre.
             </p>
         </div>
         
         <div className="flex flex-col items-center md:items-start gap-4">
-            <h3 className="font-headline text-2xl font-bold text-primary-foreground">Mapa da Diversão</h3>
+            <h3 className="font-headline text-2xl font-bold text-foreground">Mapa da Diversão</h3>
             <ul className="space-y-2">
-                <li><Link href="#characters" className="text-primary-foreground/80 hover:text-accent transition-colors font-medium">Personagens</Link></li>
-                <li><Link href="#services" className="text-primary-foreground/80 hover:text-accent transition-colors font-medium">Serviços</Link></li>
-                <li><Link href="#coverage" className="text-primary-foreground/80 hover:text-accent transition-colors font-medium">Área de Atendimento</Link></li>
-                <li><Link href="#contact" className="text-primary-foreground/80 hover:text-accent transition-colors font-medium">Fale Conosco</Link></li>
+                <li><Link href="#" className="font-semibold text-foreground/80 hover:text-accent transition-colors">Início</Link></li>
+                <li><Link href="#characters" className="font-semibold text-foreground/80 hover:text-accent transition-colors">Personagens</Link></li>
+                <li><Link href="#services" className="font-semibold text-foreground/80 hover:text-accent transition-colors">Serviços</Link></li>
             </ul>
         </div>
         
         <div className="flex flex-col items-center md:items-start gap-4">
-            <h3 className="font-headline text-2xl font-bold text-primary-foreground">Redes Encantadas</h3>
+            <h3 className="font-headline text-2xl font-bold text-foreground">Redes Encantadas</h3>
             <div className="flex items-center space-x-4">
-                <Link href="#" className="h-16 w-16 bg-[#E4405F] rounded-full flex items-center justify-center text-white transition-transform hover:scale-110 shadow-lg">
+                <Link href="#" className="h-16 w-16 bg-white rounded-full flex items-center justify-center text-[#E4405F] transition-transform hover:scale-110 shadow-lg border-2 border-[#E4405F]/50">
                     <Instagram className="h-8 w-8" />
                     <span className="sr-only">Instagram</span>
                 </Link>
-                <Link href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" className="h-16 w-16 bg-[#25D366] rounded-full flex items-center justify-center text-white transition-transform hover:scale-110 shadow-lg">
+                <Link href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" className="h-16 w-16 bg-white rounded-full flex items-center justify-center text-[#25D366] transition-transform hover:scale-110 shadow-lg border-2 border-[#25D366]/50">
                     <WhatsAppIcon className="h-9 w-9 p-0.5" />
                     <span className="sr-only">WhatsApp</span>
                 </Link>
             </div>
-             <div className="absolute right-4 bottom-4 flex gap-2 text-vibrant-pink animate-float">
-                <BalloonIcon className="w-8 h-8 -rotate-12" />
-                <BalloonIcon className="w-8 h-8 rotate-12 self-end" style={{animationDelay: '0.5s'}} />
-            </div>
+        </div>
+        
+        <div className="absolute right-8 bottom-8 animate-float" style={{ animationDuration: '6s'}}>
+            <BalloonIcon className="w-12 h-12 text-vibrant-pink/80 -rotate-12" />
         </div>
       </div>
-       <div className="bg-accent text-accent-foreground text-center py-4 font-semibold">
-           Feito com amor e muita alegria! © {new Date().getFullYear()} Comando da Alegria.
+       <div className="bg-accent text-accent-foreground text-center py-3 font-semibold text-sm">
+           © {new Date().getFullYear()} Comando da Alegria • Levando magia onde você estiver!
        </div>
     </footer>
   );

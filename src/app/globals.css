@@ -81,6 +81,9 @@ body {
 }
 
 @layer base {
+  html {
+    @apply overflow-x-hidden;
+  }
   * {
     @apply border-border;
   }

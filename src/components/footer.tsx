@@ -18,7 +18,7 @@ export default function Footer() {
   return (
     <footer id="contact" className="bg-gradient-to-br from-primary/30 to-secondary/30 text-foreground w-full pt-32 relative overflow-hidden">
       <CloudDivider />
-      <div className="container mx-auto px-4 md:px-6 grid md:grid-cols-3 gap-12 items-start justify-center text-center md:text-left relative z-10 pb-16">
+      <div className="container mx-auto px-5 grid md:grid-cols-3 gap-12 items-start justify-center text-center md:text-left relative z-10 pb-16">
         
         {/* Stars decoration */}
         <Sparkles className="absolute top-2/3 right-1/4 h-5 w-5 text-vibrant-pink/50 opacity-80 animate-twinkle" style={{animationDelay: '1s'}} />

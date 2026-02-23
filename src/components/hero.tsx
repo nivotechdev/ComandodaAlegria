@@ -5,7 +5,7 @@ import { Sparkles, Star, MoveDown } from "lucide-react";
 export default function Hero() {
 
   return (
-    <section className="relative w-full h-screen min-h-[700px] overflow-hidden flex items-center justify-center pt-20">
+    <section className="relative w-full min-h-[600px] md:min-h-[700px] overflow-hidden flex items-center justify-center pt-20">
       {/* Background Gradient & Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-vibrant-pink/20 to-secondary/20"></div>
       
@@ -21,7 +21,7 @@ export default function Hero() {
       <Star className="absolute top-[60%] right-[30%] h-4 w-4 text-accent opacity-80 animate-twinkle" style={{animationDelay: '3.5s'}} />
 
 
-      <div className="container relative z-10 mx-auto flex flex-col items-center justify-center text-center gap-8 px-4">
+      <div className="container relative z-10 mx-auto flex flex-col items-center justify-center text-center gap-8 px-5">
         <div className="animate-fade-in-down" style={{animationDelay: '0.2s'}}>
             <h1 className="font-headline text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl" style={{ textShadow: '3px 3px 0px white, -3px -3px 0px white, 3px -3px 0px white, -3px 3px 0px white' }}>
                 <span className="text-primary inline-block -rotate-2">A Magia</span>{' '}

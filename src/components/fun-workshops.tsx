@@ -14,17 +14,17 @@ const Wave = () => (
 
 const workshops = [
   {
-    icon: <Puzzle className="h-10 w-10 text-secondary" />,
+    icon: <Puzzle className="h-8 w-8 text-secondary" />,
     title: "Recreação Animada",
     description: "Brincadeiras clássicas, gincanas e muita energia para não deixar ninguém parado! Nossa equipe de recreadores transforma qualquer espaço em um parque de diversões.",
   },
   {
-    icon: <Paintbrush className="h-10 w-10 text-accent" />,
+    icon: <Paintbrush className="h-8 w-8 text-accent" />,
     title: "Pinturinha Facial",
     description: "Transformamos as crianças em seus heróis e animais favoritos com tintas antialérgicas e muito brilho! Uma recordação colorida que encanta a todos.",
   },
   {
-    icon: <Wand className="h-10 w-10 text-vibrant-pink" />,
+    icon: <Wand className="h-8 w-8 text-vibrant-pink" />,
     title: "Escultura em Balões",
     description: "Arte com balões que ganham formas de espadas, bichinhos e flores. O presente perfeito para cada convidado levar para casa!",
   },
@@ -34,7 +34,7 @@ export default function FunWorkshops() {
   return (
     <section id="workshops" className="w-full py-20 md:py-32 lg:py-40 bg-accent/10 relative">
       <Wave />
-      <div className="container mx-auto px-4 md:px-6 relative">
+      <div className="container mx-auto px-5 relative">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
             <h2 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl" style={{ textShadow: '3px 3px 0px white' }}>
                 <span className="text-secondary inline-block -rotate-2">Muito Mais</span>{' '}
@@ -45,49 +45,49 @@ export default function FunWorkshops() {
               Além dos seus heróis e princesas favoritos, oferecemos oficinas que completam a diversão.
             </p>
         </div>
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid justify-items-center gap-8 md:grid-cols-3">
             {/* Card 1 */}
             <Card 
-              className="flex flex-col items-center text-center p-8 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-105 animate-bounce-in border-4 bg-card border-secondary hover:shadow-secondary/30"
+              className="flex w-full max-w-sm flex-col items-center text-center p-6 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-105 animate-bounce-in border-4 bg-card border-secondary hover:shadow-secondary/30"
               style={{ animationDelay: `0ms` }}
             >
               <CardHeader className="p-0">
                 <div className="rounded-full p-4 mb-4 inline-block bg-secondary/10">
                     {workshops[0].icon}
                 </div>
-                <CardTitle className="text-2xl font-bold font-headline">{workshops[0].title}</CardTitle>
+                <CardTitle className="text-xl font-bold font-headline">{workshops[0].title}</CardTitle>
               </CardHeader>
-              <CardDescription className="mt-4 text-base">
+              <CardDescription className="mt-4 text-sm">
                 {workshops[0].description}
               </CardDescription>
             </Card>
             {/* Card 2 */}
             <Card 
-              className="flex flex-col items-center text-center p-8 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-105 animate-bounce-in border-4 bg-card border-accent hover:shadow-accent/30"
+              className="flex w-full max-w-sm flex-col items-center text-center p-6 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-105 animate-bounce-in border-4 bg-card border-accent hover:shadow-accent/30"
               style={{ animationDelay: `150ms` }}
             >
               <CardHeader className="p-0">
                 <div className="rounded-full p-4 mb-4 inline-block bg-accent/10">
                     {workshops[1].icon}
                 </div>
-                <CardTitle className="text-2xl font-bold font-headline">{workshops[1].title}</CardTitle>
+                <CardTitle className="text-xl font-bold font-headline">{workshops[1].title}</CardTitle>
               </CardHeader>
-              <CardDescription className="mt-4 text-base">
+              <CardDescription className="mt-4 text-sm">
                 {workshops[1].description}
               </CardDescription>
             </Card>
             {/* Card 3 */}
             <Card 
-              className="flex flex-col items-center text-center p-8 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-105 animate-bounce-in border-4 bg-card border-vibrant-pink hover:shadow-vibrant-pink/30"
+              className="flex w-full max-w-sm flex-col items-center text-center p-6 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-105 animate-bounce-in border-4 bg-card border-vibrant-pink hover:shadow-vibrant-pink/30"
               style={{ animationDelay: `300ms` }}
             >
               <CardHeader className="p-0">
                 <div className="rounded-full p-4 mb-4 inline-block bg-vibrant-pink/10">
                     {workshops[2].icon}
                 </div>
-                <CardTitle className="text-2xl font-bold font-headline">{workshops[2].title}</CardTitle>
+                <CardTitle className="text-xl font-bold font-headline">{workshops[2].title}</CardTitle>
               </CardHeader>
-              <CardDescription className="mt-4 text-base">
+              <CardDescription className="mt-4 text-sm">
                 {workshops[2].description}
               </CardDescription>
             </Card>

@@ -24,7 +24,7 @@ export default function AllCharactersPage() {
         <div className="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2032%2032%27%20width=%2732%27%20height=%2732%27%20fill=%27none%27%20stroke-width=%272%27%20stroke=%27white%27%3E%3Cpath%20d=%27M16%202%20V30%20M2%2016%20H30%27/%3E%3C/svg%3E')] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
         <Header />
         <main className="flex-grow relative z-10 py-20 md:py-32">
-            <div className="container mx-auto px-4 md:px-6">
+            <div className="container mx-auto px-5">
                 <div className="relative mb-12">
                      <Button asChild variant="ghost" className="absolute top-0 left-0 h-auto p-0 hover:bg-transparent transition-transform hover:-translate-y-1">
                         <Link href="/" className="flex items-center gap-2 text-foreground/80 font-bold">

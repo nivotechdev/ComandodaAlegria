@@ -14,7 +14,7 @@ export default function CoverageArea() {
   return (
     <section id="coverage" className="w-full py-20 md:py-32 lg:py-40 bg-vibrant-pink/10 relative">
       <Wave />
-      <div className="container mx-auto px-4 md:px-6 relative">
+      <div className="container mx-auto px-5 relative">
         <div className="flex flex-col items-center justify-center space-y-8 text-center">
             <div className="relative mb-4">
                 <div className="absolute -top-12 -left-16 animate-float">

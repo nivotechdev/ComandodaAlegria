@@ -9,7 +9,7 @@ import WhatsAppFab from "@/components/whatsapp-fab";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col text-foreground bg-background">
+    <div className="flex min-h-screen flex-col text-foreground bg-background overflow-x-hidden">
       <Header />
       <main className="flex-grow relative z-0">
         <Hero />

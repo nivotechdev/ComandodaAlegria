@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -15,9 +18,11 @@ const Wave = () => (
 export default function CharacterCatalog() {
   const characters = PlaceHolderImages.filter(img => img.id.startsWith("character-"));
   const borderColors = ["border-vibrant-pink", "border-primary", "border-accent", "border-secondary"];
+  const [showAll, setShowAll] = useState(false);
+  const displayedCharacters = showAll ? characters : characters.slice(0, 4);
   
   return (
-    <section id="characters" className="w-full py-20 md:py-32 lg:py-40 bg-background relative">
+    <section id="characters" className="w-full py-20 md:py-32 lg:py-40 bg-primary/10 relative">
       <Wave />
       <div className="container mx-auto px-4 md:px-6 relative">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -32,8 +37,8 @@ export default function CharacterCatalog() {
             </p>
           </div>
         </div>
-        <div className="pt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-20">
-            {characters.map((character, index) => (
+        <div className="pt-20 grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-20">
+            {displayedCharacters.map((character, index) => (
                 <div key={character.id} className="group animate-bounce-in [animation-fill-mode:backwards]" style={{ animationDelay: `${index * 100}ms` }}>
                     <Card className={`overflow-visible relative rounded-3xl border-4 bg-background shadow-lg transition-all duration-300 group-hover:shadow-2xl group-hover:-translate-y-4 group-hover:-rotate-[4deg] ${borderColors[index % borderColors.length]}`}>
                         <div className="relative aspect-[3/4] rounded-t-[calc(1.5rem-4px)]">
@@ -60,6 +65,17 @@ export default function CharacterCatalog() {
                 </div>
             ))}
         </div>
+        {!showAll && characters.length > 4 && (
+          <div className="mt-16 text-center">
+            <Button
+              size="lg"
+              className="bg-vibrant-pink text-white rounded-full px-10 py-8 text-xl font-bold shadow-lg hover:shadow-xl transition-all hover:scale-110 active:scale-105 animate-pulse-balloon"
+              onClick={() => setShowAll(true)}
+            >
+              ✨ Ver Mais Personagens
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );

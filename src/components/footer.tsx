@@ -28,7 +28,6 @@ export default function Footer() {
       <div className="container mx-auto px-4 md:px-6 grid md:grid-cols-3 gap-12 items-start justify-center text-center md:text-left relative z-10 pb-16">
         
         {/* Stars decoration */}
-        <Sparkles className="absolute top-10 left-10 h-6 w-6 text-accent/50 opacity-70 animate-twinkle" />
         <Sparkles className="absolute top-2/3 right-1/4 h-5 w-5 text-vibrant-pink/50 opacity-80 animate-twinkle" style={{animationDelay: '1s'}} />
         <Sparkles className="absolute bottom-10 right-10 h-8 w-8 text-white opacity-90 animate-twinkle" style={{animationDelay: '0.5s'}} />
         <Sparkles className="absolute bottom-1/4 left-1/4 h-4 w-4 text-accent/50 opacity-60 animate-twinkle" style={{animationDelay: '1.5s'}} />

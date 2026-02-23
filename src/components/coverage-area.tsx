@@ -38,7 +38,7 @@ export default function CoverageArea() {
                 </p>
             </div>
             <Button asChild size="lg" className="bg-vibrant-pink text-white rounded-full px-10 py-8 text-xl font-bold shadow-lg hover:shadow-xl transition-all hover:scale-110 active:scale-105 animate-pulse-balloon">
-                <Link href="#contact">🎈 Quero o Comando na minha festa!</Link>
+                <Link href="#contact">🎈 Quero a Comando na minha festa!</Link>
             </Button>
         </div>
       </div>

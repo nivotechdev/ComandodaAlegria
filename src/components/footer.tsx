@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Instagram, Sparkles, Facebook } from 'lucide-react';
 
 const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -34,7 +35,13 @@ export default function Footer() {
 
         <div className="flex flex-col items-center md:items-start gap-4">
              <Link href="/" className="flex flex-shrink-0 items-center gap-3">
-                <Sparkles className="h-12 w-12 text-accent drop-shadow-lg" />
+                <Image
+                    src="https://whfdrrdozhyavyflgaxo.supabase.co/storage/v1/object/sign/Comando%20da%20Alegria/comando%20da%20alegria%204k.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOWY1OGE2Ni03MDFhLTRhNDQtOWJhZC0zOGRkNmVkYTNhODAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJDb21hbmRvIGRhIEFsZWdyaWEvY29tYW5kbyBkYSBhbGVncmlhIDRrLnBuZyIsImlhdCI6MTc3MTg3MTcyNSwiZXhwIjoxMjI3MzM1OTcyNX0.oKK1I_TIo5VZN1I8kagg3Q5hyi83aAbwnZRG4ZV_2Ig"
+                    alt="Comando da Alegria Logo"
+                    width={48}
+                    height={48}
+                    className="drop-shadow-lg"
+                />
                 <span className="font-headline text-3xl font-bold text-foreground">
                     Comando da Alegria
                 </span>

@@ -3,6 +3,7 @@ import CoverageArea from "@/components/coverage-area";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
+import FunWorkshops from "@/components/fun-workshops";
 import ServiceHighlights from "@/components/service-highlights";
 import WhatsAppFab from "@/components/whatsapp-fab";
 
@@ -13,6 +14,7 @@ export default function Home() {
       <main className="flex-grow relative z-0">
         <Hero />
         <CharacterCatalog />
+        <FunWorkshops />
         <ServiceHighlights />
         <CoverageArea />
       </main>

@@ -9,6 +9,9 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
       fontFamily: {
         body: ['Lexend', 'sans-serif'],
         headline: ['Fredoka', 'sans-serif'],
@@ -93,6 +96,10 @@ export default {
             '0%, 100%': { transform: 'translateY(0px)' },
             '50%': { transform: 'translateY(-15px)' },
         },
+        'float-alt': {
+            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+            '50%': { transform: 'translateY(-10px) rotate(15deg)' },
+        },
         'pulse-balloon': {
           '0%, 100%': { transform: 'scale(1)' },
           '50%': { transform: 'scale(1.08)' },
@@ -101,14 +108,26 @@ export default {
           '0%': { transform: 'scale(0.9)', opacity: '0' },
           '50%': { transform: 'scale(1.05)', opacity: '1' },
           '100%': { transform: 'scale(1)', opacity: '1' },
-        }
+        },
+        'fade-in-up': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(20px)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'float': 'float 4s ease-in-out infinite',
+        'float-alt': 'float-alt 5s ease-in-out infinite',
         'pulse-balloon': 'pulse-balloon 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'bounce-in': 'bounce-in 0.6s ease-out',
+        'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
       },
     },
   },

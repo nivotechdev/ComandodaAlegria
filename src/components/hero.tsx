@@ -2,26 +2,49 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { Sparkles, Star, ToyBrick } from "lucide-react";
+
+const BalloonIcon = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <path d="M13.5 22C13.5 22 15.5 20 15.5 17C15.5 14 14 11 12 11C10 11 8.5 14 8.5 17C8.5 20 10.5 22 10.5 22" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M12 2C8.68629 2 6 5.58172 6 10C6 14.4183 8.68629 18 12 18C15.3137 18 18 14.4183 18 10C18 5.58172 15.3137 2 12 2Z" stroke="currentColor" strokeWidth="1.5"/>
+    </svg>
+)
 
 export default function Hero() {
-  const heroImage = PlaceHolderImages.find(img => img.id === "character-spider-man");
+  const heroImage = PlaceHolderImages.find(img => img.id === "character-elsa");
 
   return (
     <section className="relative w-full overflow-hidden bg-background pt-32 pb-20 md:pt-48 md:pb-32 lg:pt-56 lg:pb-40">
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10"></div>
+      {/* Background Gradient & Overlay */}
+      <div className="absolute inset-0 bg-gradient-radial from-primary/20 via-accent/10 to-secondary/10"></div>
+      <div className="absolute inset-0 bg-primary/10"></div>
       
+      {/* Floating Elements */}
+      <Sparkles className="absolute top-[10%] left-[5%] h-8 w-8 text-accent opacity-70 animate-float" />
+      <Star className="absolute top-[20%] right-[10%] h-6 w-6 text-vibrant-pink opacity-60 animate-float-alt" style={{animationDelay: '1s'}} />
+      <BalloonIcon className="absolute bottom-[20%] left-[15%] h-10 w-10 text-secondary opacity-50 animate-float" style={{animationDelay: '2s'}} />
+      <ToyBrick className="absolute bottom-[10%] right-[5%] h-8 w-8 text-primary opacity-60 animate-float-alt" style={{animationDelay: '3s'}} />
+
+
       <div className="container relative z-10 mx-auto grid grid-cols-1 items-center gap-12 px-4 md:grid-cols-2 lg:gap-20">
-        <div className="text-center md:text-left">
-            <h1 className="font-headline text-5xl font-extrabold tracking-tight text-foreground drop-shadow-sm sm:text-6xl md:text-7xl lg:text-8xl transform -rotate-2" style={{textShadow: '2px 2px 0px hsl(var(--primary) / 0.3)'}}>
-                Sua Festa <br/> com a <span className="text-primary animate-float inline-block">Magia</span> que Encanta!
+        <div className="text-center md:text-left animate-fade-in-up">
+            <h1 className="font-headline text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl" style={{ textShadow: '3px 3px 0px white, -3px -3px 0px white, 3px -3px 0px white, -3px 3px 0px white' }}>
+                <span className="text-primary inline-block -rotate-2">A Magia</span>{' '}
+                <span className="text-secondary inline-block">da</span>{' '}
+                <span className="text-accent inline-block rotate-1">Festa</span>{' '}
+                <span className="text-vibrant-pink inline-block -rotate-1">Chegou!</span>
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:mx-0 md:text-xl">
-            Personagens vivos e recreação completa para transformar seu evento em um dia inesquecível.
+            <p className="mx-auto mt-8 max-w-2xl text-lg text-foreground/80 md:mx-0 md:text-xl font-medium">
+            Transformamos sua casa no cenário dos sonhos com nossos personagens vivos e recreação completa. Onde tem Comando da Alegria, tem diversão garantida!
             </p>
-            <div className="mt-10">
-            <Button asChild size="lg" className="animate-pulse-balloon bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-10 py-6 text-lg font-bold shadow-lg hover:shadow-xl transition-transform hover:scale-105">
-                <Link href="#contact">Quero um Orçamento Mágico!</Link>
-            </Button>
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
+              <Button asChild size="lg" className="bg-vibrant-pink text-white hover:bg-vibrant-pink/90 rounded-full px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all hover:scale-105 active:scale-100 w-full sm:w-auto">
+                  <Link href="#contact">RESERVAR DATA</Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="border-2 border-primary bg-background/50 backdrop-blur-sm text-primary-foreground font-bold hover:bg-primary/10 hover:text-foreground rounded-full px-8 py-7 text-lg transition-all w-full sm:w-auto">
+                  <Link href="#characters">VER PERSONAGENS</Link>
+              </Button>
             </div>
         </div>
         <div className="relative flex h-full min-h-[300px] items-center justify-center">
@@ -35,7 +58,7 @@ export default function Hero() {
                     className="relative z-10 animate-float object-contain"
                     style={{
                         animationDelay: '0.5s',
-                        clipPath: 'polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%)'
+                        clipPath: 'polygon(41% 4%, 82% 9%, 98% 36%, 93% 66%, 74% 94%, 42% 99%, 13% 82%, 2% 43%)'
                     }}
                     data-ai-hint={heroImage.imageHint}
                     priority

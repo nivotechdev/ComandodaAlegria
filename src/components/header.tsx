@@ -22,8 +22,7 @@ export default function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 flex justify-center transition-all duration-300",
-        scrolled ? "pt-2" : "pt-4"
+        "fixed top-0 left-0 right-0 z-50 flex justify-center transition-all duration-300 pt-2"
       )}
     >
       <div className="container px-4 md:px-6">
@@ -37,12 +36,12 @@ export default function Header() {
             </Link>
           </div>
           
-          <Link href="/" className="flex flex-shrink-0 items-center">
+          <Link href="/" className="flex flex-shrink-0 items-center -my-3">
             <Image
               src="https://whfdrrdozhyavyflgaxo.supabase.co/storage/v1/object/sign/Comando%20da%20Alegria/Design%20sem%20nome%20(14).png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOWY1OGE2Ni03MDFhLTRhNDQtOWJhZC0zOGRkNmVkYTNhODAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJDb21hbmRvIGRhIEFsZWdyaWEvRGVzaWduIHNlbSBub21lICgxNCkucG5nIiwiaWF0IjoxNzcxODc1MzI2LCJleHAiOjg3NzI4NjczMjZ9.zN-pJQbd5SNDgSKBSBw1uvsN3skWm-hbPu4gk4ebkk0"
               alt="Comando da Alegria Logo"
-              width={64}
-              height={64}
+              width={90}
+              height={90}
               className="drop-shadow-lg"
             />
           </Link>

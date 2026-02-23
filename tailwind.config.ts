@@ -10,12 +10,12 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Poppins', 'sans-serif'],
-        headline: ['Poppins', 'sans-serif'],
+        body: ['Lexend', 'sans-serif'],
+        headline: ['Fredoka', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
-        'vibrant-pink': '#d81b60',
+        'vibrant-pink': 'hsl(var(--pink))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
@@ -89,10 +89,20 @@ export default {
             height: '0',
           },
         },
+        'float': {
+            '0%, 100%': { transform: 'translateY(0px)' },
+            '50%': { transform: 'translateY(-15px)' },
+        },
+        'pulse-balloon': {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.08)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'float': 'float 4s ease-in-out infinite',
+        'pulse-balloon': 'pulse-balloon 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
     },
   },

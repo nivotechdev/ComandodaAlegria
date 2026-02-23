@@ -21,7 +21,7 @@ const features = [
 
 export default function ServiceHighlights() {
   return (
-    <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-sky-50/50">
+    <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-secondary/10">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-foreground">
@@ -33,12 +33,12 @@ export default function ServiceHighlights() {
         </div>
         <div className="grid gap-8 md:grid-cols-3">
           {features.map((feature) => (
-            <Card key={feature.title} className="flex flex-col items-center text-center p-8 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-primary/20 hover:shadow-xl hover:-translate-y-2">
+            <Card key={feature.title} className="flex flex-col items-center text-center p-8 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-primary/20 hover:shadow-xl hover:-translate-y-2 border-2 border-transparent hover:border-primary">
               <CardHeader className="p-0">
                 <div className="bg-primary/10 rounded-full p-4 mb-4 inline-block">
                     {feature.icon}
                 </div>
-                <CardTitle className="text-2xl font-bold">{feature.title}</CardTitle>
+                <CardTitle className="text-2xl font-bold font-headline">{feature.title}</CardTitle>
               </CardHeader>
               <CardDescription className="mt-4 text-base">
                 {feature.description}

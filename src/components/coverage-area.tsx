@@ -2,7 +2,7 @@ import { MapPin } from "lucide-react";
 
 export default function CoverageArea() {
   return (
-    <section id="coverage" className="w-full py-12 md:py-24 lg:py-32 bg-background">
+    <section id="coverage" className="w-full py-12 md:py-24 lg:py-32 bg-accent/10">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-6 text-center">
             <div className="bg-secondary/10 rounded-full p-4">

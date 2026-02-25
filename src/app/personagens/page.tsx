@@ -70,7 +70,7 @@ export default function AllCharactersPage() {
                                     </h3>
                                 </CardContent>
                                 <div className="absolute inset-0 flex items-end justify-center p-6 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 rounded-[calc(1.5rem-4px)] z-20 pointer-events-none">
-                                    <Button asChild className="pointer-events-auto whitespace-nowrap rounded-full bg-vibrant-pink px-6 text-sm font-bold text-white shadow-lg transition-all duration-300 group-hover:-translate-y-2 group-hover:scale-110 animate-pulse-balloon">
+                                    <Button asChild className="pointer-events-auto rounded-full bg-vibrant-pink px-6 text-sm font-bold text-white shadow-lg transition-all duration-300 group-hover:-translate-y-2 group-hover:scale-110">
                                         <Link href="#contact">Levar para minha festa!</Link>
                                     </Button>
                                 </div>

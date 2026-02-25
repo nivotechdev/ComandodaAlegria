@@ -33,7 +33,7 @@ export default function CoverageArea() {
                     <span className="text-primary inline-block rotate-1">Onde Você</span>{' '}
                     <span className="text-vibrant-pink inline-block">Estiver!</span>
                 </h2>
-                <p className="mt-4 max-w-[600px] text-foreground/80 md:text-xl/relaxed font-medium">
+                <p className="mt-4 max-w-[600px] text-base text-foreground/80 md:text-lg font-normal leading-relaxed">
                 Não importa o lugar, a magia chega num balão! Atendemos em casas, prédios, parques e empresas com toda a estrutura necessária.
                 </p>
             </div>

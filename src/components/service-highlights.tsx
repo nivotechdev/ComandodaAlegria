@@ -38,7 +38,7 @@ export default function ServiceHighlights() {
                 <span className="text-vibrant-pink inline-block -rotate-2">somos a</span>{' '}
                 <span className="text-primary inline-block rotate-1">escolha certa?</span>
             </h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="max-w-[900px] text-base text-muted-foreground md:text-lg leading-relaxed">
               Oferecemos mais do que entretenimento, entregamos uma experiência mágica e inesquecível.
             </p>
         </div>
@@ -51,7 +51,7 @@ export default function ServiceHighlights() {
                 </div>
                 <CardTitle className="text-lg font-bold font-headline">{feature.title}</CardTitle>
               </CardHeader>
-              <CardDescription className="mt-2 text-sm">
+              <CardDescription className="mt-2 text-sm font-medium tracking-wide md:text-base leading-relaxed">
                 {feature.description}
               </CardDescription>
             </Card>

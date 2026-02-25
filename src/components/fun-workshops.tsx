@@ -41,7 +41,7 @@ export default function FunWorkshops() {
                 <span className="text-accent inline-block rotate-1">que</span>{' '}
                 <span className="text-primary inline-block">Personagens!</span>
             </h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="max-w-[900px] text-base text-muted-foreground md:text-lg leading-relaxed">
               Além dos seus heróis e princesas favoritos, oferecemos oficinas que completam a diversão.
             </p>
         </div>
@@ -67,7 +67,7 @@ export default function FunWorkshops() {
                         </div>
                         <CardTitle className="text-lg font-bold font-headline">{workshop.title}</CardTitle>
                       </CardHeader>
-                      <CardDescription className="mt-2 text-sm">
+                      <CardDescription className="mt-2 text-sm font-medium tracking-wide md:text-base leading-relaxed">
                         {workshop.description}
                       </CardDescription>
                     </Card>

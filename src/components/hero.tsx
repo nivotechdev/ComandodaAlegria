@@ -44,7 +44,7 @@ export default function Hero() {
                 <span className="text-accent inline-block rotate-1">Festa</span>{' '}
                 <span className="text-vibrant-pink inline-block -rotate-1">Chegou!</span>
             </h1>
-            <p className="mx-auto mt-8 max-w-2xl text-lg text-foreground/80 md:text-xl font-medium">
+            <p className="mx-auto mt-8 max-w-2xl text-base text-foreground/80 md:text-lg font-normal leading-relaxed">
             Transformamos sua casa no cenário dos sonhos com nossos personagens vivos e recreação completa. Onde tem Comando da Alegria, tem diversão garantida!
             </p>
         </div>

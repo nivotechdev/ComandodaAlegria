@@ -38,18 +38,18 @@ export default function CharacterCatalog() {
         <div className="pt-20 grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-20">
             {displayedCharacters.map((character, index) => (
                 <div key={character.id} className="group animate-bounce-in [animation-fill-mode:backwards]" style={{ animationDelay: `${index * 100}ms` }}>
-                    <Card className={`overflow-visible relative rounded-3xl border-4 bg-background shadow-lg transition-all duration-300 group-hover:shadow-2xl group-hover:-translate-y-4 group-hover:-rotate-[4deg] ${borderColors[index % borderColors.length]}`}>
+                    <Card className={`overflow-hidden relative rounded-3xl border-4 bg-background shadow-lg transition-all duration-300 group-hover:shadow-2xl group-hover:-translate-y-4 group-hover:-rotate-[4deg] ${borderColors[index % borderColors.length]} flex flex-col h-full`}>
                         <div className="relative aspect-[3/4] rounded-t-[calc(1.5rem-4px)]">
                             <Image
                                 src={character.imageUrl}
                                 alt={character.description}
                                 width={400}
                                 height={600}
-                                className="w-full h-full object-cover object-top rounded-t-[calc(1.5rem-4px)] transition-transform duration-500 ease-out group-hover:scale-125 group-hover:-translate-y-8 relative z-10"
+                                className="w-full h-full object-cover object-top rounded-t-[calc(1.5rem-4px)] relative z-10"
                                 data-ai-hint={character.imageHint}
                             />
                         </div>
-                        <CardContent className="p-4 text-center bg-background rounded-b-[calc(1.5rem-4px)] relative z-0">
+                        <CardContent className="p-4 text-center bg-background rounded-b-[calc(1.5rem-4px)] relative z-0 flex-grow flex items-center justify-center">
                             <h3 className="text-lg font-bold text-foreground font-headline">
                             {character.id.split('-').slice(1).map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ')}
                             </h3>

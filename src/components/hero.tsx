@@ -3,23 +3,11 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Sparkles, Star, MoveDown } from "lucide-react";
-import { useState, useEffect } from "react";
 
 export default function Hero() {
-  const [height, setHeight] = useState('100svh');
-
-  useEffect(() => {
-    // This effect runs once on the client after the component mounts.
-    // It sets a fixed pixel height for the hero section based on the window's inner height.
-    // This is the most reliable way to prevent the "stretching" or "jank" that occurs
-    // on mobile browsers when the address bar appears or disappears.
-    setHeight(`${window.innerHeight}px`);
-  }, []);
-
   return (
     <section 
-      className="relative w-full overflow-hidden flex items-center justify-center will-change-transform [overscroll-behavior:none] [touch-action:pan-y]"
-      style={{ height: height }}
+      className="relative w-full h-[100svh] overflow-hidden flex items-center justify-center will-change-transform [overscroll-behavior:none] [touch-action:pan-y]"
     >
       {/* Background Gradient & Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-vibrant-pink/20 to-secondary/20 [transform:translateZ(0)]"></div>

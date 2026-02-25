@@ -83,13 +83,15 @@ body {
 @layer base {
   html {
     @apply overflow-x-hidden;
+    overflow-y: auto;
     overscroll-behavior-y: none;
   }
   * {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground overflow-x-hidden;
+    @apply bg-background text-foreground;
+    -webkit-overflow-scrolling: touch;
   }
 }
 

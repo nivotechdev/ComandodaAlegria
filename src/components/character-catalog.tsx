@@ -30,7 +30,7 @@ export default function CharacterCatalog() {
                 <span className="text-accent inline-block rotate-2">Catálogo</span>{' '}
                 <span className="text-secondary inline-block -rotate-1">de Estrelas</span>
             </h2>
-            <p className="max-w-[900px] text-base text-muted-foreground md:text-lg leading-relaxed">
+            <p className="max-w-[900px] text-base text-foreground/80 md:text-lg leading-relaxed">
               De super-heróis a princesas, temos o personagem perfeito para encantar seus convidados.
             </p>
           </div>

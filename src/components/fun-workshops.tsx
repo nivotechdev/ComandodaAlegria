@@ -14,17 +14,17 @@ const Wave = () => (
 
 const workshops = [
   {
-    icon: <Laugh className="h-7 w-7 text-secondary" />,
+    icon: <Laugh className="h-8 w-8 text-secondary" />,
     title: "Recreação Animada",
     description: "Brincadeiras clássicas, gincanas e muita energia para não deixar ninguém parado! Nossa equipe de recreadores transforma qualquer espaço em um parque de diversões.",
   },
   {
-    icon: <Paintbrush className="h-7 w-7 text-accent" />,
+    icon: <Paintbrush className="h-8 w-8 text-accent" />,
     title: "Pinturinha Facial",
     description: "Transformamos as crianças em seus heróis e animais favoritos com tintas antialérgicas e muito brilho! Uma recordação colorida que encanta a todos.",
   },
   {
-    icon: <Gift className="h-7 w-7 text-vibrant-pink" />,
+    icon: <Gift className="h-8 w-8 text-vibrant-pink" />,
     title: "Escultura em Balões",
     description: "Arte com balões que ganham formas de espadas, bichinhos e flores. O presente perfeito para cada convidado levar para casa!",
   },
@@ -41,7 +41,7 @@ export default function FunWorkshops() {
                 <span className="text-accent inline-block rotate-1">que</span>{' '}
                 <span className="text-primary inline-block">Personagens!</span>
             </h2>
-            <p className="max-w-[900px] text-base text-muted-foreground md:text-lg leading-relaxed">
+            <p className="max-w-[900px] text-base text-foreground/80 md:text-lg leading-relaxed">
               Além dos seus heróis e princesas favoritos, oferecemos oficinas que completam a diversão.
             </p>
         </div>
@@ -55,19 +55,19 @@ export default function FunWorkshops() {
                     <Card 
                         key={workshop.title}
                         className={cn(
-                            "flex w-full max-w-sm flex-col items-center text-center p-4 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-105 animate-bounce-in border-4 bg-card",
+                            "flex w-full max-w-sm flex-col items-center text-center p-6 md:p-8 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-105 animate-bounce-in border-4 bg-card",
                             borderColors[index],
                             shadowColors[index]
                         )}
                         style={{ animationDelay: `${index * 150}ms` }}
                     >
                       <CardHeader className="p-0 items-center">
-                        <div className={cn("rounded-full p-3 mb-3", bgColors[index])}>
+                        <div className={cn("rounded-full p-4 mb-4", bgColors[index])}>
                             {workshop.icon}
                         </div>
-                        <CardTitle className="text-lg font-bold font-headline">{workshop.title}</CardTitle>
+                        <CardTitle className="text-xl md:text-2xl font-bold font-headline">{workshop.title}</CardTitle>
                       </CardHeader>
-                      <CardDescription className="mt-2 text-sm font-medium tracking-wide md:text-base leading-relaxed">
+                      <CardDescription className="mt-4 text-base font-medium leading-relaxed text-foreground/90">
                         {workshop.description}
                       </CardDescription>
                     </Card>

@@ -44,7 +44,7 @@ export default function AllCharactersPage() {
                         <span className="text-accent inline-block">Nossos</span>{' '}
                         <span className="text-vibrant-pink inline-block -rotate-1">Amiguinhos!</span>
                     </h1>
-                    <p className="max-w-[700px] text-base text-muted-foreground md:text-lg font-normal leading-relaxed">
+                    <p className="max-w-[700px] text-base text-foreground/80 md:text-lg font-normal leading-relaxed">
                         Aqui a magia ganha vida! Explore nosso catálogo completo e encontre o personagem perfeito para fazer a alegria da sua festa.
                     </p>
                 </div>

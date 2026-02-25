@@ -11,17 +11,17 @@ const Wave = () => (
 
 const features = [
   {
-    icon: <Clock className="h-7 w-7 text-primary" />,
+    icon: <Clock className="h-8 w-8 text-primary" />,
     title: "Pontualidade Britânica",
     description: "Chegamos sempre no horário para garantir que a magia comece na hora certa, sem estresse para você."
   },
   {
-    icon: <Crown className="h-7 w-7 text-secondary" />,
+    icon: <Crown className="h-8 w-8 text-secondary" />,
     title: "Fantasias de Luxo",
     description: "Nossos trajes são de alta costura, fiéis aos personagens e impressionam pela riqueza de detalhes."
   },
   {
-    icon: <PartyPopper className="h-7 w-7 text-accent" />,
+    icon: <PartyPopper className="h-8 w-8 text-accent" />,
     title: "Equipe Treinada e Animada",
     description: "Profissionais carismáticos e preparados para entreter, garantindo a segurança e diversão de todos."
   },
@@ -38,20 +38,20 @@ export default function ServiceHighlights() {
                 <span className="text-vibrant-pink inline-block -rotate-2">somos a</span>{' '}
                 <span className="text-primary inline-block rotate-1">escolha certa?</span>
             </h2>
-            <p className="max-w-[900px] text-base text-muted-foreground md:text-lg leading-relaxed">
+            <p className="max-w-[900px] text-base text-foreground/80 md:text-lg leading-relaxed">
               Oferecemos mais do que entretenimento, entregamos uma experiência mágica e inesquecível.
             </p>
         </div>
         <div className="grid gap-8 md:grid-cols-3">
           {features.map((feature, index) => (
-            <Card key={feature.title} className="flex h-full flex-col items-center text-center p-4 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-primary/20 hover:shadow-xl hover:-translate-y-2 border-2 border-transparent hover:border-primary animate-bounce-in" style={{ animationDelay: `${index * 150}ms` }}>
+            <Card key={feature.title} className="flex h-full flex-col items-center text-center p-6 md:p-8 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-primary/20 hover:shadow-xl hover:-translate-y-2 border-2 border-transparent hover:border-primary animate-bounce-in" style={{ animationDelay: `${index * 150}ms` }}>
               <CardHeader className="p-0 items-center">
-                <div className="bg-primary/10 rounded-full p-3 mb-3 inline-block">
+                <div className="bg-primary/10 rounded-full p-4 mb-4 inline-block">
                     {feature.icon}
                 </div>
-                <CardTitle className="text-lg font-bold font-headline">{feature.title}</CardTitle>
+                <CardTitle className="text-xl md:text-2xl font-bold font-headline">{feature.title}</CardTitle>
               </CardHeader>
-              <CardDescription className="mt-2 text-sm font-medium tracking-wide md:text-base leading-relaxed">
+              <CardDescription className="mt-4 text-base font-medium leading-relaxed text-foreground/90">
                 {feature.description}
               </CardDescription>
             </Card>

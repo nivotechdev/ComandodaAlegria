@@ -70,7 +70,7 @@ export default function Footer() {
         </div>
         
       </div>
-       <div className="bg-primary text-primary-foreground text-center py-3 font-semibold text-sm">
+       <div className="text-center py-3 font-semibold text-sm">
            © {new Date().getFullYear()} Comando da Alegria • Levando magia onde você estiver!
        </div>
     </footer>

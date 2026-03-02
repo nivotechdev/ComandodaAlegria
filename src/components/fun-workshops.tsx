@@ -1,3 +1,5 @@
+'use client';
+
 import { Paintbrush, Laugh, Gift } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -19,6 +21,7 @@ const workshops = [
     description: "Brincadeiras clássicas, gincanas e muita energia para não deixar ninguém parado! Nossa equipe de recreadores transforma qualquer espaço em um parque de diversões.",
     bgColor: "bg-secondary/10",
     shadowColor: "hover:shadow-secondary/20",
+    titleColor: "text-secondary",
   },
   {
     icon: <Paintbrush className="h-8 w-8 text-accent" />,
@@ -26,6 +29,7 @@ const workshops = [
     description: "Transformamos as crianças em seus heróis e animais favoritos com tintas antialérgicas e muito brilho! Uma recordação colorida que encanta a todos.",
     bgColor: "bg-accent/10",
     shadowColor: "hover:shadow-accent/20",
+    titleColor: "text-accent",
   },
   {
     icon: <Gift className="h-8 w-8 text-vibrant-pink" />,
@@ -33,6 +37,7 @@ const workshops = [
     description: "Arte com balões que ganham formas de espadas, bichinhos e flores. O presente perfeito para cada convidado levar para casa!",
     bgColor: "bg-vibrant-pink/10",
     shadowColor: "hover:shadow-vibrant-pink/20",
+    titleColor: "text-vibrant-pink",
   },
 ]
 
@@ -66,16 +71,19 @@ export default function FunWorkshops() {
                     <div className="bg-white/50 rounded-full p-4 mb-4">
                         {workshop.icon}
                     </div>
-                    <CardTitle className="text-xl md:text-2xl font-bold font-headline text-card-foreground">{workshop.title}</CardTitle>
+                    <CardTitle className={cn("text-2xl font-headline", workshop.titleColor)}>{workshop.title}</CardTitle>
                   </CardHeader>
-                  <CardDescription className="mt-4 text-base font-medium leading-relaxed text-foreground/80">
+                  <CardDescription className="mt-4 text-base font-medium leading-relaxed text-foreground/80 flex-grow">
                     {workshop.description}
                   </CardDescription>
+                  <div className="mt-auto pt-6">
+                    <Button variant="outline" size="sm" className="rounded-full font-semibold">Ver Fotos</Button>
+                  </div>
                 </Card>
             ))}
         </div>
         <div className="mt-16 text-center">
-            <Button asChild size="lg" className="bg-gradient-to-r from-vibrant-pink to-accent text-white rounded-full px-10 py-7 text-lg font-bold shadow-xl hover:shadow-2xl hover:shadow-accent/30 transition-all hover:scale-105 active:scale-100">
+            <Button asChild size="lg" className="bg-vibrant-pink text-white hover:bg-vibrant-pink/90 rounded-full px-10 py-7 text-lg font-bold shadow-xl transition-all hover:scale-110 active:scale-105 animate-pulse-balloon">
                 <Link href="#contact">Ver Pacotes e Combos</Link>
             </Button>
         </div>

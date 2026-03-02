@@ -141,6 +141,11 @@ export default {
         'twinkle': {
             '50%': { opacity: '0.6' },
         },
+        'dot-blink': {
+          '0%': { opacity: '0.2' },
+          '20%': { opacity: '1' },
+          '100%': { opacity: '0.2' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -153,6 +158,7 @@ export default {
         'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
         'fade-in-down': 'fade-in-down 0.8s ease-out forwards',
         'twinkle': 'twinkle 3s ease-in-out infinite',
+        'dot-blink': 'dot-blink 1.4s infinite ease-in-out both',
       },
     },
   },

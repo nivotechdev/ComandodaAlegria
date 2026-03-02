@@ -1,7 +1,7 @@
 'use client';
 
 import { Paintbrush, Laugh, Gift } from "lucide-react";
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -61,29 +61,31 @@ export default function FunWorkshops() {
                 <Card 
                     key={workshop.title}
                     className={cn(
-                        "flex w-full max-w-sm flex-col items-center text-center p-6 md:p-8 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border-2 border-white/50 animate-bounce-in",
+                        "flex w-full max-w-sm flex-col items-center text-center rounded-3xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border-2 border-white/50 animate-bounce-in",
                         workshop.bgColor,
                         workshop.shadowColor
                     )}
                     style={{ animationDelay: `${index * 150}ms` }}
                 >
-                  <CardHeader className="p-0 items-center">
-                    <div className="bg-white/50 rounded-full p-4 mb-4">
-                        {workshop.icon}
-                    </div>
-                    <CardTitle className={cn("text-2xl font-headline", workshop.titleColor)}>{workshop.title}</CardTitle>
-                  </CardHeader>
-                  <CardDescription className="mt-4 text-base font-medium leading-relaxed text-foreground/80 flex-grow">
-                    {workshop.description}
-                  </CardDescription>
-                  <div className="mt-auto pt-6">
-                    <Button variant="outline" size="sm" className="rounded-full font-semibold">Ver Fotos</Button>
-                  </div>
+                    <CardHeader className="p-6 md:p-8 items-center">
+                        <div className="bg-white/50 rounded-full p-4 mb-4">
+                            {workshop.icon}
+                        </div>
+                        <CardTitle className={cn("text-2xl font-headline", workshop.titleColor)}>{workshop.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="px-6 md:px-8 pt-0 flex-grow">
+                        <p className="text-base font-medium leading-relaxed text-foreground/80" style={{lineHeight: 1.8}}>
+                            {workshop.description}
+                        </p>
+                    </CardContent>
+                    <CardFooter className="p-6 md:p-8 pt-0">
+                        <Button variant="outline" size="sm" className="rounded-full font-semibold">Ver Fotos</Button>
+                    </CardFooter>
                 </Card>
             ))}
         </div>
         <div className="mt-16 text-center">
-            <Button asChild size="lg" className="bg-vibrant-pink text-white hover:bg-vibrant-pink/90 rounded-full px-10 py-7 text-lg font-bold shadow-xl transition-all hover:scale-110 active:scale-105 animate-pulse-balloon">
+            <Button asChild className="bg-vibrant-pink text-white hover:bg-vibrant-pink/90 rounded-full px-8 text-base font-bold shadow-lg transition-all animate-pulse-balloon hover:animate-none hover:scale-105 h-[50px] min-w-[240px]">
                 <Link href="#contact">Ver Pacotes e Combos</Link>
             </Button>
         </div>

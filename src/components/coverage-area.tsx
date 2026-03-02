@@ -37,7 +37,7 @@ export default function CoverageArea() {
                 Não importa o lugar, a magia chega num balão! Atendemos em casas, prédios, parques e empresas com toda a estrutura necessária.
                 </p>
             </div>
-            <Button asChild size="lg" className="bg-vibrant-pink text-white rounded-full px-6 py-5 text-lg sm:px-10 sm:py-7 sm:text-xl font-bold shadow-lg hover:shadow-xl transition-all hover:scale-110 active:scale-105 w-full max-w-sm sm:w-auto animate-pulse-balloon">
+            <Button asChild className="bg-vibrant-pink text-white hover:bg-vibrant-pink/90 rounded-full px-8 text-base font-bold shadow-lg transition-all animate-pulse-balloon hover:animate-none hover:scale-105 h-[50px] min-w-[240px] mt-16">
                 <Link href="#contact">Quero a Comando na minha festa!</Link>
             </Button>
         </div>

@@ -111,7 +111,7 @@ export default {
         },
         'pulse-logo': {
             '0%, 100%': { transform: 'scale(1)' },
-            '50%': { transform: 'scale(1.03)' },
+            '50%': { transform: 'scale(1.05)' },
         },
         'bounce-in': {
           '0%': { transform: 'scale(0.9)', opacity: '0' },
@@ -153,7 +153,7 @@ export default {
         'float': 'float 4s ease-in-out infinite',
         'float-alt': 'float-alt 5s ease-in-out infinite',
         'pulse-balloon': 'pulse-balloon 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'pulse-logo': 'pulse-logo 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'pulse-logo': 'pulse-logo 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'bounce-in': 'bounce-in 0.6s ease-out',
         'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
         'fade-in-down': 'fade-in-down 0.8s ease-out forwards',

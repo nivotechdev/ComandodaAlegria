@@ -9,7 +9,7 @@ export default function Preloader() {
 
   useEffect(() => {
     // This timer simulates the loading process.
-    const timer = setTimeout(() => setLoading(false), 2500); 
+    const timer = setTimeout(() => setLoading(false), 1800); 
     return () => clearTimeout(timer);
   }, []);
   
@@ -29,8 +29,8 @@ export default function Preloader() {
   return (
     <div
       className={cn(
-        'fixed inset-0 z-[9999] flex items-center justify-center bg-primary transition-opacity duration-1000 ease-out',
-        loading ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        'fixed inset-0 z-[9999] flex items-center justify-center bg-gradient-to-br from-primary via-vibrant-pink to-accent transition-all duration-1000 ease-out',
+        loading ? 'opacity-100' : 'opacity-0 -translate-y-full pointer-events-none'
       )}
       aria-hidden={!loading}
     >

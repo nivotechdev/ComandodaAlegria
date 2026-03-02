@@ -29,8 +29,8 @@ export default function Preloader() {
   return (
     <div
       className={cn(
-        'fixed inset-0 z-[9999] flex items-center justify-center bg-gradient-to-br from-primary via-vibrant-pink to-accent transition-all duration-1000 ease-out',
-        loading ? 'opacity-100' : 'opacity-0 -translate-y-full pointer-events-none'
+        'fixed inset-0 z-[9999] flex items-center justify-center bg-gradient-to-br from-primary/20 via-vibrant-pink/20 to-secondary/20 transition-opacity duration-1000 ease-out',
+        loading ? 'opacity-100' : 'opacity-0 pointer-events-none'
       )}
       aria-hidden={!loading}
     >
@@ -48,7 +48,7 @@ export default function Preloader() {
           className="animate-pulse-logo h-auto max-w-[70vw] drop-shadow-xl md:max-w-md"
           priority
         />
-        <p className="mt-8 text-2xl font-headline text-white">
+        <p className="mt-8 text-2xl font-headline text-foreground/80">
           Preparando a diversão
           <span className="animate-dot-blink" style={{ animationDelay: '0s' }}>.</span>
           <span className="animate-dot-blink" style={{ animationDelay: '0.2s' }}>.</span>

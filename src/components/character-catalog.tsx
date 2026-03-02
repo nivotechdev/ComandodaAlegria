@@ -35,30 +35,30 @@ export default function CharacterCatalog() {
             </p>
           </div>
         </div>
-        <div className="pt-20 grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-20">
+        <div className="pt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
             {displayedCharacters.map((character, index) => (
-                <div key={character.id} className="group animate-bounce-in [animation-fill-mode:backwards]" style={{ animationDelay: `${index * 100}ms` }}>
-                    <Card className={`overflow-hidden relative rounded-3xl border-4 bg-background shadow-lg transition-all duration-300 group-hover:shadow-2xl group-hover:-translate-y-4 group-hover:-rotate-[4deg] ${borderColors[index % borderColors.length]} flex flex-col h-full`}>
-                        <div className="relative aspect-[3/4] rounded-t-[calc(1.5rem-4px)]">
+                <div key={character.id} className="group">
+                    <Card className={`overflow-hidden rounded-3xl border-2 shadow-md transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-2 flex flex-col h-full ${borderColors[index % borderColors.length]}`}>
+                        <div className="relative aspect-[3/4] overflow-hidden">
                             <Image
                                 src={character.imageUrl}
                                 alt={character.description}
-                                width={400}
-                                height={600}
-                                className="w-full h-full object-cover object-top rounded-t-[calc(1.5rem-4px)] relative z-10"
+                                fill
+                                className="object-cover object-top transition-transform duration-300 group-hover:scale-105"
                                 data-ai-hint={character.imageHint}
+                                sizes="(max-width: 768px) 50vw, 25vw"
                             />
+                            <div className="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none">
+                                 <Button asChild className="pointer-events-auto rounded-full bg-vibrant-pink px-6 text-sm font-bold text-white shadow-lg transition-all duration-300 scale-90 group-hover:scale-100">
+                                    <Link href="#contact">Quero este na festa!</Link>
+                                </Button>
+                            </div>
                         </div>
-                        <CardContent className="p-4 text-center bg-background rounded-b-[calc(1.5rem-4px)] relative z-0 flex-grow flex items-center justify-center">
+                        <CardContent className="p-4 text-center bg-background flex-grow flex items-center justify-center">
                             <h3 className="text-lg font-bold text-foreground font-headline">
-                            {character.id.split('-').slice(1).map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ')}
+                                {character.id.split('-').slice(1).map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ')}
                             </h3>
                         </CardContent>
-                        <div className="absolute inset-0 flex items-end justify-center p-6 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 rounded-[calc(1.5rem-4px)] z-20 pointer-events-none">
-                             <Button asChild className="pointer-events-auto rounded-full bg-vibrant-pink px-6 text-sm font-bold text-white shadow-lg transition-all duration-300 group-hover:-translate-y-2 group-hover:scale-110">
-                                <Link href="#contact">Quero este na festa!</Link>
-                            </Button>
-                        </div>
                     </Card>
                 </div>
             ))}

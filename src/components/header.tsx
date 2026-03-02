@@ -34,8 +34,8 @@ export default function Header() {
             <Image
               src="https://whfdrrdozhyavyflgaxo.supabase.co/storage/v1/object/sign/Comando%20da%20Alegria/Design%20sem%20nome%20(14).png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOWY1OGE2Ni03MDFhLTRhNDQtOWJhZC0zOGRkNmVkYTNhODAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJDb21hbmRvIGRhIEFsZWdyaWEvRGVzaWduIHNlbSBub21lICgxNCkucG5nIiwiaWF0IjoxNzcyNDkyODg4LCJleHAiOjQ4OTQ1NTY4ODh9.CEdsO1GsNNTUbhb4unjCYM9NC1YJ4_R9Yf5ZABMhvL8"
               alt="Comando da Alegria Logo"
-              width={56}
-              height={56}
+              width={64}
+              height={64}
               className="object-contain drop-shadow-lg"
             />
           </Link>

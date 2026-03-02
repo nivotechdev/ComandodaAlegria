@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section 
-      className="relative w-full h-[100svh] overflow-hidden flex items-center justify-center bg-cover bg-center"
+      className="relative w-full min-h-[100svh] overflow-hidden flex items-center justify-center bg-cover bg-center"
       style={{
           backgroundImage: `url('https://whfdrrdozhyavyflgaxo.supabase.co/storage/v1/object/sign/Comando%20da%20Alegria/fundo%20comando.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOWY1OGE2Ni03MDFhLTRhNDQtOWJhZC0zOGRkNmVkYTNhODAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJDb21hbmRvIGRhIEFsZWdyaWEvZnVuZG8gY29tYW5kby5wbmciLCJpYXQiOjE3NzI0OTE3NDcsImV4cCI6NDg5NDU1NTc0N30.Oqxd1q3rfMAVA4v94FMYPXHvpOQFZt7SIOpt_njvQdY')`
       }}

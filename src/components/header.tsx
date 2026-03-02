@@ -11,8 +11,11 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
+    
     const handleScroll = () => {
       setScrolled(window.scrollY > 80);
     };
@@ -60,23 +63,25 @@ export default function Header() {
               <Button asChild size="sm" className="rounded-full bg-accent font-bold text-accent-foreground">
                   <Link href="#contact">Orçamento</Link>
               </Button>
-              <Sheet>
-                <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon" className="rounded-full">
-                    <Menu className="h-6 w-6" />
-                    <span className="sr-only">Abrir menu</span>
-                  </Button>
-                </SheetTrigger>
-                <SheetContent side="right" className="w-[80vw] bg-background/95 backdrop-blur-lg">
-                  <div className="flex flex-col h-full p-4">
-                    <nav className="flex flex-col gap-8 text-xl font-headline font-semibold mt-16 text-center">
-                      <Link href="/personagens" className="text-foreground/80 hover:text-primary transition-colors">Personagens</Link>
-                      <Link href="/#services" className="text-foreground/80 hover:text-primary transition-colors">Serviços</Link>
-                      <Link href="/#coverage" className="text-foreground/80 hover:text-primary transition-colors">Área de Atendimento</Link>
-                    </nav>
-                  </div>
-                </SheetContent>
-              </Sheet>
+              {isMounted && (
+                <Sheet>
+                  <SheetTrigger asChild>
+                    <Button variant="ghost" size="icon" className="rounded-full">
+                      <Menu className="h-6 w-6" />
+                      <span className="sr-only">Abrir menu</span>
+                    </Button>
+                  </SheetTrigger>
+                  <SheetContent side="right" className="w-[80vw] bg-background/95 backdrop-blur-lg">
+                    <div className="flex flex-col h-full p-4">
+                      <nav className="flex flex-col gap-8 text-xl font-headline font-semibold mt-16 text-center">
+                        <Link href="/personagens" className="text-foreground/80 hover:text-primary transition-colors">Personagens</Link>
+                        <Link href="/#services" className="text-foreground/80 hover:text-primary transition-colors">Serviços</Link>
+                        <Link href="/#coverage" className="text-foreground/80 hover:text-primary transition-colors">Área de Atendimento</Link>
+                      </nav>
+                    </div>
+                  </SheetContent>
+                </Sheet>
+              )}
             </div>
           </div>
 

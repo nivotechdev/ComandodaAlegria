@@ -17,16 +17,22 @@ const workshops = [
     icon: <Laugh className="h-8 w-8 text-secondary" />,
     title: "Recreação Animada",
     description: "Brincadeiras clássicas, gincanas e muita energia para não deixar ninguém parado! Nossa equipe de recreadores transforma qualquer espaço em um parque de diversões.",
+    bgColor: "bg-secondary/10",
+    shadowColor: "hover:shadow-secondary/20",
   },
   {
     icon: <Paintbrush className="h-8 w-8 text-accent" />,
     title: "Pinturinha Facial",
     description: "Transformamos as crianças em seus heróis e animais favoritos com tintas antialérgicas e muito brilho! Uma recordação colorida que encanta a todos.",
+    bgColor: "bg-accent/10",
+    shadowColor: "hover:shadow-accent/20",
   },
   {
     icon: <Gift className="h-8 w-8 text-vibrant-pink" />,
     title: "Escultura em Balões",
     description: "Arte com balões que ganham formas de espadas, bichinhos e flores. O presente perfeito para cada convidado levar para casa!",
+    bgColor: "bg-vibrant-pink/10",
+    shadowColor: "hover:shadow-vibrant-pink/20",
   },
 ]
 
@@ -46,38 +52,31 @@ export default function FunWorkshops() {
             </p>
         </div>
         <div className="grid justify-items-center gap-8 md:grid-cols-3">
-            {workshops.map((workshop, index) => {
-                const borderColors = ["border-secondary", "border-accent", "border-vibrant-pink"];
-                const bgColors = ["bg-secondary/10", "bg-accent/10", "bg-vibrant-pink/10"];
-                const shadowColors = ["hover:shadow-secondary/30", "hover:shadow-accent/30", "hover:shadow-vibrant-pink/30"];
-                
-                return (
-                    <Card 
-                        key={workshop.title}
-                        className={cn(
-                            "flex w-full max-w-sm flex-col items-center text-center p-6 md:p-8 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-105 animate-bounce-in border-4 bg-card",
-                            borderColors[index],
-                            shadowColors[index]
-                        )}
-                        style={{ animationDelay: `${index * 150}ms` }}
-                    >
-                      <CardHeader className="p-0 items-center">
-                        <div className={cn("rounded-full p-4 mb-4", bgColors[index])}>
-                            {workshop.icon}
-                        </div>
-                        <CardTitle className="text-xl md:text-2xl font-bold font-headline">{workshop.title}</CardTitle>
-                      </CardHeader>
-                      <CardDescription className="mt-4 text-base font-medium leading-relaxed text-foreground/90">
-                        {workshop.description}
-                      </CardDescription>
-                    </Card>
-                );
-            })}
+            {workshops.map((workshop, index) => (
+                <Card 
+                    key={workshop.title}
+                    className={cn(
+                        "flex w-full max-w-sm flex-col items-center text-center p-6 md:p-8 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border-2 border-white/50 animate-bounce-in",
+                        workshop.bgColor,
+                        workshop.shadowColor
+                    )}
+                    style={{ animationDelay: `${index * 150}ms` }}
+                >
+                  <CardHeader className="p-0 items-center">
+                    <div className="bg-white/50 rounded-full p-4 mb-4">
+                        {workshop.icon}
+                    </div>
+                    <CardTitle className="text-xl md:text-2xl font-bold font-headline text-card-foreground">{workshop.title}</CardTitle>
+                  </CardHeader>
+                  <CardDescription className="mt-4 text-base font-medium leading-relaxed text-foreground/80">
+                    {workshop.description}
+                  </CardDescription>
+                </Card>
+            ))}
         </div>
         <div className="mt-16 text-center">
-            <p className="text-xl font-medium text-foreground/80 mb-4">Quer o pacote completo?</p>
-            <Button asChild size="lg" className="bg-primary text-primary-foreground rounded-full px-8 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all hover:scale-110 active:scale-105">
-                <Link href="#contact">Consultar Combos</Link>
+            <Button asChild size="lg" className="bg-gradient-to-r from-vibrant-pink to-accent text-white rounded-full px-10 py-7 text-lg font-bold shadow-xl hover:shadow-2xl hover:shadow-accent/30 transition-all hover:scale-105 active:scale-100">
+                <Link href="#contact">Ver Pacotes e Combos</Link>
             </Button>
         </div>
       </div>

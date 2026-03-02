@@ -30,7 +30,7 @@ export default function Header() {
       <div className="container px-5">
         <nav className={cn("flex w-full items-center justify-between gap-4 rounded-full bg-background/90 px-4 h-16 backdrop-blur-lg transition-all duration-300", scrolled ? 'shadow-lg border border-primary/20' : 'shadow-none')}>
           
-          <Link href="/" className="flex flex-shrink-0 items-center ml-2.5">
+          <Link href="/" className="flex flex-shrink-0 items-center ml-2.5" style={{ transform: 'translateX(20px)' }}>
             <Image
               src="https://whfdrrdozhyavyflgaxo.supabase.co/storage/v1/object/sign/Comando%20da%20Alegria/Design%20sem%20nome%20(14).png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOWY1OGE2Ni03MDFhLTRhNDQtOWJhZC0zOGRkNmVkYTNhODAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJDb21hbmRvIGRhIEFsZWdyaWEvRGVzaWduIHNlbSBub21lICgxNCkucG5nIiwiaWF0IjoxNzcyNDkyODg4LCJleHAiOjQ4OTQ1NTY4ODh9.CEdsO1GsNNTUbhb4unjCYM9NC1YJ4_R9Yf5ZABMhvL8"
               alt="Comando da Alegria Logo"

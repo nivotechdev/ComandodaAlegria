@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
+import Preloader from '@/components/preloader';
 
 
 export const metadata: Metadata = {
@@ -22,6 +23,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Lexend:wght@400;500;600&family=Pacifico&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased">
+        <Preloader />
         {children}
         <Toaster />
       </body>

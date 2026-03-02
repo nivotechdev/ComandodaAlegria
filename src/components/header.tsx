@@ -13,7 +13,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      setScrolled(window.scrollY > 80);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -22,7 +22,8 @@ export default function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 flex justify-center transition-all duration-300 pt-2"
+        "fixed top-0 left-0 right-0 z-50 flex justify-center transition-all duration-300 pt-2",
+        scrolled ? "opacity-100" : "opacity-0 -translate-y-4 pointer-events-none"
       )}
     >
       <div className="container px-5">

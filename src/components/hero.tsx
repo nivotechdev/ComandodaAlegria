@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import { MoveDown } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -38,10 +37,6 @@ export default function Hero() {
                 <Link href="#characters">VER PERSONAGENS</Link>
             </Button>
         </div>
-      </div>
-      
-      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 text-white/70 animate-bounce z-20">
-          <MoveDown className="h-8 w-8" />
       </div>
     </section>
   );

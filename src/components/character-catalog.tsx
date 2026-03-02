@@ -67,10 +67,10 @@ export default function CharacterCatalog() {
           <div className="mt-16 text-center">
             <Button
               asChild
-              size="lg"
-              className="bg-vibrant-pink text-white rounded-full px-10 py-8 text-xl font-bold shadow-lg hover:shadow-xl transition-all hover:scale-110 active:scale-95 animate-pulse-balloon touch-manipulation"
+              variant="outline"
+              className="h-auto rounded-full border-vibrant-pink px-8 py-3 text-base font-medium tracking-wide text-vibrant-pink transition-colors duration-300 hover:scale-105 hover:bg-vibrant-pink hover:text-white"
             >
-              <Link href="/personagens">✨ Ver Mais Personagens</Link>
+              <Link href="/personagens">Ver mais personagens</Link>
             </Button>
           </div>
         )}

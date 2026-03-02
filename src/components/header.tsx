@@ -39,7 +39,7 @@ export default function Header() {
           
           <Link href="/" className="flex flex-shrink-0 items-center -my-3">
             <Image
-              src="https://whfdrrdozhyavyflgaxo.supabase.co/storage/v1/object/sign/Comando%20da%20Alegria/Design%20sem%20nome%20(14).png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOWY1OGE2Ni03MDFhLTRhNDQtOWJhZC0zOGRkNmVkYTNhODAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJDb21hbmRvIGRhIEFsZWdyaWEvRGVzaWduIHNlbSBub21lICgxNCkucG5nIiwiaWF0IjoxNzcxODc1MzI2LCJleHAiOjg3NzI4NjczMjZ9.zN-pJQbd5SNDgSKBSBw1uvsN3skWm-hbPu4gk4ebkk0"
+              src="https://whfdrrdozhyavyflgaxo.supabase.co/storage/v1/object/sign/Comando%20da%20Alegria/3422ba6e-664b-4a8a-a483-64cb728c37ea.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOWY1OGE2Ni03MDFhLTRhNDQtOWJhZC0zOGRkNmVkYTNhODAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJDb21hbmRvIGRhIEFsZWdyaWEvMzQyMmJhNmUtNjY0Yi00YThhLWE0ODMtNjRjYjcyOGMzN2VhLnBuZyIsImlhdCI6MTc3MjQ5MjQzOSwiZXhwIjozMzI3Njk1NjQzOX0._6wTUBAwQcnHET3WKUiSleZxfSeF8AldY2Pj44vUXGc"
               alt="Comando da Alegria Logo"
               width={90}
               height={90}

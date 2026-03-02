@@ -40,7 +40,7 @@ export default function Hero() {
         </div>
       </div>
       
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/70 animate-bounce z-20">
+      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 text-white/70 animate-bounce z-20">
           <MoveDown className="h-8 w-8" />
       </div>
     </section>

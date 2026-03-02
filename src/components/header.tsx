@@ -27,7 +27,7 @@ export default function Header() {
       )}
     >
       <div className="container px-5">
-        <nav className={cn("flex w-full items-center justify-between gap-4 rounded-full bg-background/90 px-4 backdrop-blur-lg transition-all duration-300 md:justify-around", scrolled ? 'shadow-lg ring-1 ring-black/5' : 'shadow-none')}>
+        <nav className={cn("flex w-full items-center justify-between gap-4 rounded-full bg-background/90 px-4 h-16 backdrop-blur-lg transition-all duration-300 md:justify-around", scrolled ? 'shadow-lg border-b border-primary/30' : 'shadow-none')}>
           <div className="hidden items-center gap-6 md:flex">
             <Link href="/personagens" className="flex items-center gap-2 font-headline text-lg font-semibold text-foreground/70 transition-colors hover:text-primary">
               <Users className="h-5 w-5" /> Personagens
@@ -37,13 +37,13 @@ export default function Header() {
             </Link>
           </div>
           
-          <Link href="/" className="flex flex-shrink-0 items-center -my-3">
+          <Link href="/" className="flex flex-shrink-0 items-center">
             <Image
               src="https://whfdrrdozhyavyflgaxo.supabase.co/storage/v1/object/sign/Comando%20da%20Alegria/3422ba6e-664b-4a8a-a483-64cb728c37ea.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOWY1OGE2Ni03MDFhLTRhNDQtOWJhZC0zOGRkNmVkYTNhODAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJDb21hbmRvIGRhIEFsZWdyaWEvMzQyMmJhNmUtNjY0Yi00YThhLWE0ODMtNjRjYjcyOGMzN2VhLnBuZyIsImlhdCI6MTc3MjQ5MjQzOSwiZXhwIjozMzI3Njk1NjQzOX0._6wTUBAwQcnHET3WKUiSleZxfSeF8AldY2Pj44vUXGc"
               alt="Comando da Alegria Logo"
-              width={90}
-              height={90}
-              className="drop-shadow-lg"
+              width={48}
+              height={48}
+              className="object-contain drop-shadow-lg"
             />
           </Link>
 

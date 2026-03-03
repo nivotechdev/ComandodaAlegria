@@ -79,11 +79,11 @@ export default function Header() {
                     <div className="relative flex h-full flex-col overflow-hidden">
                         
                         {/* Stars decoration */}
-                        <Sparkles className="absolute top-1/4 right-1/4 h-4 w-4 text-vibrant-pink/50 opacity-80 animate-twinkle" style={{animationDelay: '1s'}} />
-                        <Sparkles className="absolute bottom-1/4 right-1/2 h-5 w-5 text-white opacity-90 animate-twinkle" style={{animationDelay: '0.5s'}} />
-                        <Sparkles className="absolute bottom-1/3 left-1/4 h-3 w-3 text-accent/50 opacity-60 animate-twinkle" style={{animationDelay: '1.5s'}} />
-                        <Sparkles className="absolute top-1/2 left-[15%] h-6 w-6 text-primary/50 opacity-70 animate-twinkle" style={{animationDelay: '2s'}} />
-                        <Sparkles className="absolute bottom-2/3 right-[10%] h-4 w-4 text-secondary/50 opacity-60 animate-twinkle" style={{animationDelay: '2.5s'}} />
+                        <Sparkles className="absolute top-1/3 right-1/4 h-5 w-5 text-white/50 opacity-80 animate-twinkle" style={{animationDelay: '1s'}} />
+                        <Sparkles className="absolute bottom-10 right-10 h-8 w-8 text-white/90 opacity-90 animate-twinkle" style={{animationDelay: '0.5s'}} />
+                        <Sparkles className="absolute bottom-1/4 left-1/4 h-4 w-4 text-white/60 opacity-60 animate-twinkle" style={{animationDelay: '1.5s'}} />
+                        <Sparkles className="absolute top-1/2 left-[10%] h-6 w-6 text-primary/50 opacity-70 animate-twinkle" style={{animationDelay: '2s'}} />
+                        <Sparkles className="absolute bottom-1/3 right-[15%] h-5 w-5 text-white/70 opacity-60 animate-twinkle" style={{animationDelay: '2.5s'}} />
 
                         <div className="flex items-center justify-center p-4 border-b border-white/20">
                             <Link href="/">
@@ -109,18 +109,18 @@ export default function Header() {
                       </nav>
 
                       <div className="mt-auto border-t border-white/20 p-6">
-                        <p className="mb-4 text-center font-headline text-base text-white/80">Siga nossa alegria:</p>
+                        <p className="mb-4 text-center font-headline text-base text-white/80">Acompanhe nossa alegria:</p>
                         <div className="flex items-center justify-center space-x-4">
-                           <Link href="#" className="h-12 w-12 bg-white rounded-full flex items-center justify-center text-[#E4405F] transition-transform hover:scale-110 shadow-lg border-2 border-[#E4405F]/50">
-                                <Instagram className="h-7 w-7" />
+                           <Link href="#" className="h-16 w-16 bg-white rounded-full flex items-center justify-center text-[#E4405F] transition-transform hover:scale-110 shadow-lg border-2 border-[#E4405F]/50">
+                                <Instagram className="h-8 w-8" />
                                 <span className="sr-only">Instagram</span>
                             </Link>
-                            <Link href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" className="h-12 w-12 bg-white rounded-full flex items-center justify-center text-[#25D366] transition-transform hover:scale-110 shadow-lg border-2 border-[#25D366]/50">
-                                <WhatsAppIcon className="h-7 w-7 p-px" />
+                            <Link href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" className="h-16 w-16 bg-white rounded-full flex items-center justify-center text-[#25D366] transition-transform hover:scale-110 shadow-lg border-2 border-[#25D366]/50">
+                                <WhatsAppIcon className="h-9 w-9 p-0.5" />
                                 <span className="sr-only">WhatsApp</span>
                             </Link>
-                            <Link href="#" className="h-12 w-12 bg-white rounded-full flex items-center justify-center text-[#1877F2] transition-transform hover:scale-110 shadow-lg border-2 border-[#1877F2]/50">
-                                <Facebook className="h-7 w-7" />
+                            <Link href="#" className="h-16 w-16 bg-white rounded-full flex items-center justify-center text-[#1877F2] transition-transform hover:scale-110 shadow-lg border-2 border-[#1877F2]/50">
+                                <Facebook className="h-8 w-8" />
                                 <span className="sr-only">Facebook</span>
                             </Link>
                         </div>

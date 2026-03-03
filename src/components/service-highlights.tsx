@@ -1,5 +1,4 @@
 import { Crown, Clock, PartyPopper } from "lucide-react";
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
 const Wave = () => (
     <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] -translate-y-px">
@@ -44,17 +43,18 @@ export default function ServiceHighlights() {
         </div>
         <div className="grid gap-8 md:grid-cols-3">
           {features.map((feature, index) => (
-            <Card key={feature.title} className="flex h-full flex-col items-center text-center p-6 md:p-8 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-primary/20 hover:shadow-xl hover:-translate-y-2 border-2 border-transparent hover:border-primary animate-bounce-in" style={{ animationDelay: `${index * 150}ms` }}>
-              <CardHeader className="p-0 items-center">
-                <div className="bg-primary/10 rounded-full p-4 mb-4 inline-block">
-                    {feature.icon}
-                </div>
-                <CardTitle className="text-xl md:text-2xl font-bold font-headline">{feature.title}</CardTitle>
-              </CardHeader>
-              <CardDescription className="mt-4 text-base font-medium leading-relaxed text-foreground/90">
+            <div 
+              key={feature.title} 
+              className="bg-background/30 backdrop-blur-sm border border-white/20 rounded-3xl p-6 md:p-8 flex h-full flex-col items-center text-center shadow-xl transition-all duration-300 hover:border-primary/50 hover:shadow-primary/20 hover:-translate-y-2 animate-bounce-in" 
+              style={{ animationDelay: `${index * 150}ms` }}>
+              <div className="bg-primary/10 rounded-full p-4 mb-4 inline-block">
+                  {feature.icon}
+              </div>
+              <h3 className="text-2xl font-headline text-foreground">{feature.title}</h3>
+              <p className="mt-4 text-base font-medium leading-loose text-foreground/80">
                 {feature.description}
-              </CardDescription>
-            </Card>
+              </p>
+            </div>
           ))}
         </div>
       </div>

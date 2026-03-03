@@ -49,7 +49,7 @@ export default function CharacterCatalog() {
                                 sizes="(max-width: 768px) 50vw, 25vw"
                             />
                             <div className="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none">
-                                 <Button asChild className="pointer-events-auto rounded-full bg-vibrant-pink px-6 text-sm font-bold text-white shadow-lg transition-all duration-300 scale-90 group-hover:scale-100">
+                                 <Button asChild className="pointer-events-auto rounded-full bg-vibrant-pink px-4 sm:px-6 text-xs sm:text-sm font-bold text-white shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 w-auto">
                                     <Link href="#contact">Quero este na festa!</Link>
                                 </Button>
                             </div>

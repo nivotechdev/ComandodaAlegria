@@ -20,7 +20,8 @@ const workshops = [
     title: "Recreação Animada",
     description: "Brincadeiras clássicas, gincanas e muita energia para não deixar ninguém parado! Nossa equipe de recreadores transforma qualquer espaço em um parque de diversões.",
     bgColor: "bg-secondary/10",
-    shadowColor: "hover:shadow-secondary/20",
+    borderColor: "border-secondary/20",
+    hoverBorderColor: "hover:border-secondary/50",
     titleColor: "text-secondary",
   },
   {
@@ -28,7 +29,8 @@ const workshops = [
     title: "Pinturinha Facial",
     description: "Transformamos as crianças em seus heróis e animais favoritos com tintas antialérgicas e muito brilho! Uma recordação colorida que encanta a todos.",
     bgColor: "bg-accent/10",
-    shadowColor: "hover:shadow-accent/20",
+    borderColor: "border-accent/20",
+    hoverBorderColor: "hover:border-accent/50",
     titleColor: "text-accent",
   },
   {
@@ -36,7 +38,8 @@ const workshops = [
     title: "Escultura em Balões",
     description: "Arte com balões que ganham formas de espadas, bichinhos e flores. O presente perfeito para cada convidado levar para casa!",
     bgColor: "bg-vibrant-pink/10",
-    shadowColor: "hover:shadow-vibrant-pink/20",
+    borderColor: "border-vibrant-pink/20",
+    hoverBorderColor: "hover:border-vibrant-pink/50",
     titleColor: "text-vibrant-pink",
   },
 ]
@@ -61,9 +64,10 @@ export default function FunWorkshops() {
                 <Card 
                     key={workshop.title}
                     className={cn(
-                        "flex w-full max-w-sm flex-col items-center text-center rounded-3xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border-2 border-white/50 animate-bounce-in",
+                        "flex w-full max-w-sm flex-col items-center text-center rounded-3xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border animate-bounce-in",
                         workshop.bgColor,
-                        workshop.shadowColor
+                        workshop.borderColor,
+                        workshop.hoverBorderColor
                     )}
                     style={{ animationDelay: `${index * 150}ms` }}
                 >
@@ -85,8 +89,11 @@ export default function FunWorkshops() {
             ))}
         </div>
         <div className="mt-16 text-center">
-            <Button asChild className="bg-vibrant-pink text-white hover:bg-vibrant-pink/90 rounded-full px-8 text-base font-bold shadow-lg transition-all animate-pulse-balloon hover:animate-none hover:scale-105 h-[50px] min-w-[240px]">
-                <Link href="#contact">Ver Pacotes e Combos</Link>
+            <Button
+              asChild
+              className="bg-vibrant-pink text-white hover:bg-vibrant-pink/90 rounded-full px-8 text-base font-bold shadow-lg transition-all animate-pulse-balloon hover:animate-none hover:scale-105 h-[50px] min-w-[240px]"
+            >
+              <Link href="#contact">Ver Pacotes e Combos</Link>
             </Button>
         </div>
       </div>

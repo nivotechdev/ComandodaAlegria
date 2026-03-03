@@ -1,4 +1,5 @@
 import { Crown, Clock, PartyPopper } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const Wave = () => (
     <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] -translate-y-px">
@@ -12,17 +13,23 @@ const features = [
   {
     icon: <Clock className="h-8 w-8 text-primary" />,
     title: "Pontualidade Britânica",
-    description: "Chegamos sempre no horário para garantir que a magia comece na hora certa, sem estresse para você."
+    description: "Chegamos sempre no horário para garantir que a magia comece na hora certa, sem estresse para você.",
+    borderColor: "border-primary/30",
+    hoverBorderColor: "hover:border-primary",
   },
   {
     icon: <Crown className="h-8 w-8 text-secondary" />,
     title: "Fantasias de Luxo",
-    description: "Nossos trajes são de alta costura, fiéis aos personagens e impressionam pela riqueza de detalhes."
+    description: "Nossos trajes são de alta costura, fiéis aos personagens e impressionam pela riqueza de detalhes.",
+    borderColor: "border-secondary/30",
+    hoverBorderColor: "hover:border-secondary",
   },
   {
     icon: <PartyPopper className="h-8 w-8 text-accent" />,
     title: "Equipe Treinada e Animada",
-    description: "Profissionais carismáticos e preparados para entreter, garantindo a segurança e diversão de todos."
+    description: "Profissionais carismáticos e preparados para entreter, garantindo a segurança e diversão de todos.",
+    borderColor: "border-accent/30",
+    hoverBorderColor: "hover:border-accent",
   },
 ]
 
@@ -45,7 +52,11 @@ export default function ServiceHighlights() {
           {features.map((feature, index) => (
             <div 
               key={feature.title} 
-              className="bg-background/30 backdrop-blur-sm border border-white/20 rounded-3xl p-6 md:p-8 flex h-full flex-col items-center text-center shadow-xl transition-all duration-300 hover:border-primary/50 hover:shadow-primary/20 hover:-translate-y-2 animate-bounce-in" 
+              className={cn(
+                "bg-background/80 backdrop-blur-sm rounded-3xl p-6 md:p-8 flex h-full flex-col items-center text-center shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 animate-bounce-in border",
+                feature.borderColor,
+                feature.hoverBorderColor
+              )}
               style={{ animationDelay: `${index * 150}ms` }}>
               <div className="bg-primary/10 rounded-full p-4 mb-4 inline-block">
                   {feature.icon}

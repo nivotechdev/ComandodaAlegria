@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Users, MapPin, Gift, Menu, Instagram, Facebook } from "lucide-react";
+import { Users, MapPin, Gift, Menu, Instagram, Facebook, Sparkles } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -75,36 +75,51 @@ export default function Header() {
                       <span className="sr-only">Abrir menu</span>
                     </Button>
                   </SheetTrigger>
-                  <SheetContent side="right" className="w-[80vw] bg-gradient-to-br from-primary/95 to-secondary/95 p-0 backdrop-blur-lg border-l-2 border-white/20">
-                    <div className="flex h-full flex-col">
+                  <SheetContent side="right" className="w-[80vw] bg-gradient-to-br from-primary/30 to-secondary/30 p-0 border-l-2 border-vibrant-pink/50">
+                    <div className="relative flex h-full flex-col overflow-hidden">
+                        
+                        {/* Stars decoration */}
+                        <Sparkles className="absolute top-1/4 right-1/4 h-4 w-4 text-vibrant-pink/50 opacity-80 animate-twinkle" style={{animationDelay: '1s'}} />
+                        <Sparkles className="absolute bottom-1/4 right-1/2 h-5 w-5 text-white opacity-90 animate-twinkle" style={{animationDelay: '0.5s'}} />
+                        <Sparkles className="absolute bottom-1/3 left-1/4 h-3 w-3 text-accent/50 opacity-60 animate-twinkle" style={{animationDelay: '1.5s'}} />
+                        <Sparkles className="absolute top-1/2 left-[15%] h-6 w-6 text-primary/50 opacity-70 animate-twinkle" style={{animationDelay: '2s'}} />
+                        <Sparkles className="absolute bottom-2/3 right-[10%] h-4 w-4 text-secondary/50 opacity-60 animate-twinkle" style={{animationDelay: '2.5s'}} />
+
                         <div className="flex items-center justify-center p-4 border-b border-white/20">
                             <Link href="/">
                                 <Image
-                                    src="https://whfdrrdozhyavyflgaxo.supabase.co/storage/v1/object/sign/Comando%20da%20Alegria/Design%20sem%20nome%20(14).png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOWY1OGE2Ni03MDFhLTRhNDQtOWJhZC0zOGRkNmVkYTNhODAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJDb21hbmRvIGRhIEFsZWdyaWEvRGVzaWduIHNlbSBub21lICgxNCkucG5nIiwiaWF0IjoxNzcyNDkyODg4LCJleHAiOjQ4OTQ1NTY4ODh9.CEdsO1GsNNTUbhb4unjCYM9NC1YJ4_R9Yf5ZABMhvL8"
+                                    src="https://whfdrrdozhyavyflgaxo.supabase.co/storage/v1/object/sign/Comando%20da%20Alegria/3422ba6e-664b-4a8a-a483-64cb728c37ea.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOWY1OGE2Ni03MDFhLTRhNDQtOWJhZC0zOGRkNmVkYTNhODAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJDb21hbmRvIGRhIEFsZWdyaWEvMzQyMmJhNmUtNjY0Yi00YThhLWE0ODMtNjRjYjcyOGMzN2VhLnBuZyIsImlhdCI6MTc3MjQ5MjQzOSwiZXhwIjozMzI3Njk1NjQzOX0._6wTUBAwQcnHET3WKUiSleZxfSeF8AldY2Pj44vUXGc"
                                     alt="Comando da Alegria Logo"
-                                    width={50}
-                                    height={50}
+                                    width={70}
+                                    height={70}
                                     className="drop-shadow-lg"
                                 />
                             </Link>
                         </div>
-                      <nav className="flex flex-grow flex-col gap-6 text-center font-headline text-xl mt-8">
-                        <Link href="/personagens" className="text-white/90 transition-all duration-300 hover:scale-105 hover:text-white">Personagens</Link>
-                        <Link href="/#services" className="text-white/90 transition-all duration-300 hover:scale-105 hover:text-white">Serviços</Link>
-                        <Link href="/#coverage" className="text-white/90 transition-all duration-300 hover:scale-105 hover:text-white">Área de Atendimento</Link>
+                      <nav className="flex flex-grow flex-col items-center gap-8 text-center font-headline text-xl font-medium mt-8">
+                        <Link href="/personagens" className="text-white drop-shadow-md transition-all duration-300 hover:scale-110">Personagens</Link>
+                        <Link href="/#services" className="text-white drop-shadow-md transition-all duration-300 hover:scale-110">Serviços</Link>
+                        <Link href="/#coverage" className="text-white drop-shadow-md transition-all duration-300 hover:scale-110">Área de Atendimento</Link>
+                        
+                        <div className="pt-8">
+                             <Button asChild className="bg-vibrant-pink text-white hover:bg-vibrant-pink/90 rounded-full px-8 text-base font-bold shadow-lg transition-all animate-pulse-balloon hover:animate-none hover:scale-105 h-[50px] min-w-[240px]">
+                                <Link href="#contact">Orçamento!</Link>
+                            </Button>
+                        </div>
                       </nav>
-                      <div className="mt-auto border-t border-white/20 p-4">
-                        <p className="mb-4 text-center font-headline text-base text-white/80">Acompanhe nossa alegria:</p>
-                        <div className="flex items-center justify-center space-x-6">
-                            <Link href="#" className="text-white transition-transform hover:scale-125">
+
+                      <div className="mt-auto border-t border-white/20 p-6">
+                        <p className="mb-4 text-center font-headline text-base text-white/80">Siga nossa alegria:</p>
+                        <div className="flex items-center justify-center space-x-4">
+                           <Link href="#" className="h-12 w-12 bg-white rounded-full flex items-center justify-center text-[#E4405F] transition-transform hover:scale-110 shadow-lg border-2 border-[#E4405F]/50">
                                 <Instagram className="h-7 w-7" />
                                 <span className="sr-only">Instagram</span>
                             </Link>
-                            <Link href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" className="text-white transition-transform hover:scale-125">
-                                <WhatsAppIcon className="h-8 w-8" />
+                            <Link href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" className="h-12 w-12 bg-white rounded-full flex items-center justify-center text-[#25D366] transition-transform hover:scale-110 shadow-lg border-2 border-[#25D366]/50">
+                                <WhatsAppIcon className="h-7 w-7 p-px" />
                                 <span className="sr-only">WhatsApp</span>
                             </Link>
-                            <Link href="#" className="text-white transition-transform hover:scale-125">
+                            <Link href="#" className="h-12 w-12 bg-white rounded-full flex items-center justify-center text-[#1877F2] transition-transform hover:scale-110 shadow-lg border-2 border-[#1877F2]/50">
                                 <Facebook className="h-7 w-7" />
                                 <span className="sr-only">Facebook</span>
                             </Link>

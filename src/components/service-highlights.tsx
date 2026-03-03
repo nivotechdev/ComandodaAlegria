@@ -12,24 +12,24 @@ const Wave = () => (
 const features = [
   {
     icon: <Clock className="h-8 w-8 text-primary" />,
-    title: "Pontualidade Britânica",
+    title: "Pontualidade Mágica",
     description: "Chegamos sempre no horário para garantir que a magia comece na hora certa, sem estresse para você.",
     borderColor: "border-primary/30",
-    hoverBorderColor: "hover:border-primary",
+    hoverBorderColor: "hover:border-primary/80",
   },
   {
     icon: <Crown className="h-8 w-8 text-secondary" />,
     title: "Fantasias de Luxo",
     description: "Nossos trajes são de alta costura, fiéis aos personagens e impressionam pela riqueza de detalhes.",
     borderColor: "border-secondary/30",
-    hoverBorderColor: "hover:border-secondary",
+    hoverBorderColor: "hover:border-secondary/80",
   },
   {
     icon: <PartyPopper className="h-8 w-8 text-accent" />,
     title: "Equipe Treinada e Animada",
     description: "Profissionais carismáticos e preparados para entreter, garantindo a segurança e diversão de todos.",
     borderColor: "border-accent/30",
-    hoverBorderColor: "hover:border-accent",
+    hoverBorderColor: "hover:border-accent/80",
   },
 ]
 
@@ -53,7 +53,7 @@ export default function ServiceHighlights() {
             <div 
               key={feature.title} 
               className={cn(
-                "bg-background/80 backdrop-blur-sm rounded-3xl p-6 md:p-8 flex h-full flex-col items-center text-center shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 animate-bounce-in border",
+                "bg-white/90 backdrop-blur-sm rounded-3xl p-6 md:p-8 flex h-full flex-col items-center text-center shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 animate-bounce-in border-2",
                 feature.borderColor,
                 feature.hoverBorderColor
               )}

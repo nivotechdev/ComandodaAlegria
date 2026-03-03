@@ -19,7 +19,7 @@ const features = [
   },
   {
     icon: <Crown className="h-8 w-8 text-secondary" />,
-    title: "Fantasias de Luxo",
+    title: "Fantasias Impecáveis",
     description: "Nossos trajes são de alta costura, fiéis aos personagens e impressionam pela riqueza de detalhes.",
     borderColor: "border-secondary/30",
     hoverBorderColor: "hover:border-secondary/80",

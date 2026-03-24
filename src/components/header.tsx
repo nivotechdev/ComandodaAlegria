@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Users, MapPin, Gift, Menu, Instagram, Facebook, Sparkles } from "lucide-react";
+import { Users, MapPin, Gift, Menu, Instagram, Facebook, Sparkles, Heart } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -57,6 +57,9 @@ export default function Header() {
              <Link href="/#coverage" className="flex items-center gap-2 font-headline text-lg font-semibold text-foreground/70 transition-colors hover:text-primary">
               <MapPin className="h-5 w-5" /> Área
             </Link>
+            <Link href="/#about-us" className="flex items-center gap-2 font-headline text-lg font-semibold text-foreground/70 transition-colors hover:text-primary">
+              <Heart className="h-5 w-5" /> Sobre Nós
+            </Link>
           </div>
 
           <div className="flex items-center gap-2">
@@ -100,6 +103,7 @@ export default function Header() {
                         <Link href="/personagens" className="text-white drop-shadow-md transition-all duration-300 hover:scale-110">Personagens</Link>
                         <Link href="/#services" className="text-white drop-shadow-md transition-all duration-300 hover:scale-110">Serviços</Link>
                         <Link href="/#coverage" className="text-white drop-shadow-md transition-all duration-300 hover:scale-110">Área de Atendimento</Link>
+                        <Link href="/#about-us" className="text-white drop-shadow-md transition-all duration-300 hover:scale-110">Sobre Nós</Link>
                         
                         <div className="pt-8">
                              <Button asChild className="bg-vibrant-pink text-white hover:bg-vibrant-pink/90 rounded-full px-8 text-base font-bold shadow-lg transition-all animate-pulse-balloon hover:animate-none hover:scale-105 h-[50px] min-w-[240px]">

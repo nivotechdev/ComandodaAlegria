@@ -6,6 +6,7 @@ import Hero from "@/components/hero";
 import FunWorkshops from "@/components/fun-workshops";
 import ServiceHighlights from "@/components/service-highlights";
 import WhatsAppFab from "@/components/whatsapp-fab";
+import AboutUs from "@/components/about-us";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <FunWorkshops />
         <ServiceHighlights />
         <CoverageArea />
+        <AboutUs />
       </main>
       <Footer />
       <WhatsAppFab />

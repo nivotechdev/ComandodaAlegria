@@ -95,6 +95,13 @@
         "Papai Noel",
         "Outros"
       ]
+    },
+    {
+      "id": "about-us-founders",
+      "description": "Founders of Comando da Alegria, João and Vivi",
+      "imageUrl": "https://images.unsplash.com/photo-1556157382-97eda2d62296?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmb3VuZGVycyUyMHBvcnRyYWl0fGVufDB8fHx8fDE3NzI5NTQ0ODB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "founders portrait",
+      "categories": []
     }
   ]
 }

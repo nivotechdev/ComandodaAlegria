@@ -3,8 +3,7 @@ import CoverageArea from "@/components/coverage-area";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
-import FunWorkshops from "@/components/fun-workshops";
-import ServiceHighlights from "@/components/service-highlights";
+import Services from "@/components/services";
 import WhatsAppFab from "@/components/whatsapp-fab";
 import AboutUs from "@/components/about-us";
 
@@ -16,8 +15,7 @@ export default function Home() {
         <Hero />
         <AboutUs />
         <CharacterCatalog />
-        <FunWorkshops />
-        <ServiceHighlights />
+        <Services />
         <CoverageArea />
       </main>
       <Footer />

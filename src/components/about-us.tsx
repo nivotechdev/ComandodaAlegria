@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Heart } from "lucide-react";
+import { Heart, Sparkles } from "lucide-react";
 
 const Wave = () => (
     <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] -translate-y-px">
@@ -19,7 +19,24 @@ export default function AboutUs() {
     <section id="about-us" className="w-full py-20 md:py-32 lg:py-40 bg-primary/10 relative">
         <Wave />
         <div className="container mx-auto px-5 relative">
-            <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+            <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+                <div className="md:order-last">
+                    <div className="relative aspect-[4/5] w-full max-w-sm mx-auto md:max-w-none group">
+                        <div className="absolute -inset-2 bg-gradient-to-br from-accent/50 to-secondary/50 rounded-3xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300 animate-pulse-balloon" style={{ animationDuration: '6s' }}></div>
+                        {aboutImage && (
+                            <div className="relative h-full w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white transition-transform duration-300 group-hover:scale-105">
+                                <Image
+                                    src={aboutImage.imageUrl}
+                                    alt={aboutImage.description}
+                                    fill
+                                    className="object-cover"
+                                    data-ai-hint={aboutImage.imageHint}
+                                    sizes="(max-width: 768px) 90vw, 45vw"
+                                />
+                            </div>
+                        )}
+                    </div>
+                </div>
                 <div className="flex flex-col items-center md:items-start text-center md:text-left">
                     <h2 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl" style={{ textShadow: '3px 3px 0px white' }}>
                         <span className="text-accent inline-block -rotate-2">Nossa</span>{' '}
@@ -32,27 +49,16 @@ export default function AboutUs() {
                     <p className="mt-4 max-w-xl text-base text-foreground/80 md:text-lg font-normal leading-relaxed">
                         Cada sorriso que despertamos é o nosso maior combustível. Somos movidos pelo amor ao que fazemos e pela certeza de que a alegria é o melhor presente que podemos oferecer.
                     </p>
-                    <div className="mt-8 flex items-center gap-4 bg-white/50 p-4 rounded-2xl border-2 border-secondary/50 shadow-lg">
-                        <Heart className="h-10 w-10 text-vibrant-pink" />
+                    <div className="mt-8 flex items-center gap-4 bg-white/60 backdrop-blur-sm p-4 rounded-2xl border-2 border-white/50 shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
+                        <div className="relative">
+                            <Heart className="h-12 w-12 text-vibrant-pink" fill="currentColor" />
+                            <Sparkles className="absolute -top-2 -right-2 h-5 w-5 text-accent animate-twinkle" />
+                        </div>
                         <div>
                             <p className="font-bold text-lg text-secondary font-headline">João & Vivi</p>
                             <p className="font-medium text-foreground/80">Fundadores e Apaixonados por Sorrisos</p>
                         </div>
                     </div>
-                </div>
-                <div className="relative aspect-square md:aspect-[4/5] w-full max-w-md mx-auto md:max-w-none animate-bounce-in">
-                    {aboutImage && (
-                         <div className="h-full w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white rotate-3 transition-transform duration-300 hover:rotate-0 hover:scale-105">
-                            <Image
-                                src={aboutImage.imageUrl}
-                                alt={aboutImage.description}
-                                fill
-                                className="object-cover"
-                                data-ai-hint={aboutImage.imageHint}
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                            />
-                        </div>
-                    )}
                 </div>
             </div>
         </div>

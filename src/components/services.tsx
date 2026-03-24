@@ -39,12 +39,36 @@ const Wave = () => (
 )
 
 const mainServices = [
-    { icon: <Laugh className="h-8 w-8 text-secondary" />, title: "Recreação" },
-    { icon: <Paintbrush className="h-8 w-8 text-accent" />, title: "Pintura Facial" },
-    { icon: <Gift className="h-8 w-8 text-vibrant-pink" />, title: "Esculturas de Balão" },
-    { icon: <Cake className="h-8 w-8 text-primary" />, title: "Animação de Parabéns" },
-    { icon: <PersonStanding className="h-8 w-8 text-secondary" />, title: "Pernas de Pau" },
-    { icon: <ToyBrick className="h-8 w-8 text-accent" />, title: "Espaço Kids" }
+    { 
+        icon: <Laugh className="h-8 w-8 text-secondary" />, 
+        title: "Recreação",
+        description: "Brincadeiras clássicas, gincanas e muita energia para não deixar ninguém parado! Nossa equipe de recreadores transforma qualquer espaço em um parque de diversões."
+    },
+    { 
+        icon: <Paintbrush className="h-8 w-8 text-accent" />, 
+        title: "Pintura Facial",
+        description: "Transformamos as crianças em seus heróis e animais favoritos com tintas antialérgicas e muito brilho! Uma recordação colorida que encanta a todos."
+    },
+    { 
+        icon: <Gift className="h-8 w-8 text-vibrant-pink" />, 
+        title: "Esculturas de Balão",
+        description: "Arte com balões que ganham formas de espadas, bichinhos e flores. Um presente divertido para cada convidado levar para casa!"
+    },
+    { 
+        icon: <Cake className="h-8 w-8 text-primary" />, 
+        title: "Animação de Parabéns",
+        description: "O momento mais especial da festa com uma entrada triunfal do personagem para cantar parabéns, tirar fotos inesquecíveis e animar a todos."
+    },
+    { 
+        icon: <PersonStanding className="h-8 w-8 text-secondary" />, 
+        title: "Pernas de Pau",
+        description: "Leve sua festa para as alturas com nossos artistas em pernas de pau, trazendo um toque de circo e fantasia que impressiona adultos e crianças."
+    },
+    { 
+        icon: <ToyBrick className="h-8 w-8 text-accent" />, 
+        title: "Espaço Kids",
+        description: "Um cantinho seguro e cheio de diversão para os pequenos, com monitores e atividades especiais. Ideal para eventos como casamentos e formaturas."
+    }
 ];
 
 
@@ -80,13 +104,16 @@ export default function Services() {
         </div>
         
         <div className="max-w-4xl mx-auto mb-20">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
                 {mainServices.map((service, index) => (
-                    <div key={index} className="flex items-center gap-4 group justify-center sm:justify-start">
-                        <div className="relative bg-white/60 backdrop-blur-sm p-4 rounded-full border-2 border-white transition-all duration-300 group-hover:scale-110 group-hover:border-primary/50">
+                    <div key={index} className="flex items-start gap-6">
+                        <div className="relative flex-shrink-0 bg-white/60 backdrop-blur-sm p-4 rounded-full border-2 border-white transition-all duration-300 group-hover:scale-110 group-hover:border-primary/50 mt-1">
                             {service.icon}
                         </div>
-                        <h3 className="font-headline text-lg md:text-xl font-bold text-foreground/90 transition-colors group-hover:text-primary">{service.title}</h3>
+                        <div>
+                            <h3 className="font-headline text-xl md:text-2xl font-bold text-secondary">{service.title}</h3>
+                            <p className="mt-2 text-base text-foreground/80 leading-relaxed">{service.description}</p>
+                        </div>
                     </div>
                 ))}
             </div>

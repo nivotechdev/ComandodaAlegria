@@ -27,7 +27,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
 const Wave = () => (
@@ -38,16 +38,60 @@ const Wave = () => (
     </div>
 )
 
-const mainServices = [
-  { icon: <Cake className="h-8 w-8" />, title: "Animação de Parabéns", color: "text-primary" },
-  { icon: <Paintbrush className="h-8 w-8" />, title: "Pintura Facial", color: "text-accent" },
-  { icon: <Gift className="h-8 w-8" />, title: "Esculturas de Balão", color: "text-vibrant-pink" },
-  { icon: <PersonStanding className="h-8 w-8" />, title: "Pernas de Pau", color: "text-secondary" },
-  { icon: <Laugh className="h-8 w-8" />, title: "Recreação", color: "text-primary" },
-  { icon: <ToyBrick className="h-8 w-8" />, title: "Espaço Kids", description: "Para formaturas e casamentos.", color: "text-accent" },
-  { icon: <Star className="h-8 w-8" />, title: "Cortejos Natalinos", color: "text-vibrant-pink" },
-  { icon: <Sparkles className="h-8 w-8" />, title: "Encontro Encantado", color: "text-secondary" },
+const coreServices = [
+  {
+    icon: <Laugh className="h-8 w-8 text-secondary" />,
+    title: "Recreação Divertida",
+    description: "Nossa equipe de recreadores comanda a diversão com gincanas, brincadeiras clássicas e atividades energizantes que garantem a alegria e a participação de todas as idades.",
+    bgColor: "bg-secondary/10",
+    borderColor: "border-secondary/20",
+    hoverBorderColor: "hover:border-secondary/50",
+    titleColor: "text-secondary",
+  },
+  {
+    icon: <Paintbrush className="h-8 w-8 text-accent" />,
+    title: "Pintura Facial Mágica",
+    description: "Transformamos crianças em seus personagens favoritos com tintas seguras, antialérgicas e um toque de brilho. Uma arte que encanta e colore a festa.",
+    bgColor: "bg-accent/10",
+    borderColor: "border-accent/20",
+    hoverBorderColor: "hover:border-accent/50",
+    titleColor: "text-accent",
+  },
+  {
+    icon: <Gift className="h-8 w-8 text-vibrant-pink" />,
+    title: "Esculturas de Balão",
+    description: "Nossos artistas modelam balões em espadas, flores e animais, criando uma lembrança interativa e divertida que cada convidado leva para casa.",
+    bgColor: "bg-vibrant-pink/10",
+    borderColor: "border-vibrant-pink/20",
+    hoverBorderColor: "hover:border-vibrant-pink/50",
+    titleColor: "text-vibrant-pink",
+  },
+  {
+    icon: <Cake className="h-8 w-8 text-primary" />,
+    title: "Animação de Parabéns",
+    description: "Tornamos o momento do parabéns o ponto alto da festa, com música, interação e a presença especial do personagem escolhido para uma celebração inesquecível.",
+    bgColor: "bg-primary/10",
+    borderColor: "border-primary/20",
+    hoverBorderColor: "hover:border-primary/50",
+    titleColor: "text-primary",
+  },
+  {
+    icon: <PersonStanding className="h-8 w-8 text-secondary" />,
+    title: "Recepção com Pernas de Pau",
+    description: "Surpreenda seus convidados desde a chegada com uma recepção grandiosa. Nossos artistas em pernas de pau garantem um visual impactante e fotos memoráveis.",
+    bgColor: "bg-secondary/10",
+    borderColor: "border-secondary/20",
+    hoverBorderColor: "hover:border-secondary/50",
+    titleColor: "text-secondary",
+  }
 ];
+
+const specialServices = [
+    { icon: <ToyBrick className="h-8 w-8" />, title: "Espaço Kids", description: "Para formaturas e casamentos.", color: "text-accent" },
+    { icon: <Star className="h-8 w-8" />, title: "Cortejos Natalinos", color: "text-vibrant-pink" },
+    { icon: <Sparkles className="h-8 w-8" />, title: "Encontro Encantado", color: "text-secondary" },
+];
+
 
 const workshops = [
     { icon: <FlaskConical size={20} className="text-primary" />, title: "Massinha de Modelar Nuvem" },
@@ -78,8 +122,41 @@ export default function Services() {
             </p>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-16">
-            {mainServices.map((service, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center mb-20">
+            {coreServices.map((service, index) => (
+                <Card 
+                    key={service.title}
+                    className={cn(
+                        "flex w-full max-w-sm flex-col items-center text-center rounded-3xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border",
+                        service.bgColor,
+                        service.borderColor,
+                        service.hoverBorderColor
+                    )}
+                    style={{ animationDelay: `${index * 100}ms`, animationName: 'fade-in-up', animationFillMode: 'both' }}
+                >
+                    <CardHeader className="p-6 md:p-8 items-center">
+                        <div className="bg-white/50 rounded-full p-4 mb-4 border-2 border-white">
+                            {service.icon}
+                        </div>
+                        <CardTitle className={cn("text-2xl font-headline", service.titleColor)}>{service.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="px-6 md:px-8 pt-0 flex-grow">
+                        <p className="text-base font-medium leading-relaxed text-foreground/80" style={{lineHeight: 1.8}}>
+                            {service.description}
+                        </p>
+                    </CardContent>
+                </Card>
+            ))}
+        </div>
+
+        <div className="text-center mb-16">
+            <h3 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl text-foreground/80">
+                E Nossos <span className="text-vibrant-pink">Serviços Especiais</span>
+            </h3>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-20">
+             {specialServices.map((service, index) => (
                 <div key={index} className="flex flex-col items-center text-center p-4 group">
                     <div className="relative mb-4 transition-transform duration-300 group-hover:scale-110">
                         <div className={cn("absolute -inset-2 rounded-full opacity-20 blur-md", service.color.replace('text-', 'bg-'))}></div>
@@ -92,6 +169,7 @@ export default function Services() {
                 </div>
             ))}
         </div>
+
 
         <div className="max-w-4xl mx-auto">
             <Card className="w-full rounded-3xl shadow-xl border-2 border-primary/20 bg-white/50 backdrop-blur-md overflow-hidden">

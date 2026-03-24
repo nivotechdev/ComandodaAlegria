@@ -88,8 +88,6 @@ const coreServices = [
 
 const specialServices = [
     { icon: <ToyBrick className="h-8 w-8" />, title: "Espaço Kids", description: "Para formaturas e casamentos.", color: "text-accent" },
-    { icon: <Star className="h-8 w-8" />, title: "Cortejos Natalinos", color: "text-vibrant-pink" },
-    { icon: <Sparkles className="h-8 w-8" />, title: "Encontro Encantado", color: "text-secondary" },
 ];
 
 
@@ -104,6 +102,8 @@ const workshops = [
     { icon: <Map size={20} className="text-vibrant-pink" />, title: "Caça ao Tesouro" },
     { icon: <Users size={20} className="text-primary" />, title: "Festa Futebol" },
     { icon: <Bed size={20} className="text-secondary" />, title: "Noite do Pijama" },
+    { icon: <Star size={20} className="text-vibrant-pink" />, title: "Cortejos Natalinos" },
+    { icon: <Sparkles size={20} className="text-secondary" />, title: "Encontro Encantado" },
 ];
 
 export default function Services() {
@@ -155,7 +155,7 @@ export default function Services() {
             </h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-20">
+        <div className="flex justify-center gap-4 md:gap-6 mb-20">
              {specialServices.map((service, index) => (
                 <div key={index} className="flex flex-col items-center text-center p-4 group">
                     <div className="relative mb-4 transition-transform duration-300 group-hover:scale-110">

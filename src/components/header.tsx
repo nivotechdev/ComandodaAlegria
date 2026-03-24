@@ -39,7 +39,7 @@ export default function Header() {
           
           <Link href="/" className="flex flex-shrink-0 items-center">
             <Image
-              src="https://whfdrrdozhyavyflgaxo.supabase.co/storage/v1/object/sign/Comando%20da%20Alegria/3422ba6e-664b-4a8a-a483-64cb728c37ea.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOWY1OGE2Ni03MDFhLTRhNDQtOWJhZC0zOGRkNmVkYTNhODAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJDb21hbmRvIGRhIEFsZWdyaWEvMzQyMmJhNmUtNjY0Yi00YThhLWE0ODMtNjRjYjcyOGMzN2VhLnBuZyIsImlhdCI6MTc3MjQ5MjQzOSwiZXhwIjozMzI3Njk1NjQzOX0._6wTUBAwQcnHET3WKUiSleZxfSeF8AldY2Pj44vUXGc"
+              src="https://whfdrrdozhyavyflgaxo.supabase.co/storage/v1/object/sign/Comando%20da%20Alegria/Design%20sem%20nome%20(14).png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOWY1OGE2Ni03MDFhLTRhNDQtOWJhZC0zOGRkNmVkYTNhODAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJDb21hbmRvIGRhIEFsZWdyaWEvRGVzaWduIHNlbSBub21lICgxNCkucG5nIiwiaWF0IjoxNzc0Mzc0MjUzLCJleHAiOjM1MDQwMDE3NzA4NzAyNTN9._-zK2NVcZ4QtD_GnecAq_HMAP8lODMEPCZGILo8vsXo"
               alt="Comando da Alegria Logo"
               width={160}
               height={44}
@@ -91,7 +91,7 @@ export default function Header() {
                         <div className="flex items-center justify-center p-4 border-b border-white/20">
                             <Link href="/">
                                 <Image
-                                    src="https://whfdrrdozhyavyflgaxo.supabase.co/storage/v1/object/sign/Comando%20da%20Alegria/3422ba6e-664b-4a8a-a483-64cb728c37ea.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOWY1OGE2Ni03MDFhLTRhNDQtOWJhZC0zOGRkNmVkYTNhODAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJDb21hbmRvIGRhIEFsZWdyaWEvMzQyMmJhNmUtNjY0Yi00YThhLWE0ODMtNjRjYjcyOGMzN2VhLnBuZyIsImlhdCI6MTc3MjQ5MjQzOSwiZXhwIjozMzI3Njk1NjQzOX0._6wTUBAwQcnHET3WKUiSleZxfSeF8AldY2Pj44vUXGc"
+                                    src="https://whfdrrdozhyavyflgaxo.supabase.co/storage/v1/object/sign/Comando%20da%20Alegria/Design%20sem%20nome%20(14).png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOWY1OGE2Ni03MDFhLTRhNDQtOWJhZC0zOGRkNmVkYTNhODAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJDb21hbmRvIGRhIEFsZWdyaWEvRGVzaWduIHNlbSBub21lICgxNCkucG5nIiwiaWF0IjoxNzc0Mzc0MjUzLCJleHAiOjM1MDQwMDE3NzA4NzAyNTN9._-zK2NVcZ4QtD_GnecAq_HMAP8lODMEPCZGILo8vsXo"
                                     alt="Comando da Alegria Logo"
                                     width={70}
                                     height={70}
@@ -141,3 +141,5 @@ export default function Header() {
     </header>
   );
 }
+
+    

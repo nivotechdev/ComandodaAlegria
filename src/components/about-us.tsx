@@ -6,7 +6,7 @@ import { Heart } from "lucide-react";
 
 const Wave = () => (
     <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] -translate-y-px">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-[calc(100%+1.3px)] h-[80px] fill-background">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-[calc(100%+1.3px)] h-[80px] fill-primary/10">
             <path d="M0,50 C150,100 350,0 600,50 C850,100 1050,0 1200,50 L1200,120 L0,120 Z"></path>
         </svg>
     </div>
@@ -32,11 +32,11 @@ export default function AboutUs() {
                     <p className="mt-4 max-w-xl text-base text-foreground/80 md:text-lg font-normal leading-relaxed">
                         Cada sorriso que despertamos é o nosso maior combustível. Somos movidos pelo amor ao que fazemos e pela certeza de que a alegria é o melhor presente que podemos oferecer.
                     </p>
-                    <div className="mt-8 flex items-center gap-4 bg-white/50 p-4 rounded-2xl border-2 border-dashed border-secondary/50">
+                    <div className="mt-8 flex items-center gap-4 bg-white/50 p-4 rounded-2xl border-2 border-secondary/50 shadow-lg">
                         <Heart className="h-10 w-10 text-vibrant-pink" />
                         <div>
                             <p className="font-bold text-lg text-secondary font-headline">João & Vivi</p>
-                            <p className="font-medium text-foreground/70">Fundadores e Apaixonados por Sorrisos</p>
+                            <p className="font-medium text-foreground/80">Fundadores e Apaixonados por Sorrisos</p>
                         </div>
                     </div>
                 </div>

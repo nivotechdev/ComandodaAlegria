@@ -4,49 +4,97 @@
       "id": "character-spider-man",
       "description": "Spider-Man character",
       "imageUrl": "https://images.unsplash.com/photo-1712574784177-95e025a0762a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzcGlkZXIlMjBtYW58ZW58MHx8fHwxNzcxODYxMjk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "spider man"
+      "imageHint": "spider man",
+      "categories": [
+        "Heróis"
+      ]
     },
     {
       "id": "character-elsa",
       "description": "Elsa character from Frozen",
       "imageUrl": "https://images.unsplash.com/photo-1647221798702-cf1089ac1aec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwcmluY2VzcyUyMHNub3d8ZW58MHx8fHwxNzcxODYxMjk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "princess snow"
+      "imageHint": "princess snow",
+      "categories": [
+        "Princesas",
+        "Disney"
+      ]
     },
     {
       "id": "character-mickey-mouse",
       "description": "Mickey Mouse character",
       "imageUrl": "https://images.unsplash.com/photo-1566214464181-725081b5c941?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjYXJ0b29uJTIwbW91c2V8ZW58MHx8fHwxNzcxODYxMjk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "cartoon mouse"
+      "imageHint": "cartoon mouse",
+      "categories": [
+        "Disney",
+        "Outros"
+      ]
     },
     {
       "id": "character-captain-america",
       "description": "Captain America character",
       "imageUrl": "https://images.unsplash.com/photo-1626471671193-2b21b9b46e45?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzdXBlcmhlcm8lMjBzaGllbGR8ZW58MHx8fHwxNzcxODYxMjk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "superhero shield"
+      "imageHint": "superhero shield",
+      "categories": [
+        "Heróis"
+      ]
     },
     {
       "id": "character-wonder-woman",
       "description": "Wonder Woman character",
       "imageUrl": "https://images.unsplash.com/photo-1768765719122-a77ac1446cfa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzdXBlcmhlcm8lMjB3b21hbnxlbnwwfHx8fDE3NzE4NjEyOTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "superhero woman"
+      "imageHint": "superhero woman",
+      "categories": [
+        "Heróis"
+      ]
     },
     {
       "id": "character-buzz-lightyear",
       "description": "Buzz Lightyear character",
       "imageUrl": "https://images.unsplash.com/photo-1760007418266-f08947dd3db9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzcGFjZSUyMHJhbmdlcnxlbnwwfHx8fDE3NzE4NjEyOTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "space ranger"
+      "imageHint": "space ranger",
+      "categories": [
+        "Disney",
+        "Outros"
+      ]
     },
     {
       "id": "character-bela",
       "description": "Belle character from Beauty and the Beast",
       "imageUrl": "https://images.unsplash.com/photo-1645810268793-27d0e9709ba7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwcmluY2VzcyUyMGRyZXNzfGVufDB8fHx8MTc3MTg2MTI5OXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "princess dress"
+      "imageHint": "princess dress",
+      "categories": [
+        "Princesas",
+        "Disney"
+      ]
     },
     {
       "id": "character-hulk",
       "description": "Hulk character",
       "imageUrl": "https://images.unsplash.com/photo-1759335858774-efa2e81e466c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxncmVlbiUyMG1vbnN0ZXJ8ZW58MHx8fHwxNzcxODYxMjk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "green monster"
+      "imageHint": "green monster",
+      "categories": [
+        "Heróis"
+      ]
+    },
+    {
+      "id": "character-coelho-pascoa",
+      "description": "Easter Bunny character",
+      "imageUrl": "https://images.unsplash.com/photo-1554284126-d3513134a65b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlYXN0ZXIlMjBidW5ueXxlbnwwfHx8fDE3NzI5NTQ0MTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "easter bunny",
+      "categories": [
+        "Coelho",
+        "Outros"
+      ]
+    },
+    {
+      "id": "character-papai-noel",
+      "description": "Santa Claus character",
+      "imageUrl": "https://images.unsplash.com/photo-1607590843621-3a0551381b85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzYW50YSUyMGNsYXVzfGVufDB8fHx8fDE3NzI5NTQ0NDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "santa claus",
+      "categories": [
+        "Papai Noel",
+        "Outros"
+      ]
     }
   ]
 }

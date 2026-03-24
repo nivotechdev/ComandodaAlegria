@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from 'lucide-react';
@@ -9,9 +12,15 @@ import Footer from "@/components/footer";
 import WhatsAppFab from "@/components/whatsapp-fab";
 
 export default function AllCharactersPage() {
-  const characters = PlaceHolderImages.filter(img => img.id.startsWith("character-"));
+  const allCharacters = PlaceHolderImages.filter(img => img.id.startsWith("character-"));
   const borderColors = ["border-vibrant-pink", "border-primary", "border-accent", "border-secondary"];
-  const categories = ["Todos", "Heróis", "Princesas", "Clássicos", "Desenhos"];
+  const categories = ["Todos", "Heróis", "Princesas", "Disney", "Coelho", "Papai Noel", "Outros"];
+
+  const [selectedCategory, setSelectedCategory] = useState("Todos");
+
+  const filteredCharacters = selectedCategory === "Todos"
+    ? allCharacters
+    : allCharacters.filter(character => character.categories.includes(selectedCategory));
 
   return (
     <div className="flex min-h-screen flex-col text-foreground bg-background">
@@ -40,11 +49,12 @@ export default function AllCharactersPage() {
                 </div>
                 
                 <div className="mb-12 flex flex-wrap items-center justify-center gap-3">
-                    {categories.map((category, index) => (
+                    {categories.map((category) => (
                         <Button 
                             key={category} 
-                            variant={index === 0 ? "default" : "outline"}
+                            variant={selectedCategory === category ? "default" : "outline"}
                             className="rounded-full font-semibold transition-all hover:shadow-md text-base px-5 py-2 h-auto"
+                            onClick={() => setSelectedCategory(category)}
                         >
                             {category}
                         </Button>
@@ -52,7 +62,7 @@ export default function AllCharactersPage() {
                 </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                    {characters.map((character, index) => (
+                    {filteredCharacters.map((character, index) => (
                         <div key={character.id} className="group">
                              <Card className={`overflow-hidden rounded-3xl border-2 shadow-md transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-2 flex flex-col h-full ${borderColors[index % borderColors.length]}`}>
                                 <div className="relative aspect-[3/4] overflow-hidden">

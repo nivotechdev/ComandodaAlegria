@@ -14,11 +14,11 @@ export default function Home() {
       <Header />
       <main className="flex-grow relative z-0">
         <Hero />
+        <AboutUs />
         <CharacterCatalog />
         <FunWorkshops />
         <ServiceHighlights />
         <CoverageArea />
-        <AboutUs />
       </main>
       <Footer />
       <WhatsAppFab />

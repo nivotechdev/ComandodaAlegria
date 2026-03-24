@@ -43,7 +43,7 @@ export default function Header() {
               alt="Comando da Alegria Logo"
               width={160}
               height={44}
-              className="h-11 w-auto object-contain drop-shadow-lg"
+              className="h-14 w-auto object-contain drop-shadow-lg"
             />
           </Link>
 
@@ -141,5 +141,3 @@ export default function Header() {
     </header>
   );
 }
-
-    

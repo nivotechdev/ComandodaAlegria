@@ -8,16 +8,10 @@ import {
   PersonStanding,
   Laugh,
   ToyBrick,
+  Sparkles,
+  Star,
+  PartyPopper,
 } from "lucide-react";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { cn } from "@/lib/utils";
 
 const Wave = () => (
     <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] -translate-y-px">
@@ -29,37 +23,38 @@ const Wave = () => (
 
 const mainServices = [
     { 
-        icon: <Laugh className="h-8 w-8 text-secondary" />, 
+        icon: Laugh, 
         title: "Recreação",
-        description: "Brincadeiras clássicas, gincanas e muita energia para não deixar ninguém parado! Nossa equipe de recreadores transforma qualquer espaço em um parque de diversões."
+        description: "Brincadeiras clássicas, gincanas e muita energia para não deixar ninguém parado!"
     },
     { 
-        icon: <Paintbrush className="h-8 w-8 text-accent" />, 
+        icon: Paintbrush, 
         title: "Pintura Facial",
-        description: "Transformamos as crianças em seus heróis e animais favoritos com tintas antialérgicas e muito brilho! Uma recordação colorida que encanta a todos."
+        description: "Transformamos as crianças em seus heróis e animais favoritos com tintas antialérgicas."
     },
     { 
-        icon: <Gift className="h-8 w-8 text-vibrant-pink" />, 
+        icon: Gift, 
         title: "Esculturas de Balão",
-        description: "Arte com balões que ganham formas de espadas, bichinhos e flores. Um presente divertido para cada convidado levar para casa!"
+        description: "Arte com balões que ganham formas de espadas, bichinhos e flores."
     },
     { 
-        icon: <Cake className="h-8 w-8 text-primary" />, 
+        icon: Cake, 
         title: "Animação de Parabéns",
-        description: "O momento mais especial da festa com uma entrada triunfal do personagem para cantar parabéns, tirar fotos inesquecíveis e animar a todos."
+        description: "O momento mais especial da festa com uma entrada triunfal do personagem para cantar parabéns."
     },
     { 
-        icon: <PersonStanding className="h-8 w-8 text-secondary" />, 
+        icon: PersonStanding, 
         title: "Pernas de Pau",
-        description: "Leve sua festa para as alturas com nossos artistas em pernas de pau, trazendo um toque de circo e fantasia que impressiona adultos e crianças."
+        description: "Leve sua festa para as alturas com nossos artistas em pernas de pau e um toque de circo."
     },
     { 
-        icon: <ToyBrick className="h-8 w-8 text-accent" />, 
+        icon: ToyBrick, 
         title: "Espaço Kids",
-        description: "Um cantinho seguro e cheio de diversão para os pequenos, com monitores e atividades especiais. Ideal para eventos como casamentos e formaturas."
+        description: "Um cantinho seguro e cheio de diversão para os pequenos, com monitores e atividades."
     }
 ];
 
+const benefitIcons = [Sparkles, Star, PartyPopper];
 
 export default function Services() {
   return (
@@ -77,35 +72,42 @@ export default function Services() {
             </p>
         </div>
         
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full max-w-sm md:max-w-2xl lg:max-w-5xl mx-auto"
-        >
-          <CarouselContent className="-ml-4">
-            {mainServices.map((service, index) => (
-              <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                <div className="p-1 h-full">
-                  <Card className="flex flex-col h-full text-center items-center rounded-3xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border-2 border-secondary/10 bg-white/60 backdrop-blur-sm">
-                    <CardHeader className="items-center p-6">
-                        <div className="bg-white/50 rounded-full p-4 mb-2 border">
-                           {service.icon}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+            {mainServices.map((service, index) => {
+              const ServiceIcon = service.icon;
+              return (
+                <div key={index} className="group flex">
+                  <div className="bg-card text-card-foreground rounded-[2.5rem] w-full shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col overflow-hidden">
+                    <div className="p-6 flex-grow flex flex-col">
+                      <div className="relative aspect-[3/2] rounded-2xl overflow-hidden mb-6">
+                        <div className="absolute inset-0 bg-primary/10 flex items-center justify-center transition-transform duration-1000 ease-out group-hover:scale-110">
+                            <ServiceIcon className="w-20 h-20 text-primary opacity-50"/>
                         </div>
-                       <CardTitle className="text-xl font-headline text-secondary">{service.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent className="flex-grow pt-0 px-6 pb-6">
-                       <p className="text-base text-foreground/80 leading-relaxed">{service.description}</p>
-                    </CardContent>
-                  </Card>
+                      </div>
+                      
+                      <h3 className="font-headline text-2xl font-bold text-foreground transition-colors duration-300 group-hover:text-primary">
+                        {service.title}
+                      </h3>
+                      <p className="text-muted-foreground font-light mt-2 flex-grow">
+                        {service.description}
+                      </p>
+                      
+                      <div className="pt-4 mt-auto">
+                        <div className="flex items-center gap-3">
+                           {benefitIcons.map((BenefitIcon, i) => (
+                               <div key={i} className="group/benefit flex items-center justify-center h-10 w-10 rounded-full bg-primary/5 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary/10" style={{ transitionDelay: `${i * 50}ms` }}>
+                                 <BenefitIcon size={20} className="transition-all duration-300" />
+                               </div>
+                           ))}
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
                 </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="flex left-2 sm:-left-12" />
-          <CarouselNext className="flex right-2 sm:-right-12" />
-        </Carousel>
+              );
+            })}
+        </div>
 
       </div>
     </section>

@@ -53,23 +53,27 @@ const mainServices = [
 
 const ServiceCard = ({ service }: { service: typeof mainServices[0] }) => {
     return (
-        <div className="group flex flex-col items-center text-center bg-white rounded-[32px] p-6 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-            <div className="relative mb-6 h-32 w-32 rounded-3xl overflow-hidden transition-transform duration-300 group-hover:scale-105">
-                <Image
-                    src={service.imageUrl}
-                    alt={service.title}
-                    fill
-                    className="object-cover transition-transform duration-1000 group-hover:scale-110"
-                    data-ai-hint={service.imageHint}
-                    sizes="128px"
-                />
+        <div className="group bg-white rounded-3xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 overflow-hidden flex flex-col">
+            <div className="p-3">
+                <div className="relative aspect-[3/2] w-full overflow-hidden rounded-2xl">
+                    <Image
+                        src={service.imageUrl}
+                        alt={service.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        data-ai-hint={service.imageHint}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                </div>
             </div>
-            <h3 className="font-headline text-xl font-bold text-foreground transition-colors group-hover:text-primary">
-                {service.title}
-            </h3>
-            <p className="mt-2 text-base font-light text-foreground/70 leading-relaxed">
-                {service.description}
-            </p>
+            <div className="text-center p-6 pt-0 flex-grow flex flex-col">
+                <h3 className="font-headline text-xl font-bold text-foreground transition-colors group-hover:text-primary mt-4">
+                    {service.title}
+                </h3>
+                <p className="mt-2 text-base font-light text-foreground/70 leading-relaxed">
+                    {service.description}
+                </p>
+            </div>
         </div>
     );
 };

@@ -4,6 +4,7 @@ import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
 import Services from "@/components/services";
+import FunWorkshops from "@/components/fun-workshops";
 import WhatsAppFab from "@/components/whatsapp-fab";
 import AboutUs from "@/components/about-us";
 
@@ -16,6 +17,7 @@ export default function Home() {
         <AboutUs />
         <CharacterCatalog />
         <Services />
+        <FunWorkshops />
         <CoverageArea />
       </main>
       <Footer />

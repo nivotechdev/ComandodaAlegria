@@ -51,9 +51,9 @@ const mainServices = [
     }
 ];
 
-const ServiceCard = ({ service }: { service: typeof mainServices[0] }) => {
+const ServiceCard = ({ service, borderColor }: { service: typeof mainServices[0], borderColor: string }) => {
     return (
-        <div className="group bg-white rounded-3xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 overflow-hidden flex flex-col">
+        <div className={cn("group bg-white rounded-3xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 overflow-hidden flex flex-col border-2", borderColor)} style={{boxShadow: '0 4px 15px rgba(0,0,0,0.05)'}}>
             <div className="p-3">
                 <div className="relative aspect-[3/2] w-full overflow-hidden rounded-2xl">
                     <Image
@@ -67,7 +67,7 @@ const ServiceCard = ({ service }: { service: typeof mainServices[0] }) => {
                 </div>
             </div>
             <div className="text-center p-6 pt-0 flex-grow flex flex-col">
-                <h3 className="font-headline text-xl font-bold text-foreground transition-colors group-hover:text-primary mt-4">
+                <h3 className="font-headline text-xl font-bold text-foreground transition-colors group-hover:text-primary mt-[15px]" style={{fontSize: '1.25rem'}}>
                     {service.title}
                 </h3>
                 <p className="mt-2 text-base font-light text-foreground/70 leading-relaxed">
@@ -80,6 +80,8 @@ const ServiceCard = ({ service }: { service: typeof mainServices[0] }) => {
 
 
 export default function Services() {
+  const borderColors = ["border-primary/50", "border-secondary/50", "border-accent/50", "border-vibrant-pink/50", "border-primary/50", "border-secondary/50"];
+
   return (
     <section id="services" className="w-full py-20 md:py-32 lg:py-40 bg-accent/10 relative">
       <Wave />
@@ -97,7 +99,7 @@ export default function Services() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {mainServices.map((service, index) => (
-                <ServiceCard key={index} service={service} />
+                <ServiceCard key={index} service={service} borderColor={borderColors[index]} />
             ))}
         </div>
       </div>

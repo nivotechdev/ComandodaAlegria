@@ -71,26 +71,26 @@ const ServiceCard = ({ service, index }: { service: typeof mainServices[0], inde
     const ServiceIcon = service.icon;
     return (
         <div className="group flex h-full">
-            <div className={`bg-card text-card-foreground rounded-[2.25rem] w-full shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col overflow-hidden border-4 ${borderColors[index % borderColors.length]}`}>
-                <div className="p-5 flex-grow flex flex-col">
-                    <div className="relative aspect-[3/2] rounded-2xl overflow-hidden mb-5">
+            <div className={`bg-card text-card-foreground rounded-[2rem] w-full shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col overflow-hidden border-4 ${borderColors[index % borderColors.length]}`}>
+                <div className="p-4 flex-grow flex flex-col">
+                    <div className="relative aspect-[3/2] rounded-xl overflow-hidden mb-4">
                         <div className="absolute inset-0 bg-primary/10 flex items-center justify-center transition-transform duration-1000 ease-out group-hover:scale-110">
-                            <ServiceIcon className="w-16 h-16 text-primary opacity-50"/>
+                            <ServiceIcon className="w-12 h-12 text-primary opacity-50"/>
                         </div>
                     </div>
 
-                    <h3 className="font-headline text-xl font-bold text-foreground transition-colors duration-300 group-hover:text-primary">
+                    <h3 className="font-headline text-lg font-bold text-foreground transition-colors duration-300 group-hover:text-primary">
                         {service.title}
                     </h3>
-                    <p className="text-muted-foreground font-light text-sm mt-2 flex-grow">
+                    <p className="text-muted-foreground font-light text-sm mt-1 flex-grow">
                         {service.description}
                     </p>
 
-                    <div className="pt-4 mt-auto">
-                        <div className="flex items-center gap-2">
+                    <div className="pt-3 mt-auto">
+                        <div className="flex items-center gap-1.5">
                             {benefitIcons.map((BenefitIcon, i) => (
-                                <div key={i} className="group/benefit flex items-center justify-center h-9 w-9 rounded-full bg-primary/5 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary/10" style={{ transitionDelay: `${i * 50}ms` }}>
-                                    <BenefitIcon size={18} className="transition-all duration-300" />
+                                <div key={i} className="group/benefit flex items-center justify-center h-8 w-8 rounded-full bg-primary/5 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary/10" style={{ transitionDelay: `${i * 50}ms` }}>
+                                    <BenefitIcon size={16} className="transition-all duration-300" />
                                 </div>
                             ))}
                         </div>

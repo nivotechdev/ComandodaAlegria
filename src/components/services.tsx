@@ -73,17 +73,17 @@ const ServiceCard = ({ service, index }: { service: typeof mainServices[0], inde
     return (
         <div className="group flex h-full p-1">
             <div className={cn(
-                "bg-card/80 backdrop-blur-sm text-card-foreground rounded-3xl w-full shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex flex-col overflow-hidden border-2",
+                "bg-card/80 backdrop-blur-sm text-card-foreground rounded-2xl w-full shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex flex-col overflow-hidden border-2",
                 borderColors[index % borderColors.length]
             )}>
-                <div className="p-4 flex-grow flex flex-col">
-                    <div className="relative aspect-video rounded-lg overflow-hidden mb-3">
+                <div className="p-3 flex-grow flex flex-col">
+                    <div className="relative aspect-video rounded-lg overflow-hidden mb-2">
                         <div className="absolute inset-0 bg-primary/5 flex items-center justify-center transition-transform duration-700 ease-out group-hover:scale-110">
-                            <ServiceIcon className="w-10 h-10 text-primary opacity-60 transition-opacity duration-300 group-hover:opacity-100"/>
+                            <ServiceIcon className="w-8 h-8 text-primary opacity-60 transition-opacity duration-300 group-hover:opacity-100"/>
                         </div>
                     </div>
 
-                    <h3 className="font-headline text-base font-bold text-foreground transition-colors duration-300 group-hover:text-primary text-center">
+                    <h3 className="font-headline text-sm font-bold text-foreground transition-colors duration-300 group-hover:text-primary text-center">
                         {service.title}
                     </h3>
                     <p className="text-muted-foreground font-light text-xs mt-1 flex-grow text-center">
@@ -91,10 +91,10 @@ const ServiceCard = ({ service, index }: { service: typeof mainServices[0], inde
                     </p>
 
                     <div className="pt-2 mt-auto flex justify-center">
-                        <div className="flex items-center gap-1.5">
+                        <div className="flex items-center gap-1">
                             {benefitIcons.map((BenefitIcon, i) => (
-                                <div key={i} className="group/benefit flex items-center justify-center h-6 w-6 rounded-full bg-primary/5 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary/10" style={{ transitionDelay: `${i * 50}ms` }}>
-                                    <BenefitIcon size={12} className="transition-all duration-300" />
+                                <div key={i} className="group/benefit flex items-center justify-center h-5 w-5 rounded-full bg-primary/5 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary/10" style={{ transitionDelay: `${i * 50}ms` }}>
+                                    <BenefitIcon size={10} className="transition-all duration-300" />
                                 </div>
                             ))}
                         </div>
@@ -130,10 +130,8 @@ export default function Services() {
                         </CarouselItem>
                     ))}
                 </CarouselContent>
-                <CarouselPrevious className="flex md:hidden absolute left-0 top-1/2 -translate-y-1/2 z-10" />
-                <CarouselNext className="flex md:hidden absolute right-0 top-1/2 -translate-y-1/2 z-10"/>
-                <CarouselPrevious className="hidden md:flex" />
-                <CarouselNext className="hidden md:flex"/>
+                <CarouselPrevious className="flex md:hidden absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/50 backdrop-blur-sm text-primary border-primary/20 hover:bg-white/80" />
+                <CarouselNext className="flex md:hidden absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/50 backdrop-blur-sm text-primary border-primary/20 hover:bg-white/80" />
             </Carousel>
             
             <Carousel opts={{ align: "start" }} className="w-full">
@@ -144,10 +142,8 @@ export default function Services() {
                         </CarouselItem>
                     ))}
                 </CarouselContent>
-                <CarouselPrevious className="flex md:hidden absolute left-0 top-1/2 -translate-y-1/2 z-10" />
-                <CarouselNext className="flex md:hidden absolute right-0 top-1/2 -translate-y-1/2 z-10"/>
-                <CarouselPrevious className="hidden md:flex" />
-                <CarouselNext className="hidden md:flex"/>
+                <CarouselPrevious className="flex md:hidden absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/50 backdrop-blur-sm text-primary border-primary/20 hover:bg-white/80" />
+                <CarouselNext className="flex md:hidden absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/50 backdrop-blur-sm text-primary border-primary/20 hover:bg-white/80" />
             </Carousel>
         </div>
       </div>

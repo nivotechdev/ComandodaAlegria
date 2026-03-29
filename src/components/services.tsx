@@ -1,14 +1,7 @@
 'use client';
 
 import React from "react";
-import {
-  Cake,
-  Paintbrush,
-  Gift,
-  PersonStanding,
-  Laugh,
-  ToyBrick,
-} from "lucide-react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const Wave = () => (
@@ -21,49 +14,55 @@ const Wave = () => (
 
 const mainServices = [
     {
-        icon: Laugh,
+        imageUrl: "https://picsum.photos/seed/recreacao/400/300",
+        imageHint: "kids playing",
         title: "Recreação",
         description: "Brincadeiras clássicas, gincanas e muita energia para não deixar ninguém parado!"
     },
     {
-        icon: Paintbrush,
+        imageUrl: "https://picsum.photos/seed/pintura/400/300",
+        imageHint: "face painting",
         title: "Pintura Facial",
         description: "Transformamos as crianças em seus heróis e animais favoritos com tintas antialérgicas."
     },
     {
-        icon: Gift,
+        imageUrl: "https://picsum.photos/seed/balao/400/300",
+        imageHint: "balloon animals",
         title: "Esculturas de Balão",
         description: "Arte com balões que ganham formas de espadas, bichinhos e flores."
     },
     {
-        icon: Cake,
+        imageUrl: "https://picsum.photos/seed/parabens/400/300",
+        imageHint: "birthday cake",
         title: "Animação de Parabéns",
         description: "O momento mais especial da festa com uma entrada triunfal do personagem para cantar parabéns."
     },
     {
-        icon: PersonStanding,
+        imageUrl: "https://picsum.photos/seed/pernas/400/300",
+        imageHint: "stilt walker",
         title: "Pernas de Pau",
         description: "Leve sua festa para as alturas com nossos artistas em pernas de pau e um toque de circo."
     },
     {
-        icon: ToyBrick,
+        imageUrl: "https://picsum.photos/seed/kids/400/300",
+        imageHint: "kids playground",
         title: "Espaço Kids",
         description: "Um cantinho seguro e cheio de diversão para os pequenos, com monitores e atividades."
     }
 ];
 
-const ServiceCard = ({ service, index }: { service: typeof mainServices[0], index: number }) => {
-    const ServiceIcon = service.icon;
-    const bgColors = ["bg-vibrant-pink/10", "bg-primary/10", "bg-accent/10", "bg-secondary/10", "bg-primary/10", "bg-vibrant-pink/10"];
-    const textColors = ["text-vibrant-pink", "text-primary", "text-accent", "text-secondary", "text-primary", "text-vibrant-pink"];
-    
+const ServiceCard = ({ service }: { service: typeof mainServices[0] }) => {
     return (
         <div className="group flex flex-col items-center text-center bg-white rounded-[32px] p-8 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:scale-105">
-            <div className={cn(
-                "mb-6 flex h-24 w-24 items-center justify-center rounded-full transition-colors duration-300",
-                bgColors[index % bgColors.length]
-            )}>
-                <ServiceIcon className={cn("h-12 w-12 transition-colors duration-300", textColors[index % textColors.length])} />
+            <div className="relative mb-6 h-24 w-24 rounded-full overflow-hidden">
+                <Image
+                    src={service.imageUrl}
+                    alt={service.title}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                    data-ai-hint={service.imageHint}
+                    sizes="96px"
+                />
             </div>
             <h3 className="font-headline text-xl font-bold text-foreground">
                 {service.title}
@@ -94,7 +93,7 @@ export default function Services() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {mainServices.map((service, index) => (
-                <ServiceCard key={index} service={service} index={index} />
+                <ServiceCard key={index} service={service} />
             ))}
         </div>
       </div>

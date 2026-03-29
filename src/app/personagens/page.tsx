@@ -13,7 +13,6 @@ import WhatsAppFab from "@/components/whatsapp-fab";
 
 export default function AllCharactersPage() {
   const allCharacters = PlaceHolderImages.filter(img => img.id.startsWith("character-"));
-  const borderColors = ["border-vibrant-pink", "border-primary", "border-accent", "border-secondary"];
   const categories = ["Todos", "Heróis", "Princesas", "Disney", "Coelho", "Papai Noel", "Outros"];
 
   const [selectedCategory, setSelectedCategory] = useState("Todos");
@@ -62,27 +61,29 @@ export default function AllCharactersPage() {
                 </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                    {filteredCharacters.map((character, index) => (
+                    {filteredCharacters.map((character) => (
                         <div key={character.id} className="group">
-                             <Card className={`overflow-hidden rounded-3xl border-2 shadow-md transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-2 flex flex-col h-full ${borderColors[index % borderColors.length]}`}>
-                                <div className="relative aspect-[3/4] overflow-hidden">
-                                    <Image
-                                        src={character.imageUrl}
-                                        alt={character.description}
-                                        fill
-                                        className="object-cover object-top transition-transform duration-300 group-hover:scale-105"
-                                        data-ai-hint={character.imageHint}
-                                        sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                                        loading="lazy"
-                                    />
-                                    <div className="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none">
-                                         <Button asChild className="pointer-events-auto rounded-full bg-vibrant-pink px-4 sm:px-6 text-xs sm:text-sm font-bold text-white shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 w-auto">
-                                            <Link href="#contact">Levar para minha festa!</Link>
-                                        </Button>
+                             <Card className="overflow-hidden rounded-[32px] bg-white shadow-lg transition-all duration-300 group-hover:shadow-2xl group-hover:-translate-y-2 flex flex-col h-full">
+                                <div className="p-3">
+                                    <div className="relative aspect-video overflow-hidden rounded-2xl">
+                                        <Image
+                                            src={character.imageUrl}
+                                            alt={character.description}
+                                            fill
+                                            className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                                            data-ai-hint={character.imageHint}
+                                            sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                                            loading="lazy"
+                                        />
+                                        <div className="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none">
+                                             <Button asChild className="pointer-events-auto rounded-full bg-vibrant-pink px-4 sm:px-6 text-xs sm:text-sm font-bold text-white shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 w-auto">
+                                                <Link href="#contact">Levar para minha festa!</Link>
+                                            </Button>
+                                        </div>
                                     </div>
                                 </div>
-                                <CardContent className="p-4 text-center bg-background flex-grow flex items-center justify-center">
-                                    <h3 className="text-lg font-bold text-foreground font-headline">
+                                <CardContent className="text-center px-6 pb-6 pt-1 flex-grow flex items-center justify-center">
+                                    <h3 className="text-xl font-bold text-primary font-headline">
                                         {character.id.split('-').slice(1).map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ')}
                                     </h3>
                                 </CardContent>

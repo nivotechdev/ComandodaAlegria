@@ -2,22 +2,12 @@
 
 import React from "react";
 import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import {
   Cake,
   Paintbrush,
   Gift,
   PersonStanding,
   Laugh,
   ToyBrick,
-  Sparkles,
-  Star,
-  PartyPopper,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -62,55 +52,36 @@ const mainServices = [
     }
 ];
 
-const servicesRow1 = mainServices.slice(0, 3);
-const servicesRow2 = mainServices.slice(3, 6);
-
-const benefitIcons = [Sparkles, Star, PartyPopper];
-const borderColors = ["border-primary", "border-secondary", "border-accent", "border-vibrant-pink", "border-primary", "border-secondary"];
-
 const ServiceCard = ({ service, index }: { service: typeof mainServices[0], index: number }) => {
     const ServiceIcon = service.icon;
+    const bgColors = ["bg-vibrant-pink/10", "bg-primary/10", "bg-accent/10", "bg-secondary/10", "bg-primary/10", "bg-vibrant-pink/10"];
+    const textColors = ["text-vibrant-pink", "text-primary", "text-accent", "text-secondary", "text-primary", "text-vibrant-pink"];
+    
     return (
-        <div className="group flex h-full p-1">
+        <div className="group flex flex-col items-center text-center bg-white rounded-[32px] p-8 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:scale-105">
             <div className={cn(
-                "bg-card/80 backdrop-blur-sm text-card-foreground rounded-2xl w-full shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex flex-col overflow-hidden border-2",
-                borderColors[index % borderColors.length]
+                "mb-6 flex h-24 w-24 items-center justify-center rounded-full transition-colors duration-300",
+                bgColors[index % bgColors.length]
             )}>
-                <div className="p-3 flex-grow flex flex-col">
-                    <div className="relative aspect-video rounded-lg overflow-hidden mb-2">
-                        <div className="absolute inset-0 bg-primary/5 flex items-center justify-center transition-transform duration-700 ease-out group-hover:scale-110">
-                            <ServiceIcon className="w-8 h-8 text-primary opacity-60 transition-opacity duration-300 group-hover:opacity-100"/>
-                        </div>
-                    </div>
-
-                    <h3 className="font-headline text-sm font-bold text-foreground transition-colors duration-300 group-hover:text-primary text-center">
-                        {service.title}
-                    </h3>
-                    <p className="text-muted-foreground font-light text-xs mt-1 flex-grow text-center">
-                        {service.description}
-                    </p>
-
-                    <div className="pt-2 mt-auto flex justify-center">
-                        <div className="flex items-center gap-1">
-                            {benefitIcons.map((BenefitIcon, i) => (
-                                <div key={i} className="group/benefit flex items-center justify-center h-5 w-5 rounded-full bg-primary/5 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary/10" style={{ transitionDelay: `${i * 50}ms` }}>
-                                    <BenefitIcon size={10} className="transition-all duration-300" />
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
+                <ServiceIcon className={cn("h-12 w-12 transition-colors duration-300", textColors[index % textColors.length])} />
             </div>
+            <h3 className="font-headline text-xl font-bold text-foreground">
+                {service.title}
+            </h3>
+            <p className="mt-2 text-base text-foreground/70 leading-relaxed">
+                {service.description}
+            </p>
         </div>
     );
 };
+
 
 export default function Services() {
   return (
     <section id="services" className="w-full py-20 md:py-32 lg:py-40 bg-accent/10 relative">
       <Wave />
       <div className="container mx-auto px-5 relative">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
             <h2 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl" style={{ textShadow: '3px 3px 0px white' }}>
                 <span className="text-secondary inline-block -rotate-2">Nossos</span>{' '}
                 <span className="text-accent inline-block rotate-1">Serviços</span>{' '}
@@ -121,30 +92,10 @@ export default function Services() {
             </p>
         </div>
         
-        <div className="space-y-8">
-            <Carousel opts={{ align: "start" }} className="w-full">
-                <CarouselContent className="-ml-2">
-                    {servicesRow1.map((service, index) => (
-                        <CarouselItem key={index} className="pl-2 basis-full sm:basis-1/2 lg:basis-1/3">
-                           <ServiceCard service={service} index={index} />
-                        </CarouselItem>
-                    ))}
-                </CarouselContent>
-                <CarouselPrevious className="flex md:hidden absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/50 backdrop-blur-sm text-primary border-primary/20 hover:bg-white/80" />
-                <CarouselNext className="flex md:hidden absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/50 backdrop-blur-sm text-primary border-primary/20 hover:bg-white/80" />
-            </Carousel>
-            
-            <Carousel opts={{ align: "start" }} className="w-full">
-                <CarouselContent className="-ml-2">
-                    {servicesRow2.map((service, index) => (
-                        <CarouselItem key={index} className="pl-2 basis-full sm:basis-1/2 lg:basis-1/3">
-                            <ServiceCard service={service} index={index + servicesRow1.length} />
-                        </CarouselItem>
-                    ))}
-                </CarouselContent>
-                <CarouselPrevious className="flex md:hidden absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/50 backdrop-blur-sm text-primary border-primary/20 hover:bg-white/80" />
-                <CarouselNext className="flex md:hidden absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/50 backdrop-blur-sm text-primary border-primary/20 hover:bg-white/80" />
-            </Carousel>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {mainServices.map((service, index) => (
+                <ServiceCard key={index} service={service} index={index} />
+            ))}
         </div>
       </div>
     </section>

@@ -19,6 +19,7 @@ import {
   Star,
   PartyPopper,
 } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const Wave = () => (
     <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] -translate-y-px">
@@ -70,27 +71,30 @@ const borderColors = ["border-primary", "border-secondary", "border-accent", "bo
 const ServiceCard = ({ service, index }: { service: typeof mainServices[0], index: number }) => {
     const ServiceIcon = service.icon;
     return (
-        <div className="group flex h-full">
-            <div className={`bg-card text-card-foreground rounded-[2rem] w-full shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col overflow-hidden border-4 ${borderColors[index % borderColors.length]}`}>
+        <div className="group flex h-full p-1">
+            <div className={cn(
+                "bg-card/80 backdrop-blur-sm text-card-foreground rounded-3xl w-full shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex flex-col overflow-hidden border-2",
+                borderColors[index % borderColors.length]
+            )}>
                 <div className="p-4 flex-grow flex flex-col">
-                    <div className="relative aspect-[3/2] rounded-xl overflow-hidden mb-4">
-                        <div className="absolute inset-0 bg-primary/10 flex items-center justify-center transition-transform duration-1000 ease-out group-hover:scale-110">
-                            <ServiceIcon className="w-12 h-12 text-primary opacity-50"/>
+                    <div className="relative aspect-video rounded-lg overflow-hidden mb-3">
+                        <div className="absolute inset-0 bg-primary/5 flex items-center justify-center transition-transform duration-700 ease-out group-hover:scale-110">
+                            <ServiceIcon className="w-10 h-10 text-primary opacity-60 transition-opacity duration-300 group-hover:opacity-100"/>
                         </div>
                     </div>
 
-                    <h3 className="font-headline text-lg font-bold text-foreground transition-colors duration-300 group-hover:text-primary">
+                    <h3 className="font-headline text-base font-bold text-foreground transition-colors duration-300 group-hover:text-primary text-center">
                         {service.title}
                     </h3>
-                    <p className="text-muted-foreground font-light text-sm mt-1 flex-grow">
+                    <p className="text-muted-foreground font-light text-xs mt-1 flex-grow text-center">
                         {service.description}
                     </p>
 
-                    <div className="pt-3 mt-auto">
+                    <div className="pt-2 mt-auto flex justify-center">
                         <div className="flex items-center gap-1.5">
                             {benefitIcons.map((BenefitIcon, i) => (
-                                <div key={i} className="group/benefit flex items-center justify-center h-8 w-8 rounded-full bg-primary/5 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary/10" style={{ transitionDelay: `${i * 50}ms` }}>
-                                    <BenefitIcon size={16} className="transition-all duration-300" />
+                                <div key={i} className="group/benefit flex items-center justify-center h-6 w-6 rounded-full bg-primary/5 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary/10" style={{ transitionDelay: `${i * 50}ms` }}>
+                                    <BenefitIcon size={12} className="transition-all duration-300" />
                                 </div>
                             ))}
                         </div>
@@ -119,25 +123,29 @@ export default function Services() {
         
         <div className="space-y-8">
             <Carousel opts={{ align: "start" }} className="w-full">
-                <CarouselContent>
+                <CarouselContent className="-ml-2">
                     {servicesRow1.map((service, index) => (
-                        <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                        <CarouselItem key={index} className="pl-2 basis-full sm:basis-1/2 lg:basis-1/3">
                            <ServiceCard service={service} index={index} />
                         </CarouselItem>
                     ))}
                 </CarouselContent>
+                <CarouselPrevious className="flex md:hidden absolute left-0 top-1/2 -translate-y-1/2 z-10" />
+                <CarouselNext className="flex md:hidden absolute right-0 top-1/2 -translate-y-1/2 z-10"/>
                 <CarouselPrevious className="hidden md:flex" />
                 <CarouselNext className="hidden md:flex"/>
             </Carousel>
             
             <Carousel opts={{ align: "start" }} className="w-full">
-                <CarouselContent>
+                <CarouselContent className="-ml-2">
                     {servicesRow2.map((service, index) => (
-                        <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                        <CarouselItem key={index} className="pl-2 basis-full sm:basis-1/2 lg:basis-1/3">
                             <ServiceCard service={service} index={index + servicesRow1.length} />
                         </CarouselItem>
                     ))}
                 </CarouselContent>
+                <CarouselPrevious className="flex md:hidden absolute left-0 top-1/2 -translate-y-1/2 z-10" />
+                <CarouselNext className="flex md:hidden absolute right-0 top-1/2 -translate-y-1/2 z-10"/>
                 <CarouselPrevious className="hidden md:flex" />
                 <CarouselNext className="hidden md:flex"/>
             </Carousel>

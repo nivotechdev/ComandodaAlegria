@@ -65,12 +65,13 @@ const servicesRow1 = mainServices.slice(0, 3);
 const servicesRow2 = mainServices.slice(3, 6);
 
 const benefitIcons = [Sparkles, Star, PartyPopper];
+const borderColors = ["border-primary", "border-secondary", "border-accent", "border-vibrant-pink", "border-primary", "border-secondary"];
 
-const ServiceCard = ({ service }: { service: typeof mainServices[0] }) => {
+const ServiceCard = ({ service, index }: { service: typeof mainServices[0], index: number }) => {
     const ServiceIcon = service.icon;
     return (
         <div className="group flex h-full">
-            <div className="bg-card text-card-foreground rounded-[2.25rem] w-full shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col overflow-hidden">
+            <div className={`bg-card text-card-foreground rounded-[2.25rem] w-full shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col overflow-hidden border-4 ${borderColors[index % borderColors.length]}`}>
                 <div className="p-5 flex-grow flex flex-col">
                     <div className="relative aspect-[3/2] rounded-2xl overflow-hidden mb-5">
                         <div className="absolute inset-0 bg-primary/10 flex items-center justify-center transition-transform duration-1000 ease-out group-hover:scale-110">
@@ -121,7 +122,7 @@ export default function Services() {
                 <CarouselContent>
                     {servicesRow1.map((service, index) => (
                         <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                           <ServiceCard service={service} />
+                           <ServiceCard service={service} index={index} />
                         </CarouselItem>
                     ))}
                 </CarouselContent>
@@ -133,7 +134,7 @@ export default function Services() {
                 <CarouselContent>
                     {servicesRow2.map((service, index) => (
                         <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                            <ServiceCard service={service} />
+                            <ServiceCard service={service} index={index + servicesRow1.length} />
                         </CarouselItem>
                     ))}
                 </CarouselContent>

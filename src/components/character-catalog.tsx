@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 const Wave = () => (
     <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] -translate-y-px">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-[calc(100%+1.3px)] h-[80px] fill-primary/10">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-[calc(100%+1.3px)] h-[80px] fill-vibrant-pink/10">
             <path d="M0,50 C150,100 350,0 600,50 C850,100 1050,0 1200,50 L1200,120 L0,120 Z"></path>
         </svg>
     </div>
@@ -20,7 +20,7 @@ export default function CharacterCatalog() {
   const displayedCharacters = characters.slice(0, 4);
   
   return (
-    <section id="characters" className="w-full py-20 md:py-32 lg:py-40 bg-primary/10 relative">
+    <section id="characters" className="w-full py-20 md:py-32 lg:py-40 bg-vibrant-pink/10 relative">
       <Wave />
       <div className="container mx-auto px-5 relative">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">

@@ -2,6 +2,13 @@
 
 import React from "react";
 import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import {
   Cake,
   Paintbrush,
   Gift,
@@ -72,42 +79,53 @@ export default function Services() {
             </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+        <Carousel
+          opts={{
+            align: "start",
+          }}
+          className="w-full"
+        >
+          <CarouselContent>
             {mainServices.map((service, index) => {
               const ServiceIcon = service.icon;
               return (
-                <div key={index} className="group flex">
-                  <div className="bg-card text-card-foreground rounded-[2.5rem] w-full shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col overflow-hidden">
-                    <div className="p-6 flex-grow flex flex-col">
-                      <div className="relative aspect-[3/2] rounded-2xl overflow-hidden mb-6">
-                        <div className="absolute inset-0 bg-primary/10 flex items-center justify-center transition-transform duration-1000 ease-out group-hover:scale-110">
-                            <ServiceIcon className="w-20 h-20 text-primary opacity-50"/>
+                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <div className="group flex h-full">
+                    <div className="bg-card text-card-foreground rounded-[2.5rem] w-full shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col overflow-hidden">
+                      <div className="p-6 flex-grow flex flex-col">
+                        <div className="relative aspect-[3/2] rounded-2xl overflow-hidden mb-6">
+                          <div className="absolute inset-0 bg-primary/10 flex items-center justify-center transition-transform duration-1000 ease-out group-hover:scale-110">
+                              <ServiceIcon className="w-20 h-20 text-primary opacity-50"/>
+                          </div>
                         </div>
-                      </div>
-                      
-                      <h3 className="font-headline text-2xl font-bold text-foreground transition-colors duration-300 group-hover:text-primary">
-                        {service.title}
-                      </h3>
-                      <p className="text-muted-foreground font-light mt-2 flex-grow">
-                        {service.description}
-                      </p>
-                      
-                      <div className="pt-4 mt-auto">
-                        <div className="flex items-center gap-3">
-                           {benefitIcons.map((BenefitIcon, i) => (
-                               <div key={i} className="group/benefit flex items-center justify-center h-10 w-10 rounded-full bg-primary/5 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary/10" style={{ transitionDelay: `${i * 50}ms` }}>
-                                 <BenefitIcon size={20} className="transition-all duration-300" />
-                               </div>
-                           ))}
+                        
+                        <h3 className="font-headline text-2xl font-bold text-foreground transition-colors duration-300 group-hover:text-primary">
+                          {service.title}
+                        </h3>
+                        <p className="text-muted-foreground font-light mt-2 flex-grow">
+                          {service.description}
+                        </p>
+                        
+                        <div className="pt-4 mt-auto">
+                          <div className="flex items-center gap-3">
+                            {benefitIcons.map((BenefitIcon, i) => (
+                                <div key={i} className="group/benefit flex items-center justify-center h-10 w-10 rounded-full bg-primary/5 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary/10" style={{ transitionDelay: `${i * 50}ms` }}>
+                                  <BenefitIcon size={20} className="transition-all duration-300" />
+                                </div>
+                            ))}
+                          </div>
                         </div>
-                      </div>
 
+                      </div>
                     </div>
                   </div>
-                </div>
+                </CarouselItem>
               );
             })}
-        </div>
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
 
       </div>
     </section>

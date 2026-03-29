@@ -53,21 +53,21 @@ const mainServices = [
 
 const ServiceCard = ({ service }: { service: typeof mainServices[0] }) => {
     return (
-        <div className="group flex flex-col items-center text-center bg-white rounded-[32px] p-8 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:scale-105">
-            <div className="relative mb-6 h-24 w-24 rounded-full overflow-hidden">
+        <div className="group flex flex-col items-center text-center bg-white rounded-[32px] p-6 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+            <div className="relative mb-6 h-32 w-32 rounded-3xl overflow-hidden transition-transform duration-300 group-hover:scale-105">
                 <Image
                     src={service.imageUrl}
                     alt={service.title}
                     fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="object-cover transition-transform duration-1000 group-hover:scale-110"
                     data-ai-hint={service.imageHint}
-                    sizes="96px"
+                    sizes="128px"
                 />
             </div>
-            <h3 className="font-headline text-xl font-bold text-foreground">
+            <h3 className="font-headline text-xl font-bold text-foreground transition-colors group-hover:text-primary">
                 {service.title}
             </h3>
-            <p className="mt-2 text-base text-foreground/70 leading-relaxed">
+            <p className="mt-2 text-base font-light text-foreground/70 leading-relaxed">
                 {service.description}
             </p>
         </div>

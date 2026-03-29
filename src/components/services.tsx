@@ -136,8 +136,8 @@ export default function Services() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden sm:flex" />
-          <CarouselNext className="hidden sm:flex" />
+          <CarouselPrevious className="flex left-2 sm:-left-12" />
+          <CarouselNext className="flex right-2 sm:-right-12" />
         </Carousel>
 
         <div className="max-w-4xl mx-auto mt-20">

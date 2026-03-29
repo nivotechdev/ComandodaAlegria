@@ -146,6 +146,9 @@ export default {
           '20%': { opacity: '1' },
           '100%': { opacity: '0.2' },
         },
+        'shimmer': {
+          '100%': { transform: 'translateX(100%)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -159,6 +162,7 @@ export default {
         'fade-in-down': 'fade-in-down 0.8s ease-out forwards',
         'twinkle': 'twinkle 3s ease-in-out infinite',
         'dot-blink': 'dot-blink 1.4s infinite ease-in-out both',
+        'shimmer': 'shimmer 3s ease-in-out infinite 2s',
       },
     },
   },

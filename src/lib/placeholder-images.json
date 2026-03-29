@@ -102,6 +102,114 @@
       "imageUrl": "https://images.unsplash.com/photo-1556157382-97eda2d62296?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmb3VuZGVycyUyMHBvcnRyYWl0fGVufDB8fHx8fDE3NzI5NTQ0ODB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "founders portrait",
       "categories": []
+    },
+    {
+      "id": "workshop-massinha",
+      "description": "Kids playing with cloud dough",
+      "imageUrl": "https://images.unsplash.com/photo-1549488344-169d3da39728?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxraWRzJTIwcGxheWluZyUyMGRvdWdofGVufDB8fHx8fDE3NzQ0MjE4MDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "kids dough",
+      "categories": [
+        "Oficinas"
+      ]
+    },
+    {
+      "id": "workshop-jardinagem",
+      "description": "Kids gardening",
+      "imageUrl": "https://images.unsplash.com/photo-1593113646773-633c741a4a74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxraWRzJTIwZ2FyZGVuaW5nfGVufDB8fHx8fDE3NzQ0MjE4MDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "kids gardening",
+      "categories": [
+        "Oficinas"
+      ]
+    },
+    {
+      "id": "workshop-pintura-gesso",
+      "description": "Kids painting plaster figures",
+      "imageUrl": "https://images.unsplash.com/photo-1506806782133-e6945c0a2c26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxraWRzJTIwcGFpbnRpbmd8ZW58MHx8fHwxNzc0NDIxODAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "kids painting",
+      "categories": [
+        "Oficinas"
+      ]
+    },
+    {
+      "id": "workshop-mini-donuts",
+      "description": "Kids decorating mini donuts",
+      "imageUrl": "https://images.unsplash.com/photo-1551024601-bec78d844a4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxraWRzJTIwZGVjb3JhdGluZyUyMGRvbnV0c3xlbnwwfHx8fDE3NzQ0MjE4MDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "kids donuts",
+      "categories": [
+        "Oficinas"
+      ]
+    },
+    {
+      "id": "workshop-spa-day",
+      "description": "Kids having a spa day",
+      "imageUrl": "https://images.unsplash.com/photo-1600334129128-685c5582ce3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxraWRzJTIwc3BhJTIwZGF5fGVufDB8fHx8fDE3NzQ0MjE4MDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "kids spa",
+      "categories": [
+        "Oficinas"
+      ]
+    },
+    {
+      "id": "workshop-paper-squishy",
+      "description": "Kids making paper squishies",
+      "imageUrl": "https://images.unsplash.com/photo-1588629849495-1719119c8369?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxraWRzJTIwY3JhZnRpbmd8ZW58MHx8fHwxNzc0NDIxODAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "kids crafting",
+      "categories": [
+        "Oficinas"
+      ]
+    },
+    {
+      "id": "workshop-baladinha",
+      "description": "Kids party with dancing",
+      "imageUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxraWRzJTIwcGFydHklMjBkYW5jaW5nfGVufDB8fHx8fDE3NzQ0MjE4MDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "kids party",
+      "categories": [
+        "Oficinas"
+      ]
+    },
+    {
+      "id": "workshop-caca-tesouro",
+      "description": "Kids on a treasure hunt",
+      "imageUrl": "https://images.unsplash.com/photo-1611892440504-bae55afc8a98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxraWRzJTIwdHJlYXN1cmUlMjBodW50fGVufDB8fHx8fDE3NzQ0MjE4MDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "kids treasure",
+      "categories": [
+        "Oficinas"
+      ]
+    },
+    {
+      "id": "workshop-festa-futebol",
+      "description": "Kids soccer party",
+      "imageUrl": "https://images.unsplash.com/photo-1553779425-4c319409b626?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxraWRzJTIwc29jY2VyfGVufDB8fHx8fDE3NzQ0MjE4MDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "kids soccer",
+      "categories": [
+        "Oficinas"
+      ]
+    },
+    {
+      "id": "workshop-noite-pijama",
+      "description": "Kids slumber party",
+      "imageUrl": "https://images.unsplash.com/photo-1546443108-80e0a42445c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzbHVtYmVyJTIwcGFydHl8ZW58MHx8fHwxNzc0NDIxODAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "slumber party",
+      "categories": [
+        "Oficinas"
+      ]
+    },
+    {
+      "id": "workshop-cortejos-natalinos",
+      "description": "Christmas parade with kids",
+      "imageUrl": "https://images.unsplash.com/photo-1544457033-317a63d7e50c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaHJpc3RtYXMlMjBwYXJhZGV8ZW58MHx8fHwxNzc0NDIxODAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "christmas parade",
+      "categories": [
+        "Oficinas"
+      ]
+    },
+    {
+      "id": "workshop-encontro-encantado",
+      "description": "Kids meeting costumed characters",
+      "imageUrl": "https://images.unsplash.com/photo-1519757657389-13e7c101d222?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaGFyYWN0ZXIlMjBtZWV0fGVufDB8fHx8fDE3NzQ0MjE4MDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "character meet",
+      "categories": [
+        "Oficinas"
+      ]
     }
   ]
 }

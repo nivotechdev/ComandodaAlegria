@@ -28,6 +28,13 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
 
 const Wave = () => (
@@ -103,23 +110,37 @@ export default function Services() {
             </p>
         </div>
         
-        <div className="max-w-4xl mx-auto mb-20">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-                {mainServices.map((service, index) => (
-                    <div key={index} className="flex items-start gap-6">
-                        <div className="relative flex-shrink-0 bg-white/60 backdrop-blur-sm p-4 rounded-full border-2 border-white transition-all duration-300 group-hover:scale-110 group-hover:border-primary/50 mt-1">
-                            {service.icon}
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full max-w-sm md:max-w-2xl lg:max-w-5xl mx-auto"
+        >
+          <CarouselContent className="-ml-4">
+            {mainServices.map((service, index) => (
+              <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <div className="p-1 h-full">
+                  <Card className="flex flex-col h-full text-center items-center rounded-3xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border-2 border-secondary/10 bg-white/60 backdrop-blur-sm">
+                    <CardHeader className="items-center p-6">
+                        <div className="bg-white/50 rounded-full p-4 mb-2 border">
+                           {service.icon}
                         </div>
-                        <div>
-                            <h3 className="font-headline text-xl md:text-2xl font-bold text-secondary">{service.title}</h3>
-                            <p className="mt-2 text-base text-foreground/80 leading-relaxed">{service.description}</p>
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </div>
+                       <CardTitle className="text-xl font-headline text-secondary">{service.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex-grow pt-0 px-6 pb-6">
+                       <p className="text-base text-foreground/80 leading-relaxed">{service.description}</p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden sm:flex" />
+          <CarouselNext className="hidden sm:flex" />
+        </Carousel>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto mt-20">
             <Card className="w-full rounded-3xl shadow-xl border-2 border-primary/20 bg-white/50 backdrop-blur-md overflow-hidden">
                 <CardHeader className="text-center p-6 md:p-8 bg-primary/10">
                     <div className="inline-block mx-auto mb-4 bg-white p-4 rounded-full border-2 border-primary/20">

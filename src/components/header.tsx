@@ -35,7 +35,7 @@ export default function Header() {
       )}
     >
       <div className="container px-5">
-        <nav className={cn("flex w-full items-center justify-between rounded-full bg-background/90 px-4 h-16 backdrop-blur-lg transition-all duration-300", scrolled ? 'shadow-lg border border-primary/20' : 'shadow-none')}>
+        <nav className={cn("flex w-full items-center justify-between rounded-full bg-background/90 pl-5 pr-4 md:px-4 h-16 backdrop-blur-lg transition-all duration-300", scrolled ? 'shadow-lg border border-primary/20' : 'shadow-none')}>
           
           <Link href="/" className="flex flex-shrink-0 items-center">
             <Image

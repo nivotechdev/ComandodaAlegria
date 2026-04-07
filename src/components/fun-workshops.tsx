@@ -55,7 +55,7 @@ export default function FunWorkshops() {
       <Wave />
       <div className="container mx-auto px-5 relative">
         <div className="max-w-4xl mx-auto">
-            <Card className="w-full rounded-3xl shadow-xl border-2 border-secondary/20 bg-white/50 backdrop-blur-md overflow-hidden">
+            <Card className="w-full rounded-3xl shadow-xl border-2 border-primary/50 bg-white/50 backdrop-blur-md overflow-hidden">
                 <CardHeader className="text-center p-6 md:p-8 bg-secondary/10">
                     <div className="inline-block mx-auto mb-4 bg-white p-4 rounded-full border-2 border-secondary/20">
                          <FlaskConical className="h-10 w-10 text-secondary" />

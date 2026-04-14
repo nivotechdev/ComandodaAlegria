@@ -7,7 +7,7 @@ import { Star } from "lucide-react";
 
 const highlights = [
     {
-        imageUrl: "https://images.unsplash.com/photo-1534578322196-3de1b2afd88e?q=80&w=800&auto=format&fit=crop",
+        imageUrl: "https://whfdrrdozhyavyflgaxo.supabase.co/storage/v1/object/sign/Comando%20da%20Alegria/teste.jfif?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOWY1OGE2Ni03MDFhLTRhNDQtOWJhZC0zOGRkNmVkYTNhODAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJDb21hbmRvIGRhIEFsZWdyaWEvdGVzdGUuamZpZiIsImlhdCI6MTc3NjE5MTU2NiwiZXhwIjoxMDUyOTY1Njc5NTY2fQ.pEEb5t-rEsWC-ZCQwhFMP8HTvdKNDBClCoyB2UckoEo",
         imageHint: "Festa da Uva",
         title: "Presença na Festa da Uva!",
         description: "Marcamos presença na tradicional Festa da Uva, levando alegria e encantamento para todas as idades. Nossos personagens foram o centro das atenções, tirando fotos e interagindo com o público em um dos maiores eventos da região."
@@ -41,7 +41,7 @@ const HighlightFeature = ({ highlight }) => {
                 </p>
                 <div className="mt-6 flex items-center gap-3 text-amber-500 font-semibold">
                     <Star className="h-5 w-5" />
-                    <span>Destaque do Mês</span>
+                    <span>Destaque de 2026</span>
                 </div>
             </div>
         </div>

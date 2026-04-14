@@ -7,33 +7,33 @@ import { CheckCircle2 } from "lucide-react";
 
 const services = [
     {
-        imageUrl: "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?q=80&w=800&auto=format&fit=crop",
+        imageUrl: "https://whfdrrdozhyavyflgaxo.supabase.co/storage/v1/object/sign/Comando%20da%20Alegria/teste.jfif?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOWY1OGE2Ni03MDFhLTRhNDQtOWJhZC0zOGRkNmVkYTNhODAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJDb21hbmRvIGRhIEFsZWdyaWEvdGVzdGUuamZpZiIsImlhdCI6MTc3NjE5MTU2NiwiZXhwIjoxMDUyOTY1Njc5NTY2fQ.pEEb5t-rEsWC-ZCQwhFMP8HTvdKNDBClCoyB2UckoEo",
         imageHint: "Crianças se divertindo em uma festa com recreadores.",
         title: "Recreação Cheia de Energia",
         description: "Nossa equipe lidera gincanas vibrantes, brincadeiras clássicas e atividades que mantêm todas as crianças engajadas, rindo e se divertindo do início ao fim."
     },
     {
-        imageUrl: "https://images.unsplash.com/photo-1596495760884-db73a35f29d2?q=80&w=800&auto=format&fit=crop",
+        imageUrl: "https://whfdrrdozhyavyflgaxo.supabase.co/storage/v1/object/sign/Comando%20da%20Alegria/teste.jfif?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOWY1OGE2Ni03MDFhLTRhNDQtOWJhZC0zOGRkNmVkYTNhODAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJDb21hbmRvIGRhIEFsZWdyaWEvdGVzdGUuamZpZiIsImlhdCI6MTc3NjE5MTU2NiwiZXhwIjoxMDUyOTY1Njc5NTY2fQ.pEEb5t-rEsWC-ZCQwhFMP8HTvdKNDBClCoyB2UckoEo",
         imageHint: "Criança com o rosto pintado de super-herói.",
         title: "Pintura Facial Mágica",
         description: "Transformamos os pequenos em seus personagens dos sonhos! Usamos apenas tintas hipoalergênicas e seguras para a pele, criando desde super-heróis até fadas encantadas."
     },
     {
-        imageUrl: "https://images.unsplash.com/photo-1519325995573-d1604a11a84f?q=80&w=800&auto=format=fit=crop",
+        imageUrl: "https://whfdrrdozhyavyflgaxo.supabase.co/storage/v1/object/sign/Comando%20da%20Alegria/teste.jfif?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOWY1OGE2Ni03MDFhLTRhNDQtOWJhZC0zOGRkNmVkYTNhODAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJDb21hbmRvIGRhIEFsZWdyaWEvdGVzdGUuamZpZiIsImlhdCI6MTc3NjE5MTU2NiwiZXhwIjoxMDUyOTY1Njc5NTY2fQ.pEEb5t-rEsWC-ZCQwhFMP8HTvdKNDBClCoyB2UckoEo",
         imageHint: "Espada de balão colorida em uma festa infantil.",
         title: "Esculturas Incríveis de Balão",
         description: "Nossos artistas transformam balões coloridos em espadas, animais, flores e o que mais a imaginação permitir, presenteando cada criança com uma lembrança especial."
     },
     {
-        imageUrl: "https://images.unsplash.com/photo-1600369213198-ac5c772b2583?q=80&w=800&auto=format=fit=crop",
+        imageUrl: "https://whfdrrdozhyavyflgaxo.supabase.co/storage/v1/object/sign/Comando%20da%20Alegria/teste.jfif?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOWY1OGE2Ni03MDFhLTRhNDQtOWJhZC0zOGRkNmVkYTNhODAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJDb21hbmRvIGRhIEFsZWdyaWEvdGVzdGUuamZpZiIsImlhdCI6MTc3NjE5MTU2NiwiZXhwIjoxMDUyOTY1Njc5NTY2fQ.pEEb5t-rEsWC-ZCQwhFMP8HTvdKNDBClCoyB2UckoEo",
         imageHint: "Personagem animado comemorando o aniversário com uma criança.",
         title: "Animação de Parabéns",
         description: "O ponto alto da festa! Seu personagem favorito faz uma entrada triunfal para cantar 'Parabéns', tirar fotos e criar um momento inesquecível para o aniversariante."
     },
     {
-        imageUrl: "https://images.unsplash.com/photo-1590779799864-324271383b4c?q=80&w=800&auto=format=fit=crop",
+        imageUrl: "https://whfdrrdozhyavyflgaxo.supabase.co/storage/v1/object/sign/Comando%20da%20Alegria/teste.jfif?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOWY1OGE2Ni03MDFhLTRhNDQtOWJhZC0zOGRkNmVkYTNhODAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJDb21hbmRvIGRhIEFsZWdyaWEvdGVzdGUuamZpZiIsImlhdCI6MTc3NjE5MTU2NiwiZXhwIjoxMDUyOTY1Njc5NTY2fQ.pEEb5t-rEsWC-ZCQwhFMP8HTvdKNDBClCoyB2UckoEo",
         imageHint: "Artista em pernas de pau interagindo com convidados.",
-        title: "Pernas de Pau Gigantes",
+        title: "Pernas de Pau ",
         description: "Nossos artistas em pernas de pau trazem uma dose de encanto e grandiosidade, interagindo com os convidados e criando um espetáculo visual que eleva o nível da sua festa."
     }
 ];

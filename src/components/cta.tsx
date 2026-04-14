@@ -18,7 +18,7 @@ export default function CtaSection() {
             </div>
 
             <h2 className="font-headline text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
-              Transforme a Festa do Seu Filho em um Dia Mágico!
+              Transforme a Festa em um Dia Mágico!
             </h2>
             
             <p className="mt-6 text-lg max-w-xl text-gray-700 leading-relaxed">

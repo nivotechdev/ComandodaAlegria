@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from 'lucide-react';
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
@@ -60,34 +59,31 @@ export default function AllCharactersPage() {
                     ))}
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                {/* Modern Square Gallery Grid */}
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
                     {filteredCharacters.map((character) => (
-                        <div key={character.id} className="group">
-                             <Card className="overflow-hidden rounded-[30px] bg-white shadow-lg transition-all duration-300 group-hover:shadow-2xl group-hover:-translate-y-2 flex flex-col h-full">
-                                <div className="p-3">
-                                    <div className="relative aspect-[4/3] overflow-hidden rounded-[18px]">
-                                        <Image
-                                            src={character.imageUrl}
-                                            alt={character.description}
-                                            fill
-                                            className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                                            data-ai-hint={character.imageHint}
-                                            sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                                            loading="lazy"
-                                        />
-                                        <div className="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none">
-                                             <Button asChild className="pointer-events-auto rounded-full bg-vibrant-pink px-4 sm:px-6 text-xs sm:text-sm font-bold text-white shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 w-auto">
-                                                <Link href="#contact">Levar para minha festa!</Link>
-                                            </Button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <CardContent className="text-center px-4 pb-4 pt-3 flex-grow flex items-center justify-center">
-                                    <h3 className="text-2xl font-bold text-primary font-headline">
-                                        {character.id.split('-').slice(1).map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ')}
-                                    </h3>
-                                </CardContent>
-                            </Card>
+                         <div key={character.id} className="group relative aspect-square w-full overflow-hidden rounded-[20px] shadow-[0_8px_15px_rgba(0,0,0,0.08)]">
+                            {/* 4px White "Polaroid" Border */}
+                            <div className="absolute inset-0 rounded-[20px] border-4 border-white z-10 pointer-events-none"></div>
+                            
+                            <Image
+                                src={character.imageUrl}
+                                alt={character.description}
+                                fill
+                                className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                                loading="lazy"
+                            />
+                            
+                            {/* Gradient Overlay for Caption */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                            
+                            {/* Character Name */}
+                            <div className="absolute bottom-0 left-0 p-4 w-full">
+                                <h3 className="font-bold text-lg text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
+                                    {character.id.split('-').slice(1).map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ')}
+                                </h3>
+                            </div>
                         </div>
                     ))}
                 </div>

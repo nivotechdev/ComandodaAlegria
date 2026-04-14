@@ -48,16 +48,16 @@ export default function Header() {
           </Link>
 
           <div className="hidden items-center gap-8 md:flex">
-            <Link href="/personagens" className="flex items-center gap-2 font-headline text-lg font-semibold text-foreground/70 transition-colors hover:text-primary">
+            <Link href="/personagens" className="flex items-center gap-2 font-headline text-lg font-semibold text-gray-900/70 transition-colors hover:text-primary">
               <Users className="h-5 w-5" /> Personagens
             </Link>
-            <Link href="/#services" className="flex items-center gap-2 font-headline text-lg font-semibold text-foreground/70 transition-colors hover:text-primary">
+            <Link href="/#services" className="flex items-center gap-2 font-headline text-lg font-semibold text-gray-900/70 transition-colors hover:text-primary">
               <Gift className="h-5 w-5" /> Serviços
             </Link>
-             <Link href="/#coverage" className="flex items-center gap-2 font-headline text-lg font-semibold text-foreground/70 transition-colors hover:text-primary">
+             <Link href="/#coverage" className="flex items-center gap-2 font-headline text-lg font-semibold text-gray-900/70 transition-colors hover:text-primary">
               <MapPin className="h-5 w-5" /> Área
             </Link>
-            <Link href="/#about-us" className="flex items-center gap-2 font-headline text-lg font-semibold text-foreground/70 transition-colors hover:text-primary">
+            <Link href="/#about-us" className="flex items-center gap-2 font-headline text-lg font-semibold text-gray-900/70 transition-colors hover:text-primary">
               <Heart className="h-5 w-5" /> Sobre Nós
             </Link>
           </div>
@@ -100,10 +100,10 @@ export default function Header() {
                             </Link>
                         </div>
                       <nav className="flex flex-grow flex-col items-center gap-8 text-center font-headline text-xl font-medium mt-8">
-                        <Link href="/personagens" className="text-white drop-shadow-md transition-all duration-300 hover:scale-110">Personagens</Link>
-                        <Link href="/#services" className="text-white drop-shadow-md transition-all duration-300 hover:scale-110">Serviços</Link>
-                        <Link href="/#coverage" className="text-white drop-shadow-md transition-all duration-300 hover:scale-110">Área de Atendimento</Link>
-                        <Link href="/#about-us" className="text-white drop-shadow-md transition-all duration-300 hover:scale-110">Sobre Nós</Link>
+                        <Link href="/personagens" className="text-gray-900 drop-shadow-md transition-all duration-300 hover:scale-110">Personagens</Link>
+                        <Link href="/#services" className="text-gray-900 drop-shadow-md transition-all duration-300 hover:scale-110">Serviços</Link>
+                        <Link href="/#coverage" className="text-gray-900 drop-shadow-md transition-all duration-300 hover:scale-110">Área de Atendimento</Link>
+                        <Link href="/#about-us" className="text-gray-900 drop-shadow-md transition-all duration-300 hover:scale-110">Sobre Nós</Link>
                         
                         <div className="pt-8">
                              <Button asChild className="bg-vibrant-pink text-white hover:bg-vibrant-pink/90 rounded-full px-8 text-base font-bold shadow-lg transition-all animate-pulse-balloon hover:animate-none hover:scale-105 h-[50px] min-w-[240px]">

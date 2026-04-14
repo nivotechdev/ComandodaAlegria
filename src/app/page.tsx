@@ -1,5 +1,5 @@
 import CharacterCatalog from "@/components/character-catalog";
-import CoverageArea from "@/components/coverage-area";
+import CtaSection from "@/components/cta";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
@@ -7,6 +7,7 @@ import Services from "@/components/services";
 import FunWorkshops from "@/components/fun-workshops";
 import WhatsAppFab from "@/components/whatsapp-fab";
 import AboutUs from "@/components/about-us";
+import Highlights from "@/components/highlights";
 
 export default function Home() {
   return (
@@ -17,8 +18,9 @@ export default function Home() {
         <AboutUs />
         <CharacterCatalog />
         <Services />
+        <Highlights />
         <FunWorkshops />
-        <CoverageArea />
+        <CtaSection />
       </main>
       <Footer />
       <WhatsAppFab />

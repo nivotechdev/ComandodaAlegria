@@ -43,7 +43,7 @@ export default function Footer() {
         </div>
         
         <div className="flex flex-col items-center md:items-start gap-4">
-            <h3 className="font-headline text-2xl font-bold text-foreground">Mapa da Diversão</h3>
+            <h3 className="font-headline text-2xl font-bold text-gray-900">Mapa da Diversão</h3>
             <ul className="space-y-2">
                 <li><Link href="/" className="font-semibold text-foreground/80 hover:text-accent transition-colors">Início</Link></li>
                 <li><Link href="#characters" className="font-semibold text-foreground/80 hover:text-accent transition-colors">Personagens</Link></li>
@@ -53,7 +53,7 @@ export default function Footer() {
         </div>
         
         <div className="flex flex-col items-center md:items-start gap-4">
-            <h3 className="font-headline text-2xl font-bold text-foreground">Redes Encantadas</h3>
+            <h3 className="font-headline text-2xl font-bold text-gray-900">Redes Encantadas</h3>
             <div className="flex items-center space-x-4">
                 <Link href="#" className="h-16 w-16 bg-white rounded-full flex items-center justify-center text-[#E4405F] transition-transform hover:scale-110 shadow-lg border-2 border-[#E4405F]/50">
                     <Instagram className="h-8 w-8" />

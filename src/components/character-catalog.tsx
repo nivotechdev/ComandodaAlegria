@@ -3,77 +3,80 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
-const Wave = () => (
-    <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] -translate-y-px">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-[calc(100%+1.3px)] h-[80px] fill-vibrant-pink/10">
-            <path d="M0,50 C150,100 350,0 600,50 C850,100 1050,0 1200,50 L1200,120 L0,120 Z"></path>
-        </svg>
+// Card component for the square gallery, as requested
+const CharacterCard = ({ character }) => {
+  if (!character) return null;
+
+  return (
+    <div className="group relative aspect-square w-full overflow-hidden rounded-[20px] shadow-[0_8px_15px_rgba(0,0,0,0.08)]">
+      {/* 4px White "Polaroid" Border */}
+      <div className="absolute inset-0 rounded-[20px] border-4 border-white z-10 pointer-events-none"></div>
+      
+      <Image
+        src={character.imageUrl}
+        alt={character.name}
+        fill
+        className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+        sizes="(max-width: 768px) 50vw, 25vw"
+      />
+      
+      {/* Gradient Overlay to make the name stand out */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+      
+      {/* Character Name */}
+      <div className="absolute bottom-0 left-0 p-4">
+        <h3 className="font-bold text-lg text-white" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
+          {character.name}
+        </h3>
+      </div>
     </div>
-)
+  );
+};
 
 export default function CharacterCatalog() {
-  const characters = PlaceHolderImages.filter(img => img.id.startsWith("character-"));
-  const displayedCharacters = characters.slice(0, 4);
-  
+  // Using professional images as requested
+  const characters = [
+    { id: "character-spider-man", name: "Homem-Aranha" },
+    { id: "character-elsa", name: "Elsa" },
+    { id: "character-mickey-mouse", name: "Mickey Mouse" },
+    { id: "character-captain-america", name: "Capitão América" },
+  ].map(char => {
+      const imageData = PlaceHolderImages.find(img => img.id === char.id);
+      return { ...char, ...imageData };
+  });
+
   return (
-    <section id="characters" className="w-full py-20 md:py-32 lg:py-40 bg-vibrant-pink/10 relative">
-      <Wave />
-      <div className="container mx-auto px-5 relative">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="space-y-2">
-            <h2 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl" style={{ textShadow: '3px 3px 0px white' }}>
-                <span className="text-primary inline-block -rotate-3">Nosso</span>{' '}
-                <span className="text-accent inline-block rotate-2">Catálogo</span>{' '}
-                <span className="text-secondary inline-block -rotate-1">de Estrelas</span>
-            </h2>
-            <p className="max-w-[900px] text-base text-foreground/80 md:text-lg leading-relaxed">
-              De super-heróis a princesas, temos o personagem perfeito para encantar seus convidados.
-            </p>
-          </div>
+    <section id="character-catalog" className="w-full bg-gradient-to-b from-blue-100 to-pink-100 py-20 md:py-28">
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <div className="mx-auto mb-12 max-w-3xl text-center md:mb-16">
+          <h2 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl text-gray-900">
+            Conheça Nossa Galeria de Estrelas!
+          </h2>
+          <p className="mt-4 text-lg leading-[1.6] text-foreground/70">
+            Personagens encantadores que transformam qualquer festa em um evento inesquecível.
+          </p>
         </div>
-        <div className="pt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
-            {displayedCharacters.map((character) => (
-                <div key={character.id} className="group">
-                    <Card className="overflow-hidden rounded-[30px] bg-white shadow-lg transition-all duration-300 group-hover:shadow-2xl group-hover:-translate-y-2 flex flex-col h-full">
-                        <div className="p-3">
-                            <div className="relative aspect-[4/3] overflow-hidden rounded-[18px]">
-                                <Image
-                                    src={character.imageUrl}
-                                    alt={character.description}
-                                    fill
-                                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                                    data-ai-hint={character.imageHint}
-                                    sizes="(max-width: 768px) 50vw, 25vw"
-                                />
-                                <div className="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none">
-                                     <Button asChild className="pointer-events-auto rounded-full bg-vibrant-pink px-4 sm:px-6 text-xs sm:text-sm font-bold text-white shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 w-auto">
-                                        <Link href="#contact">Quero este na festa!</Link>
-                                    </Button>
-                                </div>
-                            </div>
-                        </div>
-                        <CardContent className="text-center px-4 pb-4 pt-3 flex-grow flex items-center justify-center">
-                            <h3 className="text-2xl font-bold text-primary font-headline">
-                                {character.id.split('-').slice(1).map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ')}
-                            </h3>
-                        </CardContent>
-                    </Card>
-                </div>
-            ))}
+
+        {/* Modern Square Gallery Grid */}
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+          {characters.map(character => (
+            <CharacterCard key={character.id} character={character} />
+          ))}
         </div>
-        {characters.length > 4 && (
-          <div className="mt-16 text-center">
-            <Button
-              asChild
-              className="bg-vibrant-pink text-white hover:bg-vibrant-pink/90 rounded-full px-8 text-base font-bold shadow-lg transition-all animate-pulse-balloon hover:animate-none hover:scale-105 h-[50px] min-w-[240px]"
+
+        {/* Call to Action Button */}
+        <div className="mt-16 flex justify-center">
+            <Link
+              href="/personagens"
+              className="inline-flex items-center justify-center rounded-full bg-accent px-10 py-4 text-lg font-bold text-white shadow-lg transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-accent/50"
             >
-              <Link href="/personagens">Ver mais personagens</Link>
-            </Button>
-          </div>
-        )}
+                Ver Todos os Personagens
+                <ArrowRight className="ml-3 h-5 w-5" />
+            </Link>
+        </div>
       </div>
     </section>
   );
